@@ -1,8 +1,10 @@
 const DAYS = ["월", "화", "수", "목", "금", "토", "일"];
 const STORAGE_KEY = "my-tv-guide-schedule-v1";
+const SCHEDULE_SOURCE_KEY = "my-tv-guide-schedule-source-v1";
 const FAVORITES_KEY = "my-tv-guide-favorites-v1";
 const FAVORITES_COOKIE_MAX_LENGTH = 3800;
 const FAVORITES_BACKUP_VERSION = 1;
+const SCHEDULE_BACKUP_VERSION = 1;
 const GENRES = ["미분류", "예능", "교양/다큐", "드라마"];
 const GENRE_SETTINGS_URL = new URL("genres.json", document.baseURI);
 const SHEET_ID = "1D9jF3KVYAZBvYRDMzZ8oEnGwVojanrIW7FQFl4n2TOk";
@@ -23,9 +25,11 @@ const favoriteListElement = document.querySelector("#favorite-list");
 const favoriteInput = document.querySelector("#favorite-input");
 const viewFilters = document.querySelector("#view-filters");
 const favoritesFileInput = document.querySelector("#favorites-file");
+const scheduleFileInput = document.querySelector("#schedule-file");
 let selectedDay = "";
 let classifications = {};
 let hasImportedSchedule = false;
+let scheduleSource = "csv";
 let programs = loadPrograms();
 let favorites = loadFavorites();
 let viewMode = favorites.length ? "favorites" : "all";
@@ -35,6 +39,7 @@ function loadPrograms() {
     const saved = localStorage.getItem(STORAGE_KEY);
     if (!saved) return [];
     const imported = validatePrograms(JSON.parse(saved));
+    scheduleSource = localStorage.getItem(SCHEDULE_SOURCE_KEY) || "csv";
     hasImportedSchedule = true;
     return imported;
   } catch (error) {
@@ -182,12 +187,14 @@ function matchingFavorite(title) {
   return favorites.find((favorite) => normalizedTitle.includes(normalizeTitle(favoriteBaseTitle(favorite))));
 }
 
-function savePrograms(nextPrograms) {
+function savePrograms(nextPrograms, source = "csv", successMessage) {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(nextPrograms));
+    localStorage.setItem(SCHEDULE_SOURCE_KEY, source);
     hasImportedSchedule = true;
+    scheduleSource = source;
     programs = nextPrograms;
-    statusElement.textContent = `${programs.length}개 프로그램을 이 브라우저에 저장했습니다.`;
+    statusElement.textContent = successMessage || `${programs.length}개 프로그램을 이 브라우저에 저장했습니다.`;
     render();
   } catch (error) {
     console.error("편성표를 저장하지 못했습니다.", error);
@@ -224,6 +231,24 @@ function downloadFavoritesBackup() {
   link.remove();
   window.setTimeout(() => URL.revokeObjectURL(url), 1000);
   statusElement.textContent = `${favorites.length}개 즐겨찾기를 백업 파일로 저장했습니다.`;
+}
+
+function downloadScheduleBackup() {
+  const backup = {
+    version: SCHEDULE_BACKUP_VERSION,
+    exportedAt: new Date().toISOString(),
+    programs: programs.map(({ day, time, channel, title }) => ({ day, time, channel, title })),
+  };
+  const blob = new Blob([JSON.stringify(backup, null, 2)], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = "tv-schedule-backup.json";
+  document.body.append(link);
+  link.click();
+  link.remove();
+  window.setTimeout(() => URL.revokeObjectURL(url), 1000);
+  statusElement.textContent = `${programs.length}개 편성을 백업 파일로 저장했습니다.`;
 }
 
 function renderFavorites() {
@@ -509,7 +534,7 @@ function parseSheetSchedule(text, day) {
 }
 
 async function loadGoogleSchedule(force = false) {
-  if (hasImportedSchedule && !force) return;
+  if (hasImportedSchedule && scheduleSource !== "sheets" && !force) return;
   statusElement.textContent = "Google Sheets에서 오늘 편성표를 불러오는 중...";
   sheetImportButton.disabled = true;
 
@@ -522,15 +547,16 @@ async function loadGoogleSchedule(force = false) {
       return parseSheetSchedule(await response.text(), day);
     }));
     const importedPrograms = validatePrograms(schedules.flat());
-    if (force) {
-      localStorage.removeItem(STORAGE_KEY);
-      hasImportedSchedule = false;
+    if (!importedPrograms.length) {
+      throw new Error("시트에서 편성을 찾지 못해 기존 자료를 유지했습니다.");
     }
-    programs = importedPrograms;
-    render();
-    statusElement.textContent = programs.length
-      ? `Google Sheets에서 오늘(${day}요일) 편성 ${programs.length}개를 불러왔습니다.`
-      : "Google Sheets에서 오늘 편성을 찾지 못했습니다.";
+    const otherDays = programs.filter((program) => program.day !== day);
+    const mergedPrograms = [...otherDays, ...importedPrograms];
+    savePrograms(
+      mergedPrograms,
+      "sheets",
+      `Google Sheets에서 ${day}요일 편성 ${importedPrograms.length}개를 갱신했습니다. 다른 요일 편성은 유지됩니다.`,
+    );
   } catch (error) {
     console.error("Google Sheets 편성표를 불러오지 못했습니다.", error);
     statusElement.textContent = `Google Sheets 편성표를 불러오지 못했습니다: ${error.message}`;
@@ -572,6 +598,24 @@ csvFileInput.addEventListener("change", async () => {
   }
 });
 
+scheduleFileInput.addEventListener("change", async () => {
+  const [file] = scheduleFileInput.files;
+  if (!file) return;
+  try {
+    const backup = JSON.parse(await file.text());
+    if (!backup || backup.version !== SCHEDULE_BACKUP_VERSION) {
+      throw new Error("지원하지 않는 편성표 백업 파일입니다.");
+    }
+    const restoredPrograms = validatePrograms(backup.programs);
+    savePrograms(restoredPrograms, "csv", `${restoredPrograms.length}개 편성을 백업에서 복원했습니다.`);
+  } catch (error) {
+    console.error("편성표 백업을 불러오지 못했습니다.", error);
+    statusElement.textContent = `편성표 백업을 불러오지 못했습니다: ${error.message}`;
+  } finally {
+    scheduleFileInput.value = "";
+  }
+});
+
 favoritesFileInput.addEventListener("change", async () => {
   const [file] = favoritesFileInput.files;
   if (!file) return;
@@ -590,6 +634,7 @@ favoritesFileInput.addEventListener("change", async () => {
 });
 
 document.querySelector("#backup-button").addEventListener("click", downloadFavoritesBackup);
+document.querySelector("#schedule-backup-button").addEventListener("click", downloadScheduleBackup);
 sheetImportButton.addEventListener("click", () => loadGoogleSchedule(true));
 
 document.querySelector("#favorite-form").addEventListener("submit", (event) => {
@@ -608,17 +653,8 @@ document.querySelector("#favorite-form").addEventListener("submit", (event) => {
 genreFilter.addEventListener("change", renderSchedule);
 channelFilter.addEventListener("change", renderSchedule);
 document.querySelector("#reset-button").addEventListener("click", () => {
-  try {
-    localStorage.removeItem(STORAGE_KEY);
-    hasImportedSchedule = false;
-    programs = [];
-    statusElement.textContent = "Google Sheets 편성표를 다시 불러옵니다.";
-    render();
-    loadGoogleSchedule();
-  } catch (error) {
-    console.error("편성표를 초기화하지 못했습니다.", error);
-    statusElement.textContent = "편성표를 초기화하지 못했습니다.";
-  }
+  statusElement.textContent = "Google Sheets에서 오늘 편성을 다시 가져옵니다.";
+  loadGoogleSchedule(true);
 });
 
 render();

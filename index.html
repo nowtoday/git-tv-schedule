@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#f5f7fb">
-    <title>오늘의 편성표</title>
+    <title>요일별 편성표</title>
     <link rel="stylesheet" href="styles.css">
     <script src="app.js" defer></script>
   </head>
@@ -13,8 +13,8 @@
       <header class="hero">
         <div>
           <p class="eyebrow">MY TV GUIDE</p>
-          <h1>오늘의 편성표</h1>
-          <p class="intro">Google Sheets에서 오늘 편성을 불러오고 즐겨찾는 방송을 모아보세요.</p>
+          <h1>요일별 편성표</h1>
+          <p class="intro">Google Sheets에서 오늘 편성을 가져와 요일별로 모아보세요.</p>
         </div>
         <div class="import-actions">
           <button id="sheet-import-button" class="import-button sheet-import-button" type="button">Google Sheets 가져오기</button>
@@ -37,6 +37,9 @@
               <button type="submit">추가</button>
             </form>
             <div class="backup-actions">
+              <button id="schedule-backup-button" class="secondary-button" type="button">편성표 백업</button>
+              <label class="secondary-button file-button" for="schedule-file">편성표 복원</label>
+              <input id="schedule-file" type="file" accept=".json,application/json" hidden>
               <button id="backup-button" class="secondary-button" type="button">즐겨찾기 백업</button>
               <label class="secondary-button file-button" for="favorites-file">백업 불러오기</label>
               <input id="favorites-file" type="file" accept=".json,application/json" hidden>
@@ -75,8 +78,8 @@
       <section id="schedule" class="schedule" aria-label="방송 편성표"></section>
 
       <footer>
-        <p>Google Sheets 편성은 방문할 때마다 불러옵니다. CSV로 가져온 편성은 이 브라우저에 저장됩니다.</p>
-        <button id="reset-button" class="text-button" type="button">Google Sheets에서 새로고침</button>
+        <p>Google Sheets 편성은 요일별로 저장되며, CSV 편성은 전체 편성을 교체합니다.</p>
+        <button id="reset-button" class="text-button" type="button">오늘 편성 다시 가져오기</button>
       </footer>
     </main>
   </body>
