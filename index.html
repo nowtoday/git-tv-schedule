@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f7fb">
+    <title>이번 주 편성표</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">MY TV GUIDE</p>
+          <h1>이번 주 편성표</h1>
+          <p class="intro">요일별 편성표를 보고 즐겨찾는 방송만 모아보세요.</p>
+        </div>
+        <label class="import-button" for="csv-file">편성표 CSV 가져오기</label>
+        <input id="csv-file" type="file" accept=".csv,text/csv" hidden>
+      </header>
+
+      <section class="favorites-panel" aria-labelledby="favorites-heading">
+        <div class="favorites-heading">
+          <div>
+            <h2 id="favorites-heading">즐겨찾는 프로그램</h2>
+            <p>즐겨찾기는 이 브라우저의 쿠키에 저장되며, 등록하면 다음 방문부터 먼저 보여드려요.</p>
+          </div>
+          <div class="favorite-actions">
+            <form id="favorite-form" class="favorite-form">
+              <label class="sr-only" for="favorite-input">즐겨찾을 프로그램 이름</label>
+              <input id="favorite-input" type="text" list="program-suggestions" placeholder="프로그램 이름 입력" maxlength="80" required>
+              <datalist id="program-suggestions"></datalist>
+              <button type="submit">추가</button>
+            </form>
+            <div class="backup-actions">
+              <button id="backup-button" class="secondary-button" type="button">즐겨찾기 백업</button>
+              <label class="secondary-button file-button" for="favorites-file">백업 불러오기</label>
+              <input id="favorites-file" type="file" accept=".json,application/json" hidden>
+            </div>
+          </div>
+        </div>
+        <div id="favorite-list" class="favorite-list"></div>
+      </section>
+
+      <section class="toolbar" aria-label="편성표 필터">
+        <div id="day-filters" class="filter-group" aria-label="요일"></div>
+        <div class="toolbar-options">
+          <div id="view-filters" class="filter-group" aria-label="표시 범위"></div>
+          <div class="select-filters">
+            <label>
+              <span class="sr-only">장르</span>
+              <select id="genre-filter">
+                <option value="">모든 장르</option>
+                <option value="미분류">미분류</option>
+                <option value="예능">예능</option>
+                <option value="교양/다큐">교양/다큐</option>
+                <option value="드라마">드라마</option>
+              </select>
+            </label>
+            <label>
+              <span class="sr-only">채널</span>
+              <select id="channel-filter">
+                <option value="">모든 채널</option>
+              </select>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <div id="status" class="status" role="status" aria-live="polite"></div>
+      <section id="schedule" class="schedule" aria-label="방송 편성표"></section>
+
+      <footer>
+        <p>편성 데이터는 이 브라우저에 저장됩니다. 즐겨찾기는 쿠키에 저장되며 백업 파일로 옮길 수 있어요.</p>
+        <button id="reset-button" class="text-button" type="button">샘플 편성표로 초기화</button>
+      </footer>
+    </main>
+  </body>
+</html>
