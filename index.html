@@ -16,7 +16,10 @@
           <h1>오늘의 편성표</h1>
           <p class="intro">Google Sheets에서 오늘 편성을 불러오고 즐겨찾는 방송을 모아보세요.</p>
         </div>
-        <label class="import-button" for="csv-file">편성표 CSV 가져오기</label>
+        <div class="import-actions">
+          <button id="sheet-import-button" class="import-button sheet-import-button" type="button">Google Sheets 가져오기</button>
+          <label class="import-button csv-import-button" for="csv-file">편성표 CSV 가져오기</label>
+        </div>
         <input id="csv-file" type="file" accept=".csv,text/csv" hidden>
       </header>
 

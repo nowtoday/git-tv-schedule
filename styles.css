@@ -70,6 +70,33 @@ h1 {
   white-space: nowrap;
 }
 
+.import-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 9px;
+}
+
+.sheet-import-button {
+  border: 1px solid #dfe3ed;
+  background: white;
+  color: #46536a;
+}
+
+.sheet-import-button:hover {
+  border-color: #cbd0df;
+  background: #f8f9fc;
+}
+
+.sheet-import-button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.csv-import-button {
+  background: #5868dc;
+}
+
 .import-button:hover {
   background: #4756c4;
 }
@@ -422,6 +449,10 @@ footer p {
 
   .import-button {
     align-self: flex-start;
+  }
+
+  .import-actions {
+    justify-content: flex-start;
   }
 
   .schedule {

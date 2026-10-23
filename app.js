@@ -18,6 +18,7 @@ const genreFilter = document.querySelector("#genre-filter");
 const channelFilter = document.querySelector("#channel-filter");
 const statusElement = document.querySelector("#status");
 const csvFileInput = document.querySelector("#csv-file");
+const sheetImportButton = document.querySelector("#sheet-import-button");
 const favoriteListElement = document.querySelector("#favorite-list");
 const favoriteInput = document.querySelector("#favorite-input");
 const viewFilters = document.querySelector("#view-filters");
@@ -124,6 +125,12 @@ function normalizeTitle(title) {
   return title.toLocaleLowerCase("ko-KR").replace(/\s+/g, " ").trim();
 }
 
+function favoriteBaseTitle(title) {
+  return title
+    .replace(/\s*(?:[-–—:]\s*)?(?:제\s*)?\d+\s*(?:회|화|부|편)\s*$/i, "")
+    .trim();
+}
+
 function genreFor(title) {
   const normalizedTitle = normalizeTitle(title);
   const match = Object.keys(classifications)
@@ -171,8 +178,8 @@ async function loadClassifications() {
 }
 
 function matchingFavorite(title) {
-  const normalizedTitle = normalizeTitle(title);
-  return favorites.find((favorite) => normalizedTitle.includes(normalizeTitle(favorite)));
+  const normalizedTitle = normalizeTitle(favoriteBaseTitle(title));
+  return favorites.find((favorite) => normalizedTitle.includes(normalizeTitle(favoriteBaseTitle(favorite))));
 }
 
 function savePrograms(nextPrograms) {
@@ -362,7 +369,7 @@ function renderSchedule() {
         if (favorite) {
           saveFavorites(favorites.filter((item) => item !== favorite));
         } else {
-          saveFavorites([...favorites, program.title]);
+          saveFavorites([...favorites, favoriteBaseTitle(program.title)]);
         }
       });
       titleRow.append(programTitle, favoriteButton);
@@ -501,9 +508,10 @@ function parseSheetSchedule(text, day) {
   return programsForDay;
 }
 
-async function loadGoogleSchedule() {
-  if (hasImportedSchedule) return;
+async function loadGoogleSchedule(force = false) {
+  if (hasImportedSchedule && !force) return;
   statusElement.textContent = "Google Sheets에서 오늘 편성표를 불러오는 중...";
+  sheetImportButton.disabled = true;
 
   try {
     const day = currentKoreanDay();
@@ -513,7 +521,12 @@ async function loadGoogleSchedule() {
       if (!response.ok) throw new Error(`시트 ${gid}에서 HTTP ${response.status} 응답을 받았습니다.`);
       return parseSheetSchedule(await response.text(), day);
     }));
-    programs = validatePrograms(schedules.flat());
+    const importedPrograms = validatePrograms(schedules.flat());
+    if (force) {
+      localStorage.removeItem(STORAGE_KEY);
+      hasImportedSchedule = false;
+    }
+    programs = importedPrograms;
     render();
     statusElement.textContent = programs.length
       ? `Google Sheets에서 오늘(${day}요일) 편성 ${programs.length}개를 불러왔습니다.`
@@ -521,6 +534,8 @@ async function loadGoogleSchedule() {
   } catch (error) {
     console.error("Google Sheets 편성표를 불러오지 못했습니다.", error);
     statusElement.textContent = `Google Sheets 편성표를 불러오지 못했습니다: ${error.message}`;
+  } finally {
+    sheetImportButton.disabled = false;
   }
 }
 
@@ -575,10 +590,11 @@ favoritesFileInput.addEventListener("change", async () => {
 });
 
 document.querySelector("#backup-button").addEventListener("click", downloadFavoritesBackup);
+sheetImportButton.addEventListener("click", () => loadGoogleSchedule(true));
 
 document.querySelector("#favorite-form").addEventListener("submit", (event) => {
   event.preventDefault();
-  const favorite = favoriteInput.value.trim();
+  const favorite = favoriteBaseTitle(favoriteInput.value.trim());
   if (!favorite) return;
   const normalized = normalizeTitle(favorite);
   if (favorites.some((item) => normalizeTitle(item) === normalized)) {
