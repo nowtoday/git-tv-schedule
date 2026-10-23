@@ -207,7 +207,7 @@ function saveFavorites(nextFavorites) {
     const validated = validateFavorites(nextFavorites);
     writeFavoritesCookie(validated);
     favorites = validated;
-    viewMode = favorites.length ? "favorites" : "all";
+    if (!favorites.length) viewMode = "all";
     statusElement.textContent = `${favorites.length}개 프로그램을 쿠키에 저장했습니다.`;
     render();
   } catch (error) {
