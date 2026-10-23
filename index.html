@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#f5f7fb">
-    <title>이번 주 편성표</title>
+    <title>오늘의 편성표</title>
     <link rel="stylesheet" href="styles.css">
     <script src="app.js" defer></script>
   </head>
@@ -13,8 +13,8 @@
       <header class="hero">
         <div>
           <p class="eyebrow">MY TV GUIDE</p>
-          <h1>이번 주 편성표</h1>
-          <p class="intro">요일별 편성표를 보고 즐겨찾는 방송만 모아보세요.</p>
+          <h1>오늘의 편성표</h1>
+          <p class="intro">Google Sheets에서 오늘 편성을 불러오고 즐겨찾는 방송을 모아보세요.</p>
         </div>
         <label class="import-button" for="csv-file">편성표 CSV 가져오기</label>
         <input id="csv-file" type="file" accept=".csv,text/csv" hidden>
@@ -72,8 +72,8 @@
       <section id="schedule" class="schedule" aria-label="방송 편성표"></section>
 
       <footer>
-        <p>편성 데이터는 이 브라우저에 저장됩니다. 즐겨찾기는 쿠키에 저장되며 백업 파일로 옮길 수 있어요.</p>
-        <button id="reset-button" class="text-button" type="button">샘플 편성표로 초기화</button>
+        <p>Google Sheets 편성은 방문할 때마다 불러옵니다. CSV로 가져온 편성은 이 브라우저에 저장됩니다.</p>
+        <button id="reset-button" class="text-button" type="button">Google Sheets에서 새로고침</button>
       </footer>
     </main>
   </body>

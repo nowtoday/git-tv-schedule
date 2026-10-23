@@ -5,15 +5,11 @@ const FAVORITES_COOKIE_MAX_LENGTH = 3800;
 const FAVORITES_BACKUP_VERSION = 1;
 const GENRES = ["미분류", "예능", "교양/다큐", "드라마"];
 const GENRE_SETTINGS_URL = new URL("genres.json", document.baseURI);
-
-const SAMPLE_PROGRAMS = [
-  { day: "월", time: "20:50", channel: "KBS2", genre: "미분류", title: "샘플 프로그램 1" },
-  { day: "화", time: "21:00", channel: "MBC", genre: "미분류", title: "샘플 프로그램 2" },
-  { day: "수", time: "21:50", channel: "SBS", genre: "미분류", title: "샘플 프로그램 3" },
-  { day: "목", time: "20:40", channel: "JTBC", genre: "미분류", title: "샘플 프로그램 4" },
-  { day: "금", time: "22:00", channel: "tvN", genre: "미분류", title: "샘플 프로그램 5" },
-  { day: "토", time: "19:55", channel: "KBS1", genre: "미분류", title: "샘플 프로그램 6" },
-  { day: "일", time: "18:00", channel: "채널A", genre: "미분류", title: "샘플 프로그램 7" },
+const SHEET_ID = "1D9jF3KVYAZBvYRDMzZ8oEnGwVojanrIW7FQFl4n2TOk";
+const SHEET_TABS = [
+  { gid: "0" },
+  { gid: "48397256" },
+  { gid: "278462282" },
 ];
 
 const scheduleElement = document.querySelector("#schedule");
@@ -28,6 +24,7 @@ const viewFilters = document.querySelector("#view-filters");
 const favoritesFileInput = document.querySelector("#favorites-file");
 let selectedDay = "";
 let classifications = {};
+let hasImportedSchedule = false;
 let programs = loadPrograms();
 let favorites = loadFavorites();
 let viewMode = favorites.length ? "favorites" : "all";
@@ -35,7 +32,10 @@ let viewMode = favorites.length ? "favorites" : "all";
 function loadPrograms() {
   try {
     const saved = localStorage.getItem(STORAGE_KEY);
-    return saved ? validatePrograms(JSON.parse(saved)) : SAMPLE_PROGRAMS;
+    if (!saved) return [];
+    const imported = validatePrograms(JSON.parse(saved));
+    hasImportedSchedule = true;
+    return imported;
   } catch (error) {
     console.error("저장된 편성표를 불러오지 못했습니다.", error);
     statusElement.textContent = "저장된 편성표를 불러오지 못했습니다. CSV를 다시 가져와 주세요.";
@@ -103,6 +103,8 @@ function validatePrograms(value) {
       !program ||
       !DAYS.includes(program.day) ||
       !/^\d{2}:\d{2}$/.test(program.time) ||
+      Number(program.time.slice(0, 2)) > 23 ||
+      Number(program.time.slice(3, 5)) > 59 ||
       !["channel", "title"].every((key) => typeof program[key] === "string" && program[key].trim())
     ) {
       throw new Error(`${index + 1}번째 방송 정보의 형식이 올바르지 않습니다.`);
@@ -176,6 +178,7 @@ function matchingFavorite(title) {
 function savePrograms(nextPrograms) {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(nextPrograms));
+    hasImportedSchedule = true;
     programs = nextPrograms;
     statusElement.textContent = `${programs.length}개 프로그램을 이 브라우저에 저장했습니다.`;
     render();
@@ -388,7 +391,7 @@ function render() {
   renderSchedule();
 }
 
-function parseCsv(text) {
+function parseCsvRows(text) {
   const rows = [];
   let row = [];
   let cell = "";
@@ -420,6 +423,109 @@ function parseCsv(text) {
   if (quoted) throw new Error("CSV 파일의 따옴표가 닫히지 않았습니다.");
   row.push(cell.trim());
   if (row.some(Boolean)) rows.push(row);
+  return rows;
+}
+
+function currentKoreanDay() {
+  const weekday = new Intl.DateTimeFormat("en-US", {
+    weekday: "short",
+    timeZone: "Asia/Seoul",
+  }).format(new Date());
+  return { Mon: "월", Tue: "화", Wed: "수", Thu: "목", Fri: "금", Sat: "토", Sun: "일" }[weekday];
+}
+
+function parseCellPrograms(cell) {
+  const starts = [];
+  const first = cell.match(/^(\d{2})(?=.)/);
+  if (first && Number(first[1]) < 60) {
+    starts.push({ index: 0, minute: first[1] });
+  }
+
+  const nextProgram = /(?:HD방송|UHD방송|자막방송|화면해설|한국수어방송|재방송|생방송)\s*(\d{2})/g;
+  let match;
+  while ((match = nextProgram.exec(cell)) !== null) {
+    if (Number(match[1]) < 60) {
+      starts.push({
+        index: match.index + match[0].lastIndexOf(match[1]),
+        minute: match[1],
+      });
+    }
+  }
+
+  return starts.map((start, index) => {
+    const end = starts[index + 1]?.index ?? cell.length;
+    const title = cell
+      .slice(start.index + 2, end)
+      .replace(/프로그램등급\s*\d+세|재방송|생방송|HD방송|UHD방송|자막방송|화면해설|한국수어방송/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+    return { minute: start.minute, title };
+  }).filter((program) => program.title);
+}
+
+function parseSheetSchedule(text, day) {
+  const rows = parseCsvRows(text);
+  const firstHeader = rows[0]?.[0]?.replace(/^\uFEFF/, "");
+  if (rows.length < 3 || firstHeader !== "채널" || rows[1][0] !== "시간") {
+    throw new Error("Google Sheets 편성표의 표 구조를 확인할 수 없습니다.");
+  }
+
+  const channels = rows[0];
+  const programsForDay = [];
+  rows.slice(2).forEach((row) => {
+    const hourMatch = row[0].match(/^(\d{1,2})시/);
+    if (!hourMatch) return;
+    const hour = Number(hourMatch[1]);
+    if (hour > 23) return;
+
+    row.slice(1).forEach((cell, index) => {
+      const channel = channels[index + 1];
+      if (
+        !channel ||
+        !cell.trim() ||
+        cell.includes("방송 시간이 아닙니다") ||
+        cell.includes("방송시간이 아닙니다")
+      ) return;
+
+      parseCellPrograms(cell).forEach(({ minute, title }) => {
+        programsForDay.push({
+          day,
+          time: `${String(hour).padStart(2, "0")}:${minute}`,
+          channel,
+          genre: genreFor(title),
+          title,
+        });
+      });
+    });
+  });
+  return programsForDay;
+}
+
+async function loadGoogleSchedule() {
+  if (hasImportedSchedule) return;
+  statusElement.textContent = "Google Sheets에서 오늘 편성표를 불러오는 중...";
+
+  try {
+    const day = currentKoreanDay();
+    const schedules = await Promise.all(SHEET_TABS.map(async ({ gid }) => {
+      const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${gid}`;
+      const response = await fetch(url, { cache: "no-cache" });
+      if (!response.ok) throw new Error(`시트 ${gid}에서 HTTP ${response.status} 응답을 받았습니다.`);
+      return parseSheetSchedule(await response.text(), day);
+    }));
+    programs = validatePrograms(schedules.flat());
+    render();
+    statusElement.textContent = programs.length
+      ? `Google Sheets에서 오늘(${day}요일) 편성 ${programs.length}개를 불러왔습니다.`
+      : "Google Sheets에서 오늘 편성을 찾지 못했습니다.";
+  } catch (error) {
+    console.error("Google Sheets 편성표를 불러오지 못했습니다.", error);
+    statusElement.textContent = `Google Sheets 편성표를 불러오지 못했습니다: ${error.message}`;
+  }
+}
+
+function parseCsv(text) {
+  const rows = parseCsvRows(text);
   if (rows.length < 2) throw new Error("헤더와 한 개 이상의 편성 정보가 필요합니다.");
 
   const headers = rows[0].map((header) => header.replace(/^\uFEFF/, "").toLowerCase());
@@ -488,9 +594,11 @@ channelFilter.addEventListener("change", renderSchedule);
 document.querySelector("#reset-button").addEventListener("click", () => {
   try {
     localStorage.removeItem(STORAGE_KEY);
-    programs = SAMPLE_PROGRAMS;
-    statusElement.textContent = "샘플 편성표로 초기화했습니다.";
+    hasImportedSchedule = false;
+    programs = [];
+    statusElement.textContent = "Google Sheets 편성표를 다시 불러옵니다.";
     render();
+    loadGoogleSchedule();
   } catch (error) {
     console.error("편성표를 초기화하지 못했습니다.", error);
     statusElement.textContent = "편성표를 초기화하지 못했습니다.";
@@ -498,4 +606,4 @@ document.querySelector("#reset-button").addEventListener("click", () => {
 });
 
 render();
-loadClassifications();
+loadClassifications().then(loadGoogleSchedule);
