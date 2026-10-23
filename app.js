@@ -17,7 +17,9 @@ const SHEET_TABS = [
 const scheduleElement = document.querySelector("#schedule");
 const dayFilters = document.querySelector("#day-filters");
 const genreFilter = document.querySelector("#genre-filter");
-const channelFilter = document.querySelector("#channel-filter");
+const channelPicker = document.querySelector("#channel-picker");
+const channelPickerSummary = document.querySelector("#channel-picker-summary");
+const channelOptions = document.querySelector("#channel-options");
 const statusElement = document.querySelector("#status");
 const csvFileInput = document.querySelector("#csv-file");
 const sheetImportButton = document.querySelector("#sheet-import-button");
@@ -27,6 +29,7 @@ const viewFilters = document.querySelector("#view-filters");
 const favoritesFileInput = document.querySelector("#favorites-file");
 const scheduleFileInput = document.querySelector("#schedule-file");
 let selectedDay = "";
+let selectedChannels = null;
 let classifications = {};
 let hasImportedSchedule = false;
 let scheduleSource = "csv";
@@ -323,18 +326,46 @@ function renderViewFilters() {
 }
 
 function renderChannelOptions() {
-  const currentValue = channelFilter.value;
   const channels = [...new Set(programs.map((program) => program.channel))].sort((a, b) => a.localeCompare(b, "ko"));
-  channelFilter.replaceChildren(new Option("모든 채널", ""));
-  channels.forEach((channel) => channelFilter.add(new Option(channel, channel)));
-  channelFilter.value = channels.includes(currentValue) ? currentValue : "";
+  if (selectedChannels !== null) {
+    selectedChannels = selectedChannels.filter((channel) => channels.includes(channel));
+  }
+
+  const selectedCount = selectedChannels === null ? channels.length : selectedChannels.length;
+  channelPickerSummary.textContent = selectedCount === channels.length
+    ? "전체 채널"
+    : selectedCount
+      ? `${selectedCount}개 채널 선택`
+      : "선택 채널 없음";
+  channelOptions.replaceChildren();
+  channels.forEach((channel) => {
+    const label = document.createElement("label");
+    label.className = "channel-option";
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.checked = selectedChannels === null || selectedChannels.includes(channel);
+    checkbox.addEventListener("change", () => {
+      if (selectedChannels === null) selectedChannels = [...channels];
+      if (checkbox.checked) {
+        if (!selectedChannels.includes(channel)) selectedChannels.push(channel);
+      } else {
+        selectedChannels = selectedChannels.filter((selected) => selected !== channel);
+      }
+      renderChannelOptions();
+      renderSchedule();
+    });
+    const name = document.createElement("span");
+    name.textContent = channel;
+    label.append(checkbox, name);
+    channelOptions.append(label);
+  });
 }
 
 function renderSchedule() {
   const filtered = programs.filter((program) => (
     (!selectedDay || program.day === selectedDay) &&
     (!genreFilter.value || program.genre === genreFilter.value) &&
-    (!channelFilter.value || program.channel === channelFilter.value) &&
+    (selectedChannels === null || selectedChannels.includes(program.channel)) &&
     (viewMode !== "favorites" || Boolean(matchingFavorite(program.title)))
   ));
   const days = selectedDay ? [selectedDay] : DAYS;
@@ -343,9 +374,11 @@ function renderSchedule() {
   if (!filtered.length) {
     const empty = document.createElement("div");
     empty.className = "empty";
-    empty.textContent = viewMode === "favorites"
-      ? "즐겨찾기한 프로그램의 편성이 없습니다. 전체 보기에서 프로그램을 찾아 별표를 눌러 추가하세요."
-      : "표시할 편성 정보가 없습니다. CSV 파일을 가져와 편성표를 채워보세요.";
+    empty.textContent = selectedChannels !== null && selectedChannels.length === 0
+      ? "선택된 채널이 없습니다. '전체 선택'을 누르거나 채널을 체크해 주세요."
+      : viewMode === "favorites"
+        ? "즐겨찾기한 프로그램의 편성이 없습니다. 전체 보기에서 프로그램을 찾아 별표를 눌러 추가하세요."
+        : "표시할 편성 정보가 없습니다. CSV 파일을 가져와 편성표를 채워보세요.";
     scheduleElement.append(empty);
     return;
   }
@@ -651,7 +684,16 @@ document.querySelector("#favorite-form").addEventListener("submit", (event) => {
 });
 
 genreFilter.addEventListener("change", renderSchedule);
-channelFilter.addEventListener("change", renderSchedule);
+document.querySelector("#select-all-channels").addEventListener("click", () => {
+  selectedChannels = null;
+  renderChannelOptions();
+  renderSchedule();
+});
+document.querySelector("#clear-channel-selection").addEventListener("click", () => {
+  selectedChannels = [];
+  renderChannelOptions();
+  renderSchedule();
+});
 document.querySelector("#reset-button").addEventListener("click", () => {
   statusElement.textContent = "Google Sheets에서 오늘 편성을 다시 가져옵니다.";
   loadGoogleSchedule(true);

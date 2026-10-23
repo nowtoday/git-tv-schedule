@@ -64,12 +64,16 @@
                 <option value="드라마">드라마</option>
               </select>
             </label>
-            <label>
-              <span class="sr-only">채널</span>
-              <select id="channel-filter">
-                <option value="">모든 채널</option>
-              </select>
-            </label>
+            <details id="channel-picker" class="channel-picker">
+              <summary id="channel-picker-summary">전체 채널</summary>
+              <div class="channel-picker-panel">
+                <div class="channel-picker-actions">
+                  <button id="select-all-channels" type="button">전체 선택</button>
+                  <button id="clear-channel-selection" type="button">전체 해제</button>
+                </div>
+                <div id="channel-options" class="channel-options"></div>
+              </div>
+            </details>
           </div>
         </div>
       </section>
