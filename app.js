@@ -41,7 +41,11 @@ let programs = [];
 let publishedSchedule = null;
 let activeLocalOverrideDays = [];
 let favorites = loadFavorites();
-let viewMode = "all";
+let viewMode = savedFilterPreferences.viewMode === "favorites" && favorites.length
+  ? "favorites"
+  : "all";
+
+if (savedFilterPreferences.viewMode !== viewMode) saveFilterPreferences();
 
 function clearLegacyScheduleStorage() {
   try {
@@ -74,7 +78,7 @@ function loadFavorites() {
 function loadFilterPreferences() {
   try {
     const cookieValue = readCookie(FILTER_PREFERENCES_COOKIE);
-    if (cookieValue === null) return { genres: null, channels: null };
+    if (cookieValue === null) return { genres: null, channels: null, viewMode: "all" };
 
     const preferences = JSON.parse(cookieValue);
     if (
@@ -83,13 +87,17 @@ function loadFilterPreferences() {
         (!Array.isArray(preferences.genres) || preferences.genres.some((genre) => !GENRES.includes(genre)))) ||
       (preferences.channels !== null &&
         (!Array.isArray(preferences.channels) ||
-          preferences.channels.some((channel) => typeof channel !== "string" || !channel.trim())))
+          preferences.channels.some((channel) => typeof channel !== "string" || !channel.trim()))) ||
+      (preferences.viewMode !== undefined &&
+        preferences.viewMode !== "all" &&
+        preferences.viewMode !== "favorites")
     ) {
       throw new Error("저장된 필터 설정 형식이 올바르지 않습니다.");
     }
     return {
       genres: preferences.genres === null ? null : [...new Set(preferences.genres)],
       channels: preferences.channels === null ? null : [...new Set(preferences.channels)],
+      viewMode: preferences.viewMode === "favorites" ? "favorites" : "all",
     };
   } catch (error) {
     console.error("필터 설정을 불러오지 못했습니다.", error);
@@ -99,7 +107,7 @@ function loadFilterPreferences() {
     } catch (cleanupError) {
       console.error("잘못된 필터 설정 쿠키를 정리하지 못했습니다.", cleanupError);
     }
-    return { genres: null, channels: null };
+    return { genres: null, channels: null, viewMode: "all" };
   }
 }
 
@@ -108,6 +116,7 @@ function saveFilterPreferences() {
     const value = encodeURIComponent(JSON.stringify({
       genres: selectedGenres,
       channels: selectedChannels,
+      viewMode,
     }));
     if (value.length > FILTER_PREFERENCES_MAX_LENGTH) {
       throw new Error("선택한 채널이 많아 브라우저 쿠키에 저장할 수 없습니다.");
@@ -405,7 +414,10 @@ function saveFavorites(nextFavorites) {
     const validated = validateFavorites(nextFavorites);
     localStorage.setItem(FAVORITES_KEY, JSON.stringify(validated));
     favorites = validated;
-    if (!favorites.length) viewMode = "all";
+    if (!favorites.length) {
+      viewMode = "all";
+      saveFilterPreferences();
+    }
     statusElement.textContent = `${favorites.length}개 프로그램을 이 브라우저에 저장했습니다.`;
     render();
   } catch (error) {
@@ -532,6 +544,7 @@ function renderViewFilters() {
     button.disabled = mode === "favorites" && !favorites.length;
     button.addEventListener("click", () => {
       viewMode = mode;
+      saveFilterPreferences();
       renderViewFilters();
       renderSchedule();
     });
