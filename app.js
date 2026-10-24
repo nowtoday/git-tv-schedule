@@ -445,6 +445,7 @@ function renderChannelOptions() {
 }
 
 function renderSchedule() {
+  scheduleElement.classList.toggle("day-selected", Boolean(selectedDay));
   const airingPrograms = currentBroadcasts();
   const filtered = programs.filter((program) => (
     (!selectedDay || program.day === selectedDay) &&

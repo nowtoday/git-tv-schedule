@@ -146,6 +146,7 @@ h1 {
 }
 
 .favorite-form button {
+  flex: 0 0 auto;
   min-height: 38px;
   padding: 0 14px;
   border: 0;
@@ -154,6 +155,7 @@ h1 {
   color: white;
   font-weight: 700;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .backup-actions {
@@ -394,6 +396,16 @@ select {
   gap: 16px;
 }
 
+.schedule.day-selected {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.schedule.day-selected .program-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 24px;
+}
+
 .day-card {
   overflow: hidden;
   border: 1px solid #e7eaf1;
@@ -563,6 +575,10 @@ footer p {
   }
 
   .schedule {
+    grid-template-columns: 1fr;
+  }
+
+  .schedule.day-selected .program-list {
     grid-template-columns: 1fr;
   }
 
