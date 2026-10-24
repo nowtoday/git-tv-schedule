@@ -455,6 +455,8 @@ select {
 }
 
 .program-current {
+  margin-inline: -8px;
+  padding-inline: 8px;
   border-radius: 8px;
   background: #f0f8f3;
   box-shadow: inset 3px 0 #6ca982;
