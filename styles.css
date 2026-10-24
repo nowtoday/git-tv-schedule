@@ -193,6 +193,21 @@ h1 {
   margin-top: 14px;
 }
 
+.favorite-list.is-collapsed {
+  max-height: 76px;
+  overflow: hidden;
+}
+
+.favorite-expand-button {
+  margin-top: 8px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #6571cc;
+  font-size: 12px;
+  cursor: pointer;
+}
+
 .favorite-chip {
   display: inline-flex;
   align-items: center;
@@ -416,6 +431,12 @@ select {
   gap: 12px;
   padding: 16px 0;
   border-bottom: 1px solid #f0f1f5;
+}
+
+.program-current {
+  border-radius: 8px;
+  background: #f0f8f3;
+  box-shadow: inset 3px 0 #6ca982;
 }
 
 .program:last-child {

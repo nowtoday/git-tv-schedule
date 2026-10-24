@@ -14,10 +14,11 @@
         <div>
           <p class="eyebrow">MY TV GUIDE</p>
           <h1>요일별 편성표</h1>
-          <p class="intro">Google Sheets에서 오늘 편성을 가져와 요일별로 모아보세요.</p>
+          <p class="intro">자동으로 모은 주간 편성이나 지금 Google Sheets에서 가져온 편성을 확인해 보세요.</p>
         </div>
         <div class="import-actions">
-          <button id="sheet-import-button" class="import-button sheet-import-button" type="button">Google Sheets 가져오기</button>
+          <button id="manual-sheet-refresh-button" class="import-button sheet-import-button" type="button">Google Sheets 수동 갱신</button>
+          <button id="schedule-refresh-button" class="import-button sheet-import-button" type="button">저장된 편성 새로고침</button>
           <label class="import-button csv-import-button" for="csv-file">편성표 CSV 가져오기</label>
         </div>
         <input id="csv-file" type="file" accept=".csv,text/csv" hidden>
@@ -27,7 +28,7 @@
         <div class="favorites-heading">
           <div>
             <h2 id="favorites-heading">즐겨찾는 프로그램</h2>
-            <p>즐겨찾기는 이 브라우저의 쿠키에 저장되며, 등록하면 다음 방문부터 먼저 보여드려요.</p>
+            <p>즐겨찾기는 이 브라우저에 저장되며, 등록하면 다음 방문부터 먼저 보여드려요.</p>
           </div>
           <div class="favorite-actions">
             <form id="favorite-form" class="favorite-form">
@@ -47,6 +48,7 @@
           </div>
         </div>
         <div id="favorite-list" class="favorite-list"></div>
+        <button id="toggle-favorites" class="favorite-expand-button" type="button" aria-expanded="false" hidden>더 보기</button>
       </section>
 
       <section class="toolbar" aria-label="편성표 필터">
@@ -82,8 +84,7 @@
       <section id="schedule" class="schedule" aria-label="방송 편성표"></section>
 
       <footer>
-        <p>Google Sheets 편성은 요일별로 저장되며, CSV 편성은 전체 편성을 교체합니다.</p>
-        <button id="reset-button" class="text-button" type="button">오늘 편성 다시 가져오기</button>
+        <p>수동으로 가져온 오늘 편성은 자동 갱신 시각과 비교해 더 최신일 때 이 브라우저에서 우선 표시합니다.</p>
       </footer>
     </main>
   </body>

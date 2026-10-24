@@ -1,18 +1,15 @@
 const DAYS = ["월", "화", "수", "목", "금", "토", "일"];
-const STORAGE_KEY = "my-tv-guide-schedule-v1";
-const SCHEDULE_SOURCE_KEY = "my-tv-guide-schedule-source-v1";
 const FAVORITES_KEY = "my-tv-guide-favorites-v1";
-const FAVORITES_COOKIE_MAX_LENGTH = 3800;
+const LOCAL_SCHEDULE_OVERRIDES_KEY = "my-tv-guide-schedule-overrides-v1";
+const LOCAL_SCHEDULE_OVERRIDE_MAX_AGE = 7 * 24 * 60 * 60 * 1000;
+const LEGACY_SCHEDULE_KEYS = ["my-tv-guide-schedule-v1", "my-tv-guide-schedule-source-v1"];
 const FAVORITES_BACKUP_VERSION = 1;
 const SCHEDULE_BACKUP_VERSION = 1;
 const GENRES = ["미분류", "예능", "교양/다큐", "드라마"];
 const GENRE_SETTINGS_URL = new URL("genres.json", document.baseURI);
+const SCHEDULE_URL = new URL("schedule.json", document.baseURI);
 const SHEET_ID = "1D9jF3KVYAZBvYRDMzZ8oEnGwVojanrIW7FQFl4n2TOk";
-const SHEET_TABS = [
-  { gid: "0" },
-  { gid: "48397256" },
-  { gid: "278462282" },
-];
+const SHEET_TABS = ["0", "48397256", "278462282"];
 
 const scheduleElement = document.querySelector("#schedule");
 const dayFilters = document.querySelector("#day-filters");
@@ -22,49 +19,45 @@ const channelPickerSummary = document.querySelector("#channel-picker-summary");
 const channelOptions = document.querySelector("#channel-options");
 const statusElement = document.querySelector("#status");
 const csvFileInput = document.querySelector("#csv-file");
-const sheetImportButton = document.querySelector("#sheet-import-button");
+const scheduleRefreshButton = document.querySelector("#schedule-refresh-button");
+const manualSheetRefreshButton = document.querySelector("#manual-sheet-refresh-button");
 const favoriteListElement = document.querySelector("#favorite-list");
+const favoriteExpandButton = document.querySelector("#toggle-favorites");
 const favoriteInput = document.querySelector("#favorite-input");
 const viewFilters = document.querySelector("#view-filters");
 const favoritesFileInput = document.querySelector("#favorites-file");
 const scheduleFileInput = document.querySelector("#schedule-file");
 let selectedDay = "";
 let selectedChannels = null;
+let favoritesExpanded = false;
 let classifications = {};
-let hasImportedSchedule = false;
-let scheduleSource = "csv";
-let programs = loadPrograms();
+let programs = [];
+let publishedSchedule = null;
+let activeLocalOverrideDays = [];
 let favorites = loadFavorites();
 let viewMode = favorites.length ? "favorites" : "all";
 
-function loadPrograms() {
+function clearLegacyScheduleStorage() {
   try {
-    const saved = localStorage.getItem(STORAGE_KEY);
-    if (!saved) return [];
-    const imported = validatePrograms(JSON.parse(saved));
-    scheduleSource = localStorage.getItem(SCHEDULE_SOURCE_KEY) || "csv";
-    hasImportedSchedule = true;
-    return imported;
+    LEGACY_SCHEDULE_KEYS.forEach((key) => localStorage.removeItem(key));
   } catch (error) {
-    console.error("저장된 편성표를 불러오지 못했습니다.", error);
-    statusElement.textContent = "저장된 편성표를 불러오지 못했습니다. CSV를 다시 가져와 주세요.";
-    return [];
+    console.error("이전 로컬 편성 데이터를 정리하지 못했습니다.", error);
+    statusElement.textContent = `이전 편성 데이터를 정리하지 못했습니다: ${error.message}`;
   }
 }
 
 function loadFavorites() {
   try {
     const cookieValue = readCookie(FAVORITES_KEY);
-    if (cookieValue !== null) return validateFavorites(JSON.parse(cookieValue));
-
-    const legacyValue = localStorage.getItem(FAVORITES_KEY);
-    if (legacyValue) {
-      const migrated = validateFavorites(JSON.parse(legacyValue));
-      writeFavoritesCookie(migrated);
-      localStorage.removeItem(FAVORITES_KEY);
+    if (cookieValue !== null) {
+      const migrated = validateFavorites(JSON.parse(cookieValue));
+      localStorage.setItem(FAVORITES_KEY, JSON.stringify(migrated));
+      clearFavoritesCookie();
       return migrated;
     }
-    return [];
+
+    const legacyValue = localStorage.getItem(FAVORITES_KEY);
+    return legacyValue ? validateFavorites(JSON.parse(legacyValue)) : [];
   } catch (error) {
     console.error("즐겨찾기를 불러오지 못했습니다.", error);
     statusElement.textContent = `즐겨찾기를 불러오지 못했습니다: ${error.message}`;
@@ -88,18 +81,8 @@ function readCookie(name) {
   return item ? decodeURIComponent(item.slice(prefix.length)) : null;
 }
 
-function writeFavoritesCookie(nextFavorites) {
-  const serialized = JSON.stringify(nextFavorites);
-  const encodedValue = encodeURIComponent(serialized);
-  if (encodedValue.length > FAVORITES_COOKIE_MAX_LENGTH) {
-    throw new Error("쿠키 저장 한도를 넘었습니다. 즐겨찾기 수를 줄이거나 백업 파일을 이용해 주세요.");
-  }
-
-  const secure = window.location.protocol === "https:" ? "; Secure" : "";
-  document.cookie = `${encodeURIComponent(FAVORITES_KEY)}=${encodedValue}; Path=/; Max-Age=31536000; SameSite=Lax${secure}`;
-  if (readCookie(FAVORITES_KEY) !== serialized) {
-    throw new Error("브라우저가 쿠키 저장을 허용하지 않았습니다. 사이트 쿠키 설정을 확인해 주세요.");
-  }
+function clearFavoritesCookie() {
+  document.cookie = `${encodeURIComponent(FAVORITES_KEY)}=; Path=/; Max-Age=0; SameSite=Lax`;
 }
 
 function validatePrograms(value) {
@@ -127,6 +110,102 @@ function validatePrograms(value) {
       title,
     };
   });
+}
+
+function readLocalScheduleOverrides() {
+  const saved = localStorage.getItem(LOCAL_SCHEDULE_OVERRIDES_KEY);
+  if (!saved) return {};
+  const overrides = JSON.parse(saved);
+  if (!overrides || overrides.version !== 1 || !overrides.days || typeof overrides.days !== "object" || Array.isArray(overrides.days)) {
+    throw new Error("브라우저에 저장된 수동 편성 데이터 형식이 올바르지 않습니다.");
+  }
+
+  const now = Date.now();
+  const validatedOverrides = Object.entries(overrides.days).map(([day, entry]) => {
+    if (
+      !DAYS.includes(day) ||
+      !entry ||
+      typeof entry.fetchedAt !== "string" ||
+      !Number.isFinite(Date.parse(entry.fetchedAt)) ||
+      !Array.isArray(entry.programs)
+    ) {
+      throw new Error(`${day}요일 수동 편성의 갱신 정보가 올바르지 않습니다.`);
+    }
+    const dayPrograms = validatePrograms(entry.programs);
+    if (dayPrograms.some((program) => program.day !== day)) {
+      throw new Error(`${day}요일 수동 편성에 다른 요일의 자료가 포함되어 있습니다.`);
+    }
+    return [day, { fetchedAt: entry.fetchedAt, programs: dayPrograms }];
+  });
+  const freshOverrides = Object.fromEntries(validatedOverrides.filter(([, entry]) => (
+    now - Date.parse(entry.fetchedAt) < LOCAL_SCHEDULE_OVERRIDE_MAX_AGE
+  )));
+
+  if (Object.keys(freshOverrides).length !== validatedOverrides.length) {
+    if (Object.keys(freshOverrides).length) {
+      localStorage.setItem(
+        LOCAL_SCHEDULE_OVERRIDES_KEY,
+        JSON.stringify({ version: 1, days: freshOverrides }),
+      );
+    } else {
+      localStorage.removeItem(LOCAL_SCHEDULE_OVERRIDES_KEY);
+    }
+  }
+  return freshOverrides;
+}
+
+function saveLocalScheduleOverride(day, dayPrograms, fetchedAt) {
+  const overrides = readLocalScheduleOverrides();
+  overrides[day] = { fetchedAt, programs: dayPrograms };
+  localStorage.setItem(LOCAL_SCHEDULE_OVERRIDES_KEY, JSON.stringify({ version: 1, days: overrides }));
+}
+
+function applyLocalScheduleOverrides(basePrograms, schedule) {
+  const overrides = readLocalScheduleOverrides();
+  const updatedAtByDay = schedule.updatedAtByDay &&
+    typeof schedule.updatedAtByDay === "object" &&
+    !Array.isArray(schedule.updatedAtByDay)
+    ? schedule.updatedAtByDay
+    : {};
+  const survivingOverrides = {};
+  let mergedPrograms = [...basePrograms];
+  activeLocalOverrideDays = [];
+
+  Object.entries(overrides).forEach(([day, override]) => {
+    const publishedAt = updatedAtByDay[day] || schedule.generatedAt;
+    if (publishedAt && !Number.isFinite(Date.parse(publishedAt))) {
+      throw new Error(`${day}요일 자동 편성의 갱신 시각이 올바르지 않습니다.`);
+    }
+    if (publishedAt && Date.parse(publishedAt) >= Date.parse(override.fetchedAt)) return;
+    survivingOverrides[day] = override;
+    activeLocalOverrideDays.push({ day, fetchedAt: override.fetchedAt });
+    mergedPrograms = mergedPrograms.filter((program) => program.day !== day).concat(override.programs);
+  });
+
+  if (Object.keys(survivingOverrides).length !== Object.keys(overrides).length) {
+    localStorage.setItem(
+      LOCAL_SCHEDULE_OVERRIDES_KEY,
+      JSON.stringify({ version: 1, days: survivingOverrides }),
+    );
+  }
+  return mergedPrograms;
+}
+
+function scheduleStatus(programCount, generatedAt) {
+  const source = activeLocalOverrideDays.length
+    ? `브라우저 수동 갱신 우선: ${activeLocalOverrideDays.map(({ day, fetchedAt }) => (
+      `${day}(${formatKoreanDateTime(fetchedAt)})`
+    )).join(", ")}`
+    : `자동 갱신: ${generatedAt ? formatKoreanDateTime(generatedAt) : "시각 정보 없음"}`;
+  return `${programCount}개 편성을 불러왔습니다. ${source}`;
+}
+
+function formatKoreanDateTime(timestamp) {
+  return `${new Intl.DateTimeFormat("ko-KR", {
+    dateStyle: "short",
+    timeStyle: "short",
+    timeZone: "Asia/Seoul",
+  }).format(new Date(timestamp))} KST`;
 }
 
 function normalizeTitle(title) {
@@ -190,32 +269,23 @@ function matchingFavorite(title) {
   return favorites.find((favorite) => normalizedTitle.includes(normalizeTitle(favoriteBaseTitle(favorite))));
 }
 
-function savePrograms(nextPrograms, source = "csv", successMessage) {
-  try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(nextPrograms));
-    localStorage.setItem(SCHEDULE_SOURCE_KEY, source);
-    hasImportedSchedule = true;
-    scheduleSource = source;
-    programs = nextPrograms;
-    statusElement.textContent = successMessage || `${programs.length}개 프로그램을 이 브라우저에 저장했습니다.`;
-    render();
-  } catch (error) {
-    console.error("편성표를 저장하지 못했습니다.", error);
-    statusElement.textContent = "편성표를 저장하지 못했습니다. 브라우저 저장 공간을 확인해 주세요.";
-  }
+function savePrograms(nextPrograms, successMessage) {
+  programs = nextPrograms;
+  statusElement.textContent = successMessage || `${programs.length}개 프로그램을 불러왔습니다. 이 브라우저에는 저장되지 않습니다.`;
+  render();
 }
 
 function saveFavorites(nextFavorites) {
   try {
     const validated = validateFavorites(nextFavorites);
-    writeFavoritesCookie(validated);
+    localStorage.setItem(FAVORITES_KEY, JSON.stringify(validated));
     favorites = validated;
     if (!favorites.length) viewMode = "all";
-    statusElement.textContent = `${favorites.length}개 프로그램을 쿠키에 저장했습니다.`;
+    statusElement.textContent = `${favorites.length}개 프로그램을 이 브라우저에 저장했습니다.`;
     render();
   } catch (error) {
     console.error("즐겨찾기를 저장하지 못했습니다.", error);
-    statusElement.textContent = `즐겨찾기를 저장하지 못했습니다: ${error.message}`;
+    statusElement.textContent = `즐겨찾기를 저장하지 못했습니다. 브라우저 저장 공간을 확인해 주세요: ${error.message}`;
   }
 }
 
@@ -282,9 +352,22 @@ function renderFavorites() {
 
   const suggestions = document.querySelector("#program-suggestions");
   suggestions.replaceChildren();
-  [...new Set(programs.map((program) => program.title))].forEach((title) => {
-    suggestions.append(new Option(title, title));
-  });
+  [...new Set(programs.map((program) => program.title))]
+    .sort((a, b) => a.localeCompare(b, "ko", { numeric: true, sensitivity: "base" }))
+    .forEach((title) => {
+      suggestions.append(new Option(title, title));
+    });
+  updateFavoritesCollapse();
+}
+
+function updateFavoritesCollapse() {
+  favoriteListElement.classList.add("is-collapsed");
+  const canCollapse = favoriteListElement.scrollHeight > favoriteListElement.clientHeight + 1;
+  if (!canCollapse) favoritesExpanded = false;
+  favoriteListElement.classList.toggle("is-collapsed", canCollapse && !favoritesExpanded);
+  favoriteExpandButton.hidden = !canCollapse;
+  favoriteExpandButton.textContent = favoritesExpanded ? "접기" : "더 보기";
+  favoriteExpandButton.setAttribute("aria-expanded", String(favoritesExpanded));
 }
 
 function renderDayFilters() {
@@ -362,6 +445,7 @@ function renderChannelOptions() {
 }
 
 function renderSchedule() {
+  const airingPrograms = currentBroadcasts();
   const filtered = programs.filter((program) => (
     (!selectedDay || program.day === selectedDay) &&
     (!genreFilter.value || program.genre === genreFilter.value) &&
@@ -378,7 +462,9 @@ function renderSchedule() {
       ? "선택된 채널이 없습니다. '전체 선택'을 누르거나 채널을 체크해 주세요."
       : viewMode === "favorites"
         ? "즐겨찾기한 프로그램의 편성이 없습니다. 전체 보기에서 프로그램을 찾아 별표를 눌러 추가하세요."
-        : "표시할 편성 정보가 없습니다. CSV 파일을 가져와 편성표를 채워보세요.";
+        : programs.length
+          ? "현재 필터에 해당하는 편성이 없습니다."
+          : "표시할 편성이 없습니다. GitHub Actions에서 주간 편성을 가져와 주세요.";
     scheduleElement.append(empty);
     return;
   }
@@ -404,6 +490,7 @@ function renderSchedule() {
     dayPrograms.forEach((program) => {
       const item = document.createElement("li");
       item.className = "program";
+      if (airingPrograms.has(program)) item.classList.add("program-current");
       const time = document.createElement("time");
       time.className = "time";
       time.textContent = program.time;
@@ -499,6 +586,149 @@ function currentKoreanDay() {
   return { Mon: "월", Tue: "화", Wed: "수", Thu: "목", Fri: "금", Sat: "토", Sun: "일" }[weekday];
 }
 
+function currentKoreanMinutes() {
+  const parts = new Intl.DateTimeFormat("en-US", {
+    hour: "2-digit",
+    minute: "2-digit",
+    hourCycle: "h23",
+    timeZone: "Asia/Seoul",
+  }).formatToParts(new Date());
+  const hour = Number(parts.find((part) => part.type === "hour")?.value);
+  const minute = Number(parts.find((part) => part.type === "minute")?.value);
+  return hour * 60 + minute;
+}
+
+function currentBroadcasts() {
+  const today = currentKoreanDay();
+  const now = currentKoreanMinutes();
+  const byChannel = new Map();
+  programs.filter((program) => program.day === today).forEach((program) => {
+    if (!byChannel.has(program.channel)) byChannel.set(program.channel, []);
+    byChannel.get(program.channel).push(program);
+  });
+
+  const airing = new Set();
+  byChannel.forEach((channelPrograms) => {
+    channelPrograms.sort((a, b) => a.time.localeCompare(b.time));
+    for (let index = channelPrograms.length - 2; index >= 0; index -= 1) {
+      const start = Number(channelPrograms[index].time.slice(0, 2)) * 60 +
+        Number(channelPrograms[index].time.slice(3, 5));
+      const nextStart = Number(channelPrograms[index + 1].time.slice(0, 2)) * 60 +
+        Number(channelPrograms[index + 1].time.slice(3, 5));
+      if (start <= now && now < nextStart) {
+        airing.add(channelPrograms[index]);
+        break;
+      }
+    }
+  });
+  return airing;
+}
+
+async function loadPublishedSchedule() {
+  statusElement.textContent = "저장소의 주간 편성표를 불러오는 중...";
+  scheduleRefreshButton.disabled = true;
+  try {
+    const response = await fetch(`${SCHEDULE_URL.href}?t=${Date.now()}`, { cache: "no-store" });
+    if (!response.ok) {
+      throw new Error(`저장소의 편성 파일에서 HTTP ${response.status} 응답을 받았습니다.`);
+    }
+    const schedule = await response.json();
+    if (
+      !schedule ||
+      schedule.version !== 1 ||
+      !Array.isArray(schedule.programs) ||
+      (schedule.generatedAt !== null && schedule.generatedAt !== undefined &&
+        (typeof schedule.generatedAt !== "string" || !Number.isFinite(Date.parse(schedule.generatedAt)))) ||
+      (schedule.updatedAtByDay !== undefined &&
+        (!schedule.updatedAtByDay || typeof schedule.updatedAtByDay !== "object" || Array.isArray(schedule.updatedAtByDay)))
+    ) {
+      throw new Error("schedule.json 형식이 올바르지 않습니다.");
+    }
+    if (
+      schedule.updatedAtByDay &&
+      Object.values(schedule.updatedAtByDay).some((timestamp) => (
+        typeof timestamp !== "string" || !Number.isFinite(Date.parse(timestamp))
+      ))
+    ) {
+      throw new Error("schedule.json에 올바르지 않은 요일별 갱신 시각이 있습니다.");
+    }
+    const publishedPrograms = validatePrograms(schedule.programs);
+    publishedSchedule = schedule;
+    const effectivePrograms = validatePrograms(applyLocalScheduleOverrides(publishedPrograms, schedule));
+    if (!effectivePrograms.length) {
+      programs = effectivePrograms;
+      render();
+      statusElement.textContent = "주간 편성표가 아직 비어 있습니다. GitHub Actions에서 'Update weekly schedule'을 실행해 주세요.";
+      return;
+    }
+    savePrograms(
+      effectivePrograms,
+      scheduleStatus(effectivePrograms.length, schedule.generatedAt),
+    );
+  } catch (error) {
+    console.error("저장소 편성표를 불러오지 못했습니다.", error);
+    try {
+      const overrides = readLocalScheduleOverrides();
+      const localPrograms = Object.values(overrides).flatMap((override) => override.programs);
+      if (localPrograms.length) {
+        programs = validatePrograms(localPrograms);
+        activeLocalOverrideDays = Object.entries(overrides).map(([day, override]) => ({
+          day,
+          fetchedAt: override.fetchedAt,
+        }));
+        render();
+        statusElement.textContent = `저장소 편성표를 불러오지 못했습니다. 이 브라우저의 수동 편성 ${programs.length}개를 대신 표시합니다: ${error.message}`;
+      } else {
+        activeLocalOverrideDays = [];
+        statusElement.textContent = `저장소 편성표를 불러오지 못했습니다: ${error.message}`;
+      }
+    } catch (localError) {
+      console.error("브라우저에 저장된 수동 편성도 불러오지 못했습니다.", localError);
+      statusElement.textContent = `저장소와 브라우저의 수동 편성표를 모두 불러오지 못했습니다: ${localError.message}`;
+    }
+  } finally {
+    scheduleRefreshButton.disabled = false;
+  }
+}
+
+async function loadManualSheetSchedule() {
+  const day = currentKoreanDay();
+  statusElement.textContent = `Google Sheets에서 ${day}요일의 최신 편성을 가져오는 중...`;
+  manualSheetRefreshButton.disabled = true;
+  scheduleRefreshButton.disabled = true;
+  try {
+    const schedules = await Promise.all(SHEET_TABS.map(async (gid) => {
+      const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${gid}`;
+      const response = await fetch(url, { cache: "no-cache" });
+      if (!response.ok) throw new Error(`시트 ${gid}에서 HTTP ${response.status} 응답을 받았습니다.`);
+      return parseSheetSchedule(await response.text(), day);
+    }));
+    const importedPrograms = validatePrograms(schedules.flat());
+    if (!importedPrograms.length) {
+      throw new Error(`${day}요일 편성을 찾지 못해 현재 표시를 유지했습니다.`);
+    }
+
+    const fetchedAt = new Date().toISOString();
+    saveLocalScheduleOverride(day, importedPrograms, fetchedAt);
+    if (publishedSchedule) {
+      programs = validatePrograms(applyLocalScheduleOverrides(
+        validatePrograms(publishedSchedule.programs),
+        publishedSchedule,
+      ));
+    } else {
+      programs = importedPrograms;
+    }
+    render();
+    statusElement.textContent = `Google Sheets에서 ${day}요일 편성 ${importedPrograms.length}개를 ${formatKoreanDateTime(fetchedAt)}에 가져왔습니다. 자동 갱신보다 최신이면 이 브라우저 자료를 우선 표시합니다.`;
+  } catch (error) {
+    console.error("Google Sheets 수동 갱신에 실패했습니다.", error);
+    statusElement.textContent = `Google Sheets 수동 갱신에 실패했습니다: ${error.message}`;
+  } finally {
+    manualSheetRefreshButton.disabled = false;
+    scheduleRefreshButton.disabled = false;
+  }
+}
+
 function parseCellPrograms(cell) {
   const starts = [];
   const first = cell.match(/^(\d{2})(?=.)/);
@@ -566,38 +796,6 @@ function parseSheetSchedule(text, day) {
   return programsForDay;
 }
 
-async function loadGoogleSchedule(force = false) {
-  if (hasImportedSchedule && scheduleSource !== "sheets" && !force) return;
-  statusElement.textContent = "Google Sheets에서 오늘 편성표를 불러오는 중...";
-  sheetImportButton.disabled = true;
-
-  try {
-    const day = currentKoreanDay();
-    const schedules = await Promise.all(SHEET_TABS.map(async ({ gid }) => {
-      const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${gid}`;
-      const response = await fetch(url, { cache: "no-cache" });
-      if (!response.ok) throw new Error(`시트 ${gid}에서 HTTP ${response.status} 응답을 받았습니다.`);
-      return parseSheetSchedule(await response.text(), day);
-    }));
-    const importedPrograms = validatePrograms(schedules.flat());
-    if (!importedPrograms.length) {
-      throw new Error("시트에서 편성을 찾지 못해 기존 자료를 유지했습니다.");
-    }
-    const otherDays = programs.filter((program) => program.day !== day);
-    const mergedPrograms = [...otherDays, ...importedPrograms];
-    savePrograms(
-      mergedPrograms,
-      "sheets",
-      `Google Sheets에서 ${day}요일 편성 ${importedPrograms.length}개를 갱신했습니다. 다른 요일 편성은 유지됩니다.`,
-    );
-  } catch (error) {
-    console.error("Google Sheets 편성표를 불러오지 못했습니다.", error);
-    statusElement.textContent = `Google Sheets 편성표를 불러오지 못했습니다: ${error.message}`;
-  } finally {
-    sheetImportButton.disabled = false;
-  }
-}
-
 function parseCsv(text) {
   const rows = parseCsvRows(text);
   if (rows.length < 2) throw new Error("헤더와 한 개 이상의 편성 정보가 필요합니다.");
@@ -622,7 +820,7 @@ csvFileInput.addEventListener("change", async () => {
   if (!file) return;
   try {
     const imported = parseCsv(await file.text());
-    savePrograms(imported);
+    savePrograms(imported, `${imported.length}개 CSV 편성을 불러왔습니다. 이 자료는 브라우저를 닫으면 사라집니다.`);
   } catch (error) {
     console.error("CSV 편성표를 가져오지 못했습니다.", error);
     statusElement.textContent = `가져오지 못했습니다: ${error.message}`;
@@ -640,7 +838,7 @@ scheduleFileInput.addEventListener("change", async () => {
       throw new Error("지원하지 않는 편성표 백업 파일입니다.");
     }
     const restoredPrograms = validatePrograms(backup.programs);
-    savePrograms(restoredPrograms, "csv", `${restoredPrograms.length}개 편성을 백업에서 복원했습니다.`);
+    savePrograms(restoredPrograms, `${restoredPrograms.length}개 편성을 백업에서 복원했습니다. 이 자료는 브라우저를 닫으면 사라집니다.`);
   } catch (error) {
     console.error("편성표 백업을 불러오지 못했습니다.", error);
     statusElement.textContent = `편성표 백업을 불러오지 못했습니다: ${error.message}`;
@@ -668,7 +866,12 @@ favoritesFileInput.addEventListener("change", async () => {
 
 document.querySelector("#backup-button").addEventListener("click", downloadFavoritesBackup);
 document.querySelector("#schedule-backup-button").addEventListener("click", downloadScheduleBackup);
-sheetImportButton.addEventListener("click", () => loadGoogleSchedule(true));
+scheduleRefreshButton.addEventListener("click", loadPublishedSchedule);
+manualSheetRefreshButton.addEventListener("click", loadManualSheetSchedule);
+favoriteExpandButton.addEventListener("click", () => {
+  favoritesExpanded = !favoritesExpanded;
+  updateFavoritesCollapse();
+});
 
 document.querySelector("#favorite-form").addEventListener("submit", (event) => {
   event.preventDefault();
@@ -684,6 +887,8 @@ document.querySelector("#favorite-form").addEventListener("submit", (event) => {
 });
 
 genreFilter.addEventListener("change", renderSchedule);
+window.addEventListener("resize", updateFavoritesCollapse);
+window.setInterval(renderSchedule, 60 * 1000);
 document.querySelector("#select-all-channels").addEventListener("click", () => {
   selectedChannels = null;
   renderChannelOptions();
@@ -694,10 +899,6 @@ document.querySelector("#clear-channel-selection").addEventListener("click", () 
   renderChannelOptions();
   renderSchedule();
 });
-document.querySelector("#reset-button").addEventListener("click", () => {
-  statusElement.textContent = "Google Sheets에서 오늘 편성을 다시 가져옵니다.";
-  loadGoogleSchedule(true);
-});
-
 render();
-loadClassifications().then(loadGoogleSchedule);
+clearLegacyScheduleStorage();
+loadClassifications().then(loadPublishedSchedule);
