@@ -294,15 +294,11 @@ select {
   opacity: 0.55;
 }
 
-select {
-  cursor: pointer;
-}
-
-.channel-picker {
+.filter-picker {
   position: relative;
 }
 
-.channel-picker summary {
+.filter-picker-summary {
   display: flex;
   min-height: 38px;
   align-items: center;
@@ -317,20 +313,20 @@ select {
   white-space: nowrap;
 }
 
-.channel-picker summary::-webkit-details-marker {
+.filter-picker-summary::-webkit-details-marker {
   display: none;
 }
 
-.channel-picker summary::after {
+.filter-picker-summary::after {
   margin-left: 10px;
   content: "▾";
 }
 
-.channel-picker[open] summary {
+.filter-picker[open] .filter-picker-summary {
   border-color: #5868dc;
 }
 
-.channel-picker-panel {
+.filter-picker-panel {
   position: absolute;
   z-index: 2;
   top: calc(100% + 6px);
@@ -345,14 +341,14 @@ select {
   box-shadow: 0 8px 24px rgb(24 34 53 / 12%);
 }
 
-.channel-picker-actions {
+.filter-picker-actions {
   display: flex;
   gap: 8px;
   padding-bottom: 8px;
   border-bottom: 1px solid #f0f1f5;
 }
 
-.channel-picker-actions button {
+.filter-picker-actions button {
   padding: 5px 8px;
   border: 1px solid #e5e8f0;
   border-radius: 7px;
@@ -362,13 +358,13 @@ select {
   cursor: pointer;
 }
 
-.channel-options {
+.filter-picker-options {
   display: grid;
   gap: 2px;
   padding-top: 6px;
 }
 
-.channel-option {
+.filter-picker-option {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -379,7 +375,7 @@ select {
   cursor: pointer;
 }
 
-.channel-option:hover {
+.filter-picker-option:hover {
   background: #f5f6fa;
 }
 

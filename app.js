@@ -3,6 +3,9 @@ const FAVORITES_KEY = "my-tv-guide-favorites-v1";
 const LOCAL_SCHEDULE_OVERRIDES_KEY = "my-tv-guide-schedule-overrides-v1";
 const LOCAL_SCHEDULE_OVERRIDE_MAX_AGE = 7 * 24 * 60 * 60 * 1000;
 const LEGACY_SCHEDULE_KEYS = ["my-tv-guide-schedule-v1", "my-tv-guide-schedule-source-v1"];
+const FILTER_PREFERENCES_COOKIE = "my-tv-guide-filter-preferences-v1";
+const FILTER_PREFERENCES_MAX_AGE = 365 * 24 * 60 * 60;
+const FILTER_PREFERENCES_MAX_LENGTH = 3800;
 const FAVORITES_BACKUP_VERSION = 1;
 const SCHEDULE_BACKUP_VERSION = 1;
 const GENRES = ["미분류", "예능", "교양/다큐", "드라마"];
@@ -13,11 +16,13 @@ const SHEET_TABS = ["0", "48397256", "278462282"];
 
 const scheduleElement = document.querySelector("#schedule");
 const dayFilters = document.querySelector("#day-filters");
-const genreFilter = document.querySelector("#genre-filter");
-const channelPicker = document.querySelector("#channel-picker");
+const genrePickerSummary = document.querySelector("#genre-picker-summary");
+const genreOptions = document.querySelector("#genre-options");
 const channelPickerSummary = document.querySelector("#channel-picker-summary");
 const channelOptions = document.querySelector("#channel-options");
 const statusElement = document.querySelector("#status");
+let filterPreferencesLoadError = "";
+const savedFilterPreferences = loadFilterPreferences();
 const csvFileInput = document.querySelector("#csv-file");
 const scheduleRefreshButton = document.querySelector("#schedule-refresh-button");
 const manualSheetRefreshButton = document.querySelector("#manual-sheet-refresh-button");
@@ -28,7 +33,8 @@ const viewFilters = document.querySelector("#view-filters");
 const favoritesFileInput = document.querySelector("#favorites-file");
 const scheduleFileInput = document.querySelector("#schedule-file");
 let selectedDay = currentKoreanDay();
-let selectedChannels = null;
+let selectedGenres = savedFilterPreferences.genres;
+let selectedChannels = savedFilterPreferences.channels;
 let favoritesExpanded = false;
 let classifications = {};
 let programs = [];
@@ -62,6 +68,59 @@ function loadFavorites() {
     console.error("즐겨찾기를 불러오지 못했습니다.", error);
     statusElement.textContent = `즐겨찾기를 불러오지 못했습니다: ${error.message}`;
     return [];
+  }
+}
+
+function loadFilterPreferences() {
+  try {
+    const cookieValue = readCookie(FILTER_PREFERENCES_COOKIE);
+    if (cookieValue === null) return { genres: null, channels: null };
+
+    const preferences = JSON.parse(cookieValue);
+    if (
+      !preferences ||
+      (preferences.genres !== null &&
+        (!Array.isArray(preferences.genres) || preferences.genres.some((genre) => !GENRES.includes(genre)))) ||
+      (preferences.channels !== null &&
+        (!Array.isArray(preferences.channels) ||
+          preferences.channels.some((channel) => typeof channel !== "string" || !channel.trim())))
+    ) {
+      throw new Error("저장된 필터 설정 형식이 올바르지 않습니다.");
+    }
+    return {
+      genres: preferences.genres === null ? null : [...new Set(preferences.genres)],
+      channels: preferences.channels === null ? null : [...new Set(preferences.channels)],
+    };
+  } catch (error) {
+    console.error("필터 설정을 불러오지 못했습니다.", error);
+    filterPreferencesLoadError = error.message;
+    try {
+      document.cookie = `${encodeURIComponent(FILTER_PREFERENCES_COOKIE)}=; Path=/; Max-Age=0; SameSite=Lax`;
+    } catch (cleanupError) {
+      console.error("잘못된 필터 설정 쿠키를 정리하지 못했습니다.", cleanupError);
+    }
+    return { genres: null, channels: null };
+  }
+}
+
+function saveFilterPreferences() {
+  try {
+    const value = encodeURIComponent(JSON.stringify({
+      genres: selectedGenres,
+      channels: selectedChannels,
+    }));
+    if (value.length > FILTER_PREFERENCES_MAX_LENGTH) {
+      throw new Error("선택한 채널이 많아 브라우저 쿠키에 저장할 수 없습니다.");
+    }
+
+    document.cookie = `${encodeURIComponent(FILTER_PREFERENCES_COOKIE)}=${value}; Path=/; Max-Age=${FILTER_PREFERENCES_MAX_AGE}; SameSite=Lax`;
+    if (readCookie(FILTER_PREFERENCES_COOKIE) !== decodeURIComponent(value)) {
+      throw new Error("브라우저가 필터 설정 쿠키를 저장하지 않았습니다.");
+    }
+    filterPreferencesLoadError = "";
+  } catch (error) {
+    console.error("필터 설정을 저장하지 못했습니다.", error);
+    statusElement.textContent = `필터 설정을 저장하지 못했습니다: ${error.message}`;
   }
 }
 
@@ -439,13 +498,44 @@ function renderViewFilters() {
   });
 }
 
+function renderGenreOptions() {
+  const selectedCount = selectedGenres === null ? GENRES.length : selectedGenres.length;
+  genrePickerSummary.textContent = selectedCount === GENRES.length
+    ? "전체 장르"
+    : selectedCount
+      ? `${selectedCount}개 장르 선택`
+      : "선택 장르 없음";
+  genreOptions.replaceChildren();
+  GENRES.forEach((genre) => {
+    const label = document.createElement("label");
+    label.className = "filter-picker-option";
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.checked = selectedGenres === null || selectedGenres.includes(genre);
+    checkbox.addEventListener("change", () => {
+      if (selectedGenres === null) selectedGenres = [...GENRES];
+      if (checkbox.checked) {
+        if (!selectedGenres.includes(genre)) selectedGenres.push(genre);
+      } else {
+        selectedGenres = selectedGenres.filter((selected) => selected !== genre);
+      }
+      if (selectedGenres.length === GENRES.length) selectedGenres = null;
+      saveFilterPreferences();
+      renderGenreOptions();
+      renderSchedule();
+    });
+    const name = document.createElement("span");
+    name.textContent = genre;
+    label.append(checkbox, name);
+    genreOptions.append(label);
+  });
+}
+
 function renderChannelOptions() {
   const channels = [...new Set(programs.map((program) => program.channel))].sort((a, b) => a.localeCompare(b, "ko"));
-  if (selectedChannels !== null) {
-    selectedChannels = selectedChannels.filter((channel) => channels.includes(channel));
-  }
-
-  const selectedCount = selectedChannels === null ? channels.length : selectedChannels.length;
+  const selectedCount = selectedChannels === null
+    ? channels.length
+    : channels.filter((channel) => selectedChannels.includes(channel)).length;
   channelPickerSummary.textContent = selectedCount === channels.length
     ? "전체 채널"
     : selectedCount
@@ -454,7 +544,7 @@ function renderChannelOptions() {
   channelOptions.replaceChildren();
   channels.forEach((channel) => {
     const label = document.createElement("label");
-    label.className = "channel-option";
+    label.className = "filter-picker-option";
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
     checkbox.checked = selectedChannels === null || selectedChannels.includes(channel);
@@ -465,6 +555,8 @@ function renderChannelOptions() {
       } else {
         selectedChannels = selectedChannels.filter((selected) => selected !== channel);
       }
+      if (selectedChannels.length === channels.length) selectedChannels = null;
+      saveFilterPreferences();
       renderChannelOptions();
       renderSchedule();
     });
@@ -475,12 +567,26 @@ function renderChannelOptions() {
   });
 }
 
+function selectAllGenres() {
+  selectedGenres = null;
+  saveFilterPreferences();
+  renderGenreOptions();
+  renderSchedule();
+}
+
+function clearGenreSelection() {
+  selectedGenres = [];
+  saveFilterPreferences();
+  renderGenreOptions();
+  renderSchedule();
+}
+
 function renderSchedule() {
   scheduleElement.classList.toggle("day-selected", Boolean(selectedDay));
   const airingPrograms = currentBroadcasts();
   const filtered = programs.filter((program) => (
     (!selectedDay || program.day === selectedDay) &&
-    (!genreFilter.value || program.genre === genreFilter.value) &&
+    (selectedGenres === null || selectedGenres.includes(program.genre)) &&
     (selectedChannels === null || selectedChannels.includes(program.channel)) &&
     (viewMode !== "favorites" || Boolean(matchingFavorite(program.title)))
   ));
@@ -492,11 +598,13 @@ function renderSchedule() {
     empty.className = "empty";
     empty.textContent = selectedChannels !== null && selectedChannels.length === 0
       ? "선택된 채널이 없습니다. '전체 선택'을 누르거나 채널을 체크해 주세요."
-      : viewMode === "favorites"
-        ? "즐겨찾기한 프로그램의 편성이 없습니다. 전체 보기에서 프로그램을 찾아 별표를 눌러 추가하세요."
-        : programs.length
-          ? "현재 필터에 해당하는 편성이 없습니다."
-          : "표시할 편성이 없습니다. GitHub Actions에서 주간 편성을 가져와 주세요.";
+      : selectedGenres !== null && selectedGenres.length === 0
+        ? "선택된 장르가 없습니다. '전체 선택'을 누르거나 장르를 체크해 주세요."
+        : viewMode === "favorites"
+          ? "즐겨찾기한 프로그램의 편성이 없습니다. 전체 보기에서 프로그램을 찾아 별표를 눌러 추가하세요."
+          : programs.length
+            ? "현재 필터에 해당하는 편성이 없습니다."
+            : "표시할 편성이 없습니다. GitHub Actions에서 주간 편성을 가져와 주세요.";
     scheduleElement.append(empty);
     return;
   }
@@ -581,6 +689,7 @@ function render() {
   renderDayFilters();
   renderViewFilters();
   renderFavorites();
+  renderGenreOptions();
   renderChannelOptions();
   renderSchedule();
 }
@@ -730,6 +839,9 @@ async function loadPublishedSchedule() {
     }
   } finally {
     scheduleRefreshButton.disabled = false;
+    if (filterPreferencesLoadError) {
+      statusElement.textContent += ` 필터 설정을 불러오지 못했습니다: ${filterPreferencesLoadError}`;
+    }
   }
 }
 
@@ -928,16 +1040,19 @@ document.querySelector("#favorite-form").addEventListener("submit", (event) => {
   saveFavorites([...favorites, favorite]);
 });
 
-genreFilter.addEventListener("change", renderSchedule);
 window.addEventListener("resize", updateFavoritesCollapse);
 window.setInterval(renderSchedule, 60 * 1000);
+document.querySelector("#select-all-genres").addEventListener("click", selectAllGenres);
+document.querySelector("#clear-genre-selection").addEventListener("click", clearGenreSelection);
 document.querySelector("#select-all-channels").addEventListener("click", () => {
   selectedChannels = null;
+  saveFilterPreferences();
   renderChannelOptions();
   renderSchedule();
 });
 document.querySelector("#clear-channel-selection").addEventListener("click", () => {
   selectedChannels = [];
+  saveFilterPreferences();
   renderChannelOptions();
   renderSchedule();
 });
