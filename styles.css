@@ -479,6 +479,10 @@ select {
   line-height: 1.45;
 }
 
+.program-title-no-rerun {
+  font-size: 20px;
+}
+
 .program-title-row {
   display: flex;
   align-items: flex-start;

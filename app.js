@@ -689,7 +689,9 @@ function renderSchedule() {
       const titleRow = document.createElement("div");
       titleRow.className = "program-title-row";
       const programTitle = document.createElement("p");
-      programTitle.className = "program-title";
+      programTitle.className = program.metadata.isRerun
+        ? "program-title"
+        : "program-title program-title-no-rerun";
       programTitle.textContent = program.title;
       const favorite = matchingFavorite(program.title);
       const favoriteButton = document.createElement("button");
