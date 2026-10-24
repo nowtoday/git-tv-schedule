@@ -426,6 +426,19 @@ select {
   font-size: 17px;
 }
 
+.day-heading-title {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.day-heading .day-date {
+  color: #6571cc;
+  font-size: 12px;
+  font-weight: 700;
+}
+
 .day-heading span {
   color: #9098a8;
   font-size: 12px;

@@ -27,7 +27,7 @@ const favoriteInput = document.querySelector("#favorite-input");
 const viewFilters = document.querySelector("#view-filters");
 const favoritesFileInput = document.querySelector("#favorites-file");
 const scheduleFileInput = document.querySelector("#schedule-file");
-let selectedDay = "";
+let selectedDay = currentKoreanDay();
 let selectedChannels = null;
 let favoritesExpanded = false;
 let classifications = {};
@@ -35,7 +35,7 @@ let programs = [];
 let publishedSchedule = null;
 let activeLocalOverrideDays = [];
 let favorites = loadFavorites();
-let viewMode = favorites.length ? "favorites" : "all";
+let viewMode = "all";
 
 function clearLegacyScheduleStorage() {
   try {
@@ -206,6 +206,37 @@ function formatKoreanDateTime(timestamp) {
     timeStyle: "short",
     timeZone: "Asia/Seoul",
   }).format(new Date(timestamp))} KST`;
+}
+
+function koreanDateKey(timestamp) {
+  const parts = new Intl.DateTimeFormat("en-US", {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    timeZone: "Asia/Seoul",
+  }).formatToParts(new Date(timestamp));
+  const values = Object.fromEntries(parts.map(({ type, value }) => [type, value]));
+  return `${values.year}-${values.month}-${values.day}`;
+}
+
+function formatKoreanDate(timestamp) {
+  return new Intl.DateTimeFormat("ko-KR", {
+    month: "numeric",
+    day: "numeric",
+    timeZone: "Asia/Seoul",
+  }).format(new Date(timestamp));
+}
+
+function scheduleDayLabel(day) {
+  const localOverride = activeLocalOverrideDays.find((entry) => entry.day === day);
+  const updatedAt = localOverride?.fetchedAt || publishedSchedule?.updatedAtByDay?.[day];
+  if (!updatedAt || !Number.isFinite(Date.parse(updatedAt))) return "날짜 정보 없음";
+
+  const updatedDate = koreanDateKey(updatedAt);
+  const today = koreanDateKey(new Date());
+  if (updatedDate === today) return "오늘";
+  if (updatedDate < today) return `지난 일정 · ${formatKoreanDate(updatedAt)}`;
+  return formatKoreanDate(updatedAt);
 }
 
 function normalizeTitle(title) {
@@ -480,11 +511,21 @@ function renderSchedule() {
     card.className = "day-card";
     const heading = document.createElement("header");
     heading.className = "day-heading";
+    const headingTitle = document.createElement("div");
+    headingTitle.className = "day-heading-title";
     const title = document.createElement("h2");
     title.textContent = `${day}요일`;
+    headingTitle.append(title);
+    const dayLabel = scheduleDayLabel(day);
+    if (dayLabel) {
+      const date = document.createElement("span");
+      date.className = "day-date";
+      date.textContent = dayLabel;
+      headingTitle.append(date);
+    }
     const count = document.createElement("span");
     count.textContent = `${dayPrograms.length}개 프로그램`;
-    heading.append(title, count);
+    heading.append(headingTitle, count);
 
     const list = document.createElement("ul");
     list.className = "program-list";
