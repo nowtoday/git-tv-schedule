@@ -30,6 +30,20 @@ def fetch_sheet(gid):
         return response.read().decode("utf-8-sig")
 
 
+def extract_metadata(program_text):
+    age_rating = re.search(r"프로그램등급\s*(\d{1,2})세", program_text)
+    quality = "UHD" if "UHD방송" in program_text else "HD" if "HD방송" in program_text else None
+    return {
+        "videoQuality": quality,
+        "isLive": "생방송" in program_text,
+        "isRerun": "재방송" in program_text,
+        "hasSubtitles": "자막방송" in program_text,
+        "hasAudioDescription": "화면해설" in program_text,
+        "hasKoreanSignLanguage": "한국수어방송" in program_text,
+        "ageRating": int(age_rating.group(1)) if age_rating else None,
+    }
+
+
 def parse_cell(cell):
     starts = []
     first = re.match(r"^(\d{2})(?=.)", cell)
@@ -44,10 +58,12 @@ def parse_cell(cell):
     programs = []
     for index, (start, minute) in enumerate(starts):
         end = starts[index + 1][0] if index + 1 < len(starts) else len(cell)
-        title = PROGRAM_METADATA.sub(" ", cell[start + 2 : end])
+        program_text = cell[start + 2 : end]
+        metadata = extract_metadata(program_text)
+        title = PROGRAM_METADATA.sub(" ", program_text)
         title = " ".join(title.split())
         if title:
-            programs.append((minute, title))
+            programs.append((minute, title, metadata))
     return programs
 
 
@@ -77,13 +93,14 @@ def parse_sheet(text, day):
             ):
                 continue
 
-            for minute, title in parse_cell(cell):
+            for minute, title, metadata in parse_cell(cell):
                 programs.append(
                     {
                         "day": day,
                         "time": f"{hour:02d}:{minute}",
                         "channel": channel.strip(),
                         "title": title,
+                        "metadata": metadata,
                     }
                 )
     return programs

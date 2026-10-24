@@ -1,15 +1,66 @@
 import unittest
 
-from scripts.update_schedule import merge_schedule, parse_cell, parse_sheet, updated_day_timestamps
+from scripts.update_schedule import (
+    extract_metadata,
+    merge_schedule,
+    parse_cell,
+    parse_sheet,
+    updated_day_timestamps,
+)
 
 
 class ScheduleParserTests(unittest.TestCase):
     def test_parse_cell_splits_multiple_programs_and_metadata(self):
-        programs = parse_cell("05첫 프로그램 HD방송25두 번째 프로그램")
+        programs = parse_cell("05첫 프로그램 재방송HD방송25두 번째 프로그램")
 
         self.assertEqual(
             programs,
-            [("05", "첫 프로그램"), ("25", "두 번째 프로그램")],
+            [
+                (
+                    "05",
+                    "첫 프로그램",
+                    {
+                        "videoQuality": "HD",
+                        "isLive": False,
+                        "isRerun": True,
+                        "hasSubtitles": False,
+                        "hasAudioDescription": False,
+                        "hasKoreanSignLanguage": False,
+                        "ageRating": None,
+                    },
+                ),
+                (
+                    "25",
+                    "두 번째 프로그램",
+                    {
+                        "videoQuality": None,
+                        "isLive": False,
+                        "isRerun": False,
+                        "hasSubtitles": False,
+                        "hasAudioDescription": False,
+                        "hasKoreanSignLanguage": False,
+                        "ageRating": None,
+                    },
+                ),
+            ],
+        )
+
+    def test_extracts_all_supported_broadcast_metadata(self):
+        metadata = extract_metadata(
+            "프로그램등급15세 UHD방송 생방송 재방송 자막방송 화면해설 한국수어방송 프로그램"
+        )
+
+        self.assertEqual(
+            metadata,
+            {
+                "videoQuality": "UHD",
+                "isLive": True,
+                "isRerun": True,
+                "hasSubtitles": True,
+                "hasAudioDescription": True,
+                "hasKoreanSignLanguage": True,
+                "ageRating": 15,
+            },
         )
 
     def test_parse_sheet_maps_channel_and_hour(self):
@@ -25,8 +76,47 @@ class ScheduleParserTests(unittest.TestCase):
                     "time": "20:05",
                     "channel": "KBS1",
                     "title": "첫 프로그램",
+                    "metadata": {
+                        "videoQuality": None,
+                        "isLive": False,
+                        "isRerun": False,
+                        "hasSubtitles": False,
+                        "hasAudioDescription": False,
+                        "hasKoreanSignLanguage": False,
+                        "ageRating": None,
+                    },
                 }
             ],
+        )
+
+    def test_parse_sheet_preserves_rerun_marker(self):
+        sheet = "채널,KBS1\n시간,\n20시,05재방송오늘의 드라마\n"
+
+        programs = parse_sheet(sheet, "토")
+
+        self.assertEqual(programs[0]["title"], "오늘의 드라마")
+        self.assertTrue(programs[0]["metadata"]["isRerun"])
+
+    def test_parse_sheet_preserves_all_metadata_fields(self):
+        sheet = (
+            "채널,KBS1\n시간,\n"
+            "20시,05프로그램등급12세 UHD방송 생방송 재방송 자막방송 화면해설 한국수어방송 프로그램\n"
+        )
+
+        program = parse_sheet(sheet, "토")[0]
+
+        self.assertEqual(program["title"], "프로그램")
+        self.assertEqual(
+            program["metadata"],
+            {
+                "videoQuality": "UHD",
+                "isLive": True,
+                "isRerun": True,
+                "hasSubtitles": True,
+                "hasAudioDescription": True,
+                "hasKoreanSignLanguage": True,
+                "ageRating": 12,
+            },
         )
 
     def test_merge_replaces_only_matching_weekday(self):

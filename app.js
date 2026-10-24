@@ -156,7 +156,10 @@ function validatePrograms(value) {
       !/^\d{2}:\d{2}$/.test(program.time) ||
       Number(program.time.slice(0, 2)) > 23 ||
       Number(program.time.slice(3, 5)) > 59 ||
-      !["channel", "title"].every((key) => typeof program[key] === "string" && program[key].trim())
+      !["channel", "title"].every((key) => typeof program[key] === "string" && program[key].trim()) ||
+      (program.isRerun !== undefined && typeof program.isRerun !== "boolean") ||
+      (program.metadata !== undefined &&
+        (!program.metadata || typeof program.metadata !== "object" || Array.isArray(program.metadata)))
     ) {
       throw new Error(`${index + 1}번째 방송 정보의 형식이 올바르지 않습니다.`);
     }
@@ -167,8 +170,40 @@ function validatePrograms(value) {
       channel: program.channel.trim(),
       genre: genreFor(title),
       title,
+      metadata: normalizeProgramMetadata(program.metadata, program.isRerun),
     };
   });
+}
+
+function normalizeProgramMetadata(metadata = {}, legacyIsRerun = false) {
+  const videoQuality = metadata.videoQuality ?? null;
+  const ageRating = metadata.ageRating ?? null;
+  const booleans = [
+    "isLive",
+    "isRerun",
+    "hasSubtitles",
+    "hasAudioDescription",
+    "hasKoreanSignLanguage",
+  ];
+  if (
+    (videoQuality !== null && !["HD", "UHD"].includes(videoQuality)) ||
+    (ageRating !== null && (!Number.isInteger(ageRating) || ageRating < 0 || ageRating > 99)) ||
+    booleans.some((key) => (
+      metadata[key] !== undefined && typeof metadata[key] !== "boolean"
+    )) ||
+    (legacyIsRerun !== undefined && typeof legacyIsRerun !== "boolean")
+  ) {
+    throw new Error("편성표 메타데이터 형식이 올바르지 않습니다.");
+  }
+  return {
+    videoQuality,
+    isLive: metadata.isLive === true,
+    isRerun: metadata.isRerun ?? legacyIsRerun ?? false,
+    hasSubtitles: metadata.hasSubtitles === true,
+    hasAudioDescription: metadata.hasAudioDescription === true,
+    hasKoreanSignLanguage: metadata.hasKoreanSignLanguage === true,
+    ageRating,
+  };
 }
 
 function readLocalScheduleOverrides() {
@@ -400,7 +435,13 @@ function downloadScheduleBackup() {
   const backup = {
     version: SCHEDULE_BACKUP_VERSION,
     exportedAt: new Date().toISOString(),
-    programs: programs.map(({ day, time, channel, title }) => ({ day, time, channel, title })),
+    programs: programs.map(({ day, time, channel, title, metadata }) => ({
+      day,
+      time,
+      channel,
+      title,
+      metadata,
+    })),
   };
   const blob = new Blob([JSON.stringify(backup, null, 2)], { type: "application/json" });
   const url = URL.createObjectURL(blob);
@@ -676,6 +717,12 @@ function renderSchedule() {
       const channel = document.createElement("span");
       channel.textContent = program.channel;
       meta.append(genre, channel);
+      if (program.metadata.isRerun) {
+        const rerun = document.createElement("span");
+        rerun.className = "rerun-tag";
+        rerun.textContent = "재방송";
+        meta.append(rerun);
+      }
       details.append(titleRow, meta);
       item.append(time, details);
       list.append(item);
@@ -883,6 +930,23 @@ async function loadManualSheetSchedule() {
   }
 }
 
+function extractProgramMetadata(programText) {
+  const ageRating = programText.match(/프로그램등급\s*(\d{1,2})세/);
+  return {
+    videoQuality: programText.includes("UHD방송")
+      ? "UHD"
+      : programText.includes("HD방송")
+        ? "HD"
+        : null,
+    isLive: programText.includes("생방송"),
+    isRerun: programText.includes("재방송"),
+    hasSubtitles: programText.includes("자막방송"),
+    hasAudioDescription: programText.includes("화면해설"),
+    hasKoreanSignLanguage: programText.includes("한국수어방송"),
+    ageRating: ageRating ? Number(ageRating[1]) : null,
+  };
+}
+
 function parseCellPrograms(cell) {
   const starts = [];
   const first = cell.match(/^(\d{2})(?=.)/);
@@ -903,12 +967,13 @@ function parseCellPrograms(cell) {
 
   return starts.map((start, index) => {
     const end = starts[index + 1]?.index ?? cell.length;
-    const title = cell
-      .slice(start.index + 2, end)
+    const programText = cell.slice(start.index + 2, end);
+    const metadata = extractProgramMetadata(programText);
+    const title = programText
       .replace(/프로그램등급\s*\d+세|재방송|생방송|HD방송|UHD방송|자막방송|화면해설|한국수어방송/g, " ")
       .replace(/\s+/g, " ")
       .trim();
-    return { minute: start.minute, title };
+    return { minute: start.minute, title, metadata };
   }).filter((program) => program.title);
 }
 
@@ -936,13 +1001,14 @@ function parseSheetSchedule(text, day) {
         cell.includes("방송시간이 아닙니다")
       ) return;
 
-      parseCellPrograms(cell).forEach(({ minute, title }) => {
+      parseCellPrograms(cell).forEach(({ minute, title, metadata }) => {
         programsForDay.push({
           day,
           time: `${String(hour).padStart(2, "0")}:${minute}`,
           channel,
           genre: genreFor(title),
           title,
+          metadata,
         });
       });
     });
@@ -961,12 +1027,63 @@ function parseCsv(text) {
     throw new Error("CSV 헤더는 day,time,channel,title 형식이어야 합니다.");
   }
 
+  const metadataColumns = {
+    videoQuality: headers.indexOf("videoquality"),
+    isLive: headers.indexOf("islive"),
+    isRerun: headers.indexOf("isrerun"),
+    hasSubtitles: headers.indexOf("hassubtitles"),
+    hasAudioDescription: headers.indexOf("hasaudiodescription"),
+    hasKoreanSignLanguage: headers.indexOf("haskoreansignlanguage"),
+    ageRating: headers.indexOf("agerating"),
+  };
   return validatePrograms(rows.slice(1).map((values) => (
     {
       ...Object.fromEntries(required.map((header, index) => [header, values[indexes[index]] || ""])),
+      metadata: {
+        videoQuality: metadataColumns.videoQuality < 0
+          ? null
+          : parseVideoQuality(values[metadataColumns.videoQuality] || ""),
+        isLive: metadataColumns.isLive < 0 ? false : parseMetadataBoolean(values[metadataColumns.isLive] || "", "생방송"),
+        isRerun: metadataColumns.isRerun < 0 ? false : parseMetadataBoolean(values[metadataColumns.isRerun] || "", "재방송"),
+        hasSubtitles: metadataColumns.hasSubtitles < 0
+          ? false
+          : parseMetadataBoolean(values[metadataColumns.hasSubtitles] || "", "자막방송"),
+        hasAudioDescription: metadataColumns.hasAudioDescription < 0
+          ? false
+          : parseMetadataBoolean(values[metadataColumns.hasAudioDescription] || "", "화면해설"),
+        hasKoreanSignLanguage: metadataColumns.hasKoreanSignLanguage < 0
+          ? false
+          : parseMetadataBoolean(values[metadataColumns.hasKoreanSignLanguage] || "", "한국수어방송"),
+        ageRating: metadataColumns.ageRating < 0
+          ? null
+          : parseAgeRating(values[metadataColumns.ageRating] || ""),
+      },
       genre: "미분류",
     }
   )));
+}
+
+function parseMetadataBoolean(value, label) {
+  const normalized = value.trim().toLocaleLowerCase("en-US");
+  if (["", "false", "no", "0", "본방송"].includes(normalized)) return false;
+  if (["true", "yes", "1", label].includes(normalized)) return true;
+  throw new Error(`CSV ${label} 값 '${value}'은(는) true/false, yes/no, 1/0 형식이어야 합니다.`);
+}
+
+function parseVideoQuality(value) {
+  const quality = value.trim().toLocaleUpperCase("en-US");
+  if (quality === "") return null;
+  if (["HD", "UHD"].includes(quality)) return quality;
+  throw new Error(`CSV 화질 값 '${value}'은(는) HD 또는 UHD여야 합니다.`);
+}
+
+function parseAgeRating(value) {
+  const rating = value.trim();
+  if (rating === "") return null;
+  if (!/^\d{1,2}$/.test(rating) || Number(rating) > 99) {
+    throw new Error(`CSV 연령 등급 값 '${value}'은(는) 0부터 99 사이의 숫자여야 합니다.`);
+  }
+  return Number(rating);
 }
 
 csvFileInput.addEventListener("change", async () => {

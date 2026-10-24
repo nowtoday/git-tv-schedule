@@ -515,6 +515,15 @@ select {
   font-weight: 700;
 }
 
+.rerun-tag {
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: #fff4df;
+  color: #9a650d;
+  font-size: 11px;
+  font-weight: 700;
+}
+
 .empty {
   grid-column: 1 / -1;
   padding: 54px 20px;
