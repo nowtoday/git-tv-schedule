@@ -644,7 +644,16 @@ function renderSchedule() {
     (selectedChannels === null || selectedChannels.includes(program.channel)) &&
     (viewMode !== "favorites" || Boolean(matchingFavorite(program.title)))
   ));
-  const days = selectedDay ? [selectedDay] : DAYS;
+  const todayIndex = DAYS.indexOf(currentKoreanDay());
+  const days = selectedDay
+    ? [selectedDay]
+    : [...DAYS].sort((a, b) => {
+      const aOffset = (DAYS.indexOf(a) - todayIndex + DAYS.length) % DAYS.length;
+      const bOffset = (DAYS.indexOf(b) - todayIndex + DAYS.length) % DAYS.length;
+      const distanceDifference = Math.min(aOffset, DAYS.length - aOffset)
+        - Math.min(bOffset, DAYS.length - bOffset);
+      return distanceDifference || aOffset - bOffset;
+    });
 
   scheduleElement.replaceChildren();
   if (!filtered.length) {
