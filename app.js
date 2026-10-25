@@ -30,6 +30,7 @@ const favoriteListElement = document.querySelector("#favorite-list");
 const favoriteExpandButton = document.querySelector("#toggle-favorites");
 const favoriteInput = document.querySelector("#favorite-input");
 const viewFilters = document.querySelector("#view-filters");
+const hideRerunsCheckbox = document.querySelector("#hide-reruns");
 const favoritesFileInput = document.querySelector("#favorites-file");
 const scheduleFileInput = document.querySelector("#schedule-file");
 let selectedDay = currentKoreanDay();
@@ -41,6 +42,7 @@ let programs = [];
 let publishedSchedule = null;
 let activeLocalOverrideDays = [];
 let favorites = loadFavorites();
+let hideReruns = false;
 let viewMode = savedFilterPreferences.viewMode === "favorites" && favorites.length
   ? "favorites"
   : "all";
@@ -642,6 +644,7 @@ function renderSchedule() {
     (!selectedDay || program.day === selectedDay) &&
     (selectedGenres === null || selectedGenres.includes(program.genre)) &&
     (selectedChannels === null || selectedChannels.includes(program.channel)) &&
+    (!hideReruns || !program.metadata.isRerun) &&
     (viewMode !== "favorites" || Boolean(matchingFavorite(program.title)))
   ));
   const todayIndex = DAYS.indexOf(currentKoreanDay());
@@ -1179,6 +1182,11 @@ document.querySelector("#favorite-form").addEventListener("submit", (event) => {
   }
   favoriteInput.value = "";
   saveFavorites([...favorites, favorite]);
+});
+
+hideRerunsCheckbox.addEventListener("change", () => {
+  hideReruns = hideRerunsCheckbox.checked;
+  renderSchedule();
 });
 
 window.addEventListener("resize", updateFavoritesCollapse);

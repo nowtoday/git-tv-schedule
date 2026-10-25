@@ -267,6 +267,21 @@ h1 {
   gap: 12px;
 }
 
+.rerun-filter {
+  display: flex;
+  min-height: 38px;
+  align-items: center;
+  gap: 7px;
+  color: #4f5b70;
+  font-size: 13px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.rerun-filter input {
+  accent-color: #5868dc;
+}
+
 .filter-button,
 select {
   min-height: 38px;
