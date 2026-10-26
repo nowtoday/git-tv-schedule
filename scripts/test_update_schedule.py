@@ -1,10 +1,13 @@
 import unittest
+from datetime import date
 
 from scripts.update_schedule import (
+    day_updated_today,
     extract_metadata,
     merge_schedule,
     parse_cell,
     parse_sheet,
+    should_skip_scheduled_refresh,
     updated_day_timestamps,
 )
 
@@ -161,6 +164,37 @@ class ScheduleParserTests(unittest.TestCase):
 
         self.assertEqual(timestamps["월"], "2026-10-23T18:00:00Z")
         self.assertEqual(timestamps["토"], "2026-10-24T18:00:00Z")
+
+    def test_day_updated_today_uses_korean_calendar_date(self):
+        schedule = {
+            "updatedAtByDay": {
+                "월": "2026-10-26T14:59:00Z",
+                "화": "2026-10-26T15:01:00Z",
+            }
+        }
+
+        self.assertTrue(day_updated_today(schedule, "월", date(2026, 10, 26)))
+        self.assertFalse(day_updated_today(schedule, "월", date(2026, 10, 27)))
+        self.assertTrue(day_updated_today(schedule, "화", date(2026, 10, 27)))
+
+    def test_day_updated_today_falls_back_to_legacy_timestamp(self):
+        schedule = {"generatedAt": "2026-10-26T15:01:00Z"}
+
+        self.assertTrue(day_updated_today(schedule, "화", date(2026, 10, 27)))
+
+    def test_only_scheduled_runs_skip_when_today_is_already_updated(self):
+        schedule = {"updatedAtByDay": {"화": "2026-10-26T15:01:00Z"}}
+
+        self.assertTrue(
+            should_skip_scheduled_refresh(
+                schedule, "화", date(2026, 10, 27), "schedule"
+            )
+        )
+        self.assertFalse(
+            should_skip_scheduled_refresh(
+                schedule, "화", date(2026, 10, 27), "workflow_dispatch"
+            )
+        )
 
 
 if __name__ == "__main__":

@@ -1,8 +1,9 @@
 import csv
 import json
+import os
 import re
 import tempfile
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 from pathlib import Path
 from urllib.request import Request, urlopen
 from zoneinfo import ZoneInfo
@@ -159,6 +160,24 @@ def updated_day_timestamps(previous, programs, day, refreshed_at):
     return timestamps
 
 
+def day_updated_today(previous, day, today):
+    day_timestamps = previous.get("updatedAtByDay", {})
+    updated_at = day_timestamps.get(day) if isinstance(day_timestamps, dict) else None
+    if updated_at is None:
+        updated_at = previous.get("generatedAt")
+    if not isinstance(updated_at, str):
+        return False
+
+    timestamp = datetime.fromisoformat(updated_at.replace("Z", "+00:00"))
+    if timestamp.tzinfo is None:
+        raise ValueError(f"{day}요일 갱신 시각에 시간대 정보가 없습니다.")
+    return timestamp.astimezone(ZoneInfo("Asia/Seoul")).date() == today
+
+
+def should_skip_scheduled_refresh(previous, day, today, event_name):
+    return event_name == "schedule" and day_updated_today(previous, day, today)
+
+
 def write_schedule(programs, updated_at_by_day, generated_at):
     schedule = {
         "version": 1,
@@ -176,18 +195,26 @@ def write_schedule(programs, updated_at_by_day, generated_at):
 
 
 def main():
-    day_index = datetime.now(ZoneInfo("Asia/Seoul")).weekday()
+    now_korea = datetime.now(ZoneInfo("Asia/Seoul"))
+    day_index = now_korea.weekday()
     day = DAYS[day_index]
+    try:
+        previous = json.loads(SCHEDULE_PATH.read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        previous = {}
+
+    if should_skip_scheduled_refresh(
+        previous, day, now_korea.date(), os.environ.get("GITHUB_EVENT_NAME")
+    ):
+        print(f"{day}요일 편성이 오늘 이미 갱신되어 있어 이번 예약 실행은 건너뜁니다.")
+        return
+
     todays_programs = []
     for gid in SHEET_GIDS:
         todays_programs.extend(parse_sheet(fetch_sheet(gid), day))
     if not todays_programs:
         raise RuntimeError(f"Google Sheets에서 {day}요일 편성을 찾지 못했습니다.")
 
-    try:
-        previous = json.loads(SCHEDULE_PATH.read_text(encoding="utf-8"))
-    except FileNotFoundError:
-        previous = {}
     accumulated = merge_schedule(previous, todays_programs, day)
     refreshed_at = datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
     updated_at_by_day = updated_day_timestamps(previous, accumulated, day, refreshed_at)
