@@ -8,8 +8,7 @@ on:
       - ".github/workflows/update-schedule.yml"
       - "scripts/**"
   schedule:
-    - cron: "*/5 15 * * *"
-    - cron: "0 16 * * *"
+    - cron: "7-57/5 15 * * *"
   workflow_dispatch:
 
 concurrency:
@@ -23,6 +22,14 @@ jobs:
   update-schedule:
     runs-on: ubuntu-latest
     steps:
+      - name: Log workflow trigger
+        env:
+          SCHEDULE_CRON: ${{ github.event.schedule }}
+        run: |
+          echo "event=${GITHUB_EVENT_NAME}"
+          echo "schedule_cron=${SCHEDULE_CRON:-not-applicable}"
+          echo "run_started_at_utc=$(date -u --iso-8601=seconds)"
+          echo "run_started_at_kst=$(TZ=Asia/Seoul date --iso-8601=seconds)"
       - name: Check out repository
         uses: actions/checkout@v4
       - name: Update to latest main
