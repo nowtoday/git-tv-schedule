@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-28T15:42:08Z",
+  "generatedAt": "2026-10-29T07:33:44Z",
   "updatedAtByDay": {
     "월": "2026-10-25T17:01:10Z",
     "화": "2026-10-26T16:25:42Z",
     "수": "2026-10-27T16:40:47Z",
-    "목": "2026-10-28T15:42:08Z",
+    "목": "2026-10-29T07:33:44Z",
     "토": "2026-10-24T12:27:57Z",
     "일": "2026-10-24T15:50:24Z"
   },
@@ -26457,21 +26457,6 @@
     },
     {
       "day": "목",
-      "time": "18:50",
-      "channel": "tvN",
-      "title": "적과의 동거 22회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": false,
-        "hasSubtitles": false,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 12
-      }
-    },
-    {
-      "day": "목",
       "time": "18:55",
       "channel": "KBS joy",
       "title": "무엇이든 물어보살 387회",
@@ -26483,6 +26468,21 @@
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
         "ageRating": 15
+      }
+    },
+    {
+      "day": "목",
+      "time": "18:55",
+      "channel": "tvN",
+      "title": "적과의 동거 22회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": false,
+        "hasSubtitles": false,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 12
       }
     },
     {
@@ -26849,7 +26849,7 @@
       "day": "목",
       "time": "20:00",
       "channel": "tvN",
-      "title": "언더커버 셰프 - 써니&MZ 선배 다시보기",
+      "title": "언더커버 셰프 - 써니&MZ 선배 다시보기 1회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -27102,21 +27102,6 @@
     },
     {
       "day": "목",
-      "time": "20:50",
-      "channel": "tvN",
-      "title": "언더커버 셰프 : 멀리서 찾아온 벗 1회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": false,
-        "hasSubtitles": false,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "목",
       "time": "21:00",
       "channel": "EBS2",
       "title": "지식채널e(1)",
@@ -27203,6 +27188,21 @@
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
         "ageRating": null
+      }
+    },
+    {
+      "day": "목",
+      "time": "21:00",
+      "channel": "tvN",
+      "title": "언더커버 셰프 : 멀리서 찾아온 벗 1회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": false,
+        "hasSubtitles": false,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
       }
     },
     {
@@ -27702,21 +27702,6 @@
     },
     {
       "day": "목",
-      "time": "23:00",
-      "channel": "tvN",
-      "title": "십오야 골든벨 4회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": false,
-        "hasSubtitles": false,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "목",
       "time": "23:05",
       "channel": "EBS2",
       "title": "EBS 비즈니스 리뷰",
@@ -27728,6 +27713,21 @@
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
         "ageRating": null
+      }
+    },
+    {
+      "day": "목",
+      "time": "23:05",
+      "channel": "tvN",
+      "title": "십오야 골든벨 4회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": false,
+        "hasSubtitles": false,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
       }
     },
     {
