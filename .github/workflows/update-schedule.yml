@@ -8,8 +8,8 @@ on:
       - ".github/workflows/update-schedule.yml"
       - "scripts/**"
   schedule:
-    - cron: "30 14 * * *"
-    - cron: "50 14 * * *"
+    - cron: "0 13 * * *"
+    - cron: "0 14 * * *"
     - cron: "7-57/5 15 * * *"
   workflow_dispatch:
 
