@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-30T16:34:15Z",
+  "generatedAt": "2026-10-31T17:31:12Z",
   "updatedAtByDay": {
     "월": "2026-10-25T17:01:10Z",
     "화": "2026-10-26T16:25:42Z",
@@ -8,7 +8,7 @@
     "목": "2026-10-29T07:33:44Z",
     "금": "2026-10-29T16:23:10Z",
     "토": "2026-10-30T16:34:15Z",
-    "일": "2026-10-24T15:50:24Z"
+    "일": "2026-10-31T17:31:12Z"
   },
   "programs": [
     {
@@ -41144,51 +41144,6 @@
     {
       "day": "일",
       "time": "00:00",
-      "channel": "CH W",
-      "title": "수정의 고동 ~살인 분석반~ 3회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": false,
-        "hasSubtitles": false,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 19
-      }
-    },
-    {
-      "day": "일",
-      "time": "00:00",
-      "channel": "JTBC2",
-      "title": "[첫 방송]파이널 테이블 1회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": false,
-        "hasSubtitles": true,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "일",
-      "time": "00:00",
-      "channel": "KBS joy",
-      "title": "더 시즌즈-성시경의 고막남친 28회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": false,
-        "hasSubtitles": true,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "일",
-      "time": "00:00",
       "channel": "KBS1",
       "title": "KBS 뉴스",
       "metadata": {
@@ -41204,8 +41159,23 @@
     {
       "day": "일",
       "time": "00:00",
+      "channel": "MBN",
+      "title": "속풀이쇼 동치미 2부 725회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": false,
+        "hasSubtitles": true,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
+      }
+    },
+    {
+      "day": "일",
+      "time": "00:00",
       "channel": "TV 조선",
-      "title": "열린비평 TV를 말하다 918회",
+      "title": "열린비평 TV를 말하다 919회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -41220,7 +41190,7 @@
       "day": "일",
       "time": "00:00",
       "channel": "채널A",
-      "title": "강철지구 멕시코 스페셜 1회",
+      "title": "브랜딩 코리아 18회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -41229,6 +41199,36 @@
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
         "ageRating": null
+      }
+    },
+    {
+      "day": "일",
+      "time": "00:00",
+      "channel": "코미디TV",
+      "title": "놀면 뭐하니? 330회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": true,
+        "hasSubtitles": false,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
+      }
+    },
+    {
+      "day": "일",
+      "time": "00:05",
+      "channel": "CH W",
+      "title": "수정의 고동 ~살인 분석반~ 5회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": false,
+        "hasSubtitles": false,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 19
       }
     },
     {
@@ -41250,7 +41250,7 @@
       "day": "일",
       "time": "00:10",
       "channel": "JTBC",
-      "title": "연애전쟁 17회",
+      "title": "이혼숙려캠프 106회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -41265,22 +41265,7 @@
       "day": "일",
       "time": "00:10",
       "channel": "KBS1",
-      "title": "2026 아이치-나고야 장애인 아시안게임",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": true,
-        "isRerun": false,
-        "hasSubtitles": true,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": true,
-        "ageRating": null
-      }
-    },
-    {
-      "day": "일",
-      "time": "00:10",
-      "channel": "MBN",
-      "title": "속풀이쇼 동치미 2부 724회",
+      "title": "KBS 스포츠 중계석",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -41288,14 +41273,14 @@
         "hasSubtitles": true,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
-        "ageRating": 15
+        "ageRating": null
       }
     },
     {
       "day": "일",
-      "time": "00:10",
+      "time": "00:15",
       "channel": "O tvN",
-      "title": "나의 유죄인간 1회",
+      "title": "나의 유죄인간 3회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -41310,26 +41295,11 @@
       "day": "일",
       "time": "00:30",
       "channel": "SBS",
-      "title": "런닝맨",
+      "title": "케이팝 올스타즈 in 멕시코",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": true,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "일",
-      "time": "00:30",
-      "channel": "tvN",
-      "title": "십오야 골든벨 3회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": true,
+        "isRerun": false,
         "hasSubtitles": true,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
@@ -41340,58 +41310,28 @@
       "day": "일",
       "time": "00:30",
       "channel": "채널A",
-      "title": "잘 살면 좋잖아 27회",
+      "title": "알아야산다 59회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
         "isRerun": true,
         "hasSubtitles": true,
-        "hasAudioDescription": true,
+        "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
         "ageRating": null
       }
     },
     {
       "day": "일",
-      "time": "00:35",
-      "channel": "코미디TV",
-      "title": "놀면 뭐하니? 329회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": false,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "일",
       "time": "00:40",
       "channel": "MBN",
-      "title": "상남자의 여행법 3회",
+      "title": "상남자의 여행법 in 대만 4회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
         "isRerun": true,
         "hasSubtitles": true,
         "hasAudioDescription": true,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "일",
-      "time": "00:43",
-      "channel": "E채널",
-      "title": "나 혼자 산다 657회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": true,
-        "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
         "ageRating": 15
       }
@@ -41413,6 +41353,51 @@
     },
     {
       "day": "일",
+      "time": "00:45",
+      "channel": "tvN",
+      "title": "언더커버 셰프 : 멀리서 찾아온 벗 1회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": true,
+        "hasSubtitles": true,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
+      }
+    },
+    {
+      "day": "일",
+      "time": "00:53",
+      "channel": "E채널",
+      "title": "나 혼자 산다 658회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": true,
+        "hasSubtitles": true,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
+      }
+    },
+    {
+      "day": "일",
+      "time": "00:55",
+      "channel": "EBS1",
+      "title": "위대한 수업, 그레이트 마인즈 (1~5강)>",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": false,
+        "hasSubtitles": true,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": null
+      }
+    },
+    {
+      "day": "일",
       "time": "00:55",
       "channel": "OBS 경인TV",
       "title": "당신이 있는 그곳 오페라 하우스",
@@ -41429,23 +41414,23 @@
     {
       "day": "일",
       "time": "01:00",
-      "channel": "CH W",
-      "title": "극도천하포무 4회",
+      "channel": "MBC",
+      "title": "라이어 2회",
       "metadata": {
-        "videoQuality": "HD",
+        "videoQuality": "UHD",
         "isLive": false,
-        "isRerun": false,
-        "hasSubtitles": false,
-        "hasAudioDescription": false,
+        "isRerun": true,
+        "hasSubtitles": true,
+        "hasAudioDescription": true,
         "hasKoreanSignLanguage": false,
-        "ageRating": 19
+        "ageRating": 15
       }
     },
     {
       "day": "일",
       "time": "01:00",
       "channel": "TV 조선",
-      "title": "한 컷의 비밀 50회",
+      "title": "한 컷의 비밀 51회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -41459,53 +41444,23 @@
     {
       "day": "일",
       "time": "01:05",
-      "channel": "MBC",
-      "title": "라이어 프리미어",
+      "channel": "CH W",
+      "title": "야쿠자 경전 4회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
         "isRerun": false,
-        "hasSubtitles": true,
+        "hasSubtitles": false,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
-        "ageRating": 15
+        "ageRating": 19
       }
     },
     {
       "day": "일",
-      "time": "01:10",
-      "channel": "KBS1",
-      "title": "생로병사의 비밀",
-      "metadata": {
-        "videoQuality": "UHD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": true,
-        "hasAudioDescription": true,
-        "hasKoreanSignLanguage": false,
-        "ageRating": null
-      }
-    },
-    {
-      "day": "일",
-      "time": "01:20",
-      "channel": "MBC",
-      "title": "서프라이즈 미스터리 살롱 스페셜",
-      "metadata": {
-        "videoQuality": "UHD",
-        "isLive": false,
-        "isRerun": false,
-        "hasSubtitles": true,
-        "hasAudioDescription": true,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "일",
-      "time": "01:22",
+      "time": "01:16",
       "channel": "JTBC2",
-      "title": "[첫 방송]파이널 테이블 1회",
+      "title": "[연속방송]파이널 테이블 3회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -41519,28 +41474,13 @@
     {
       "day": "일",
       "time": "01:30",
-      "channel": "EBS1",
-      "title": "위대한 수업, 그레이트 마인즈 (1~4강)>",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": false,
-        "hasSubtitles": true,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": null
-      }
-    },
-    {
-      "day": "일",
-      "time": "01:30",
-      "channel": "MBC every1",
-      "title": "나 혼자 산다 670회",
+      "channel": "KBS joy",
+      "title": "운명네컷 5회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
         "isRerun": true,
-        "hasSubtitles": true,
+        "hasSubtitles": false,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
         "ageRating": 15
@@ -41550,7 +41490,7 @@
       "day": "일",
       "time": "01:30",
       "channel": "O tvN",
-      "title": "나의 유죄인간 2회",
+      "title": "나의 유죄인간 4회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -41565,7 +41505,7 @@
       "day": "일",
       "time": "01:30",
       "channel": "채널A",
-      "title": "채널A 스페셜 하늘을 날다 1회",
+      "title": "채널A 스페셜 앤틱 로드쇼 시즌48 2회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -41578,9 +41518,39 @@
     },
     {
       "day": "일",
+      "time": "01:30",
+      "channel": "코미디TV",
+      "title": "니돈내산 독박투어4 46회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": false,
+        "hasSubtitles": false,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
+      }
+    },
+    {
+      "day": "일",
+      "time": "01:39",
+      "channel": "MBC every1",
+      "title": "나 혼자 산다 671회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": true,
+        "hasSubtitles": true,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
+      }
+    },
+    {
+      "day": "일",
       "time": "01:40",
       "channel": "JTBC",
-      "title": "파이널 테이블 1회",
+      "title": "파이널 테이블 3회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -41594,36 +41564,36 @@
     {
       "day": "일",
       "time": "01:40",
-      "channel": "KBS joy",
-      "title": "운명네컷 4회",
+      "channel": "TV 조선",
+      "title": "신 성공시대 마이웨이 13회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
         "isRerun": true,
-        "hasSubtitles": false,
-        "hasAudioDescription": false,
+        "hasSubtitles": true,
+        "hasAudioDescription": true,
         "hasKoreanSignLanguage": false,
-        "ageRating": 19
+        "ageRating": 15
       }
     },
     {
       "day": "일",
-      "time": "01:40",
-      "channel": "TV 조선",
-      "title": "살맛나는 세상 874회",
+      "time": "01:50",
+      "channel": "SBS",
+      "title": "문화가중계",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
-        "isRerun": false,
+        "isRerun": true,
         "hasSubtitles": true,
-        "hasAudioDescription": true,
+        "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
         "ageRating": null
       }
     },
     {
       "day": "일",
-      "time": "02:00",
+      "time": "01:55",
       "channel": "KBS1",
       "title": "KBS걸작 다큐멘터리",
       "metadata": {
@@ -41640,7 +41610,7 @@
       "day": "일",
       "time": "02:00",
       "channel": "MBN",
-      "title": "[MBN 스페셜 다큐] 세계 최고의 크루즈 여행 1회",
+      "title": "[MBN 스페셜 다큐] 세계 최고의 크루즈 여행 5회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -41653,29 +41623,29 @@
     },
     {
       "day": "일",
-      "time": "02:00",
-      "channel": "SBS",
-      "title": "문화가중계",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": true,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": null
-      }
-    },
-    {
-      "day": "일",
-      "time": "02:05",
-      "channel": "코미디TV",
-      "title": "니돈내산 독박투어4 45회",
+      "time": "02:30",
+      "channel": "CH W",
+      "title": "W랭귀지 - 중국어 203회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
         "isRerun": false,
         "hasSubtitles": false,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 12
+      }
+    },
+    {
+      "day": "일",
+      "time": "02:35",
+      "channel": "KBS joy",
+      "title": "말자쇼 40회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": true,
+        "hasSubtitles": true,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
         "ageRating": 15
@@ -41683,46 +41653,16 @@
     },
     {
       "day": "일",
-      "time": "02:10",
-      "channel": "tvN",
-      "title": "무쇠소녀단 3회",
+      "time": "02:36",
+      "channel": "JTBC2",
+      "title": "[최신]아는 형님 549회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
         "isRerun": true,
-        "hasSubtitles": true,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": null
-      }
-    },
-    {
-      "day": "일",
-      "time": "02:25",
-      "channel": "CH W",
-      "title": "W랭귀지 - 중국어 174회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": false,
         "hasSubtitles": false,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
-        "ageRating": 12
-      }
-    },
-    {
-      "day": "일",
-      "time": "02:31",
-      "channel": "E채널",
-      "title": "용감한 형사들 2 8회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": true,
-        "hasAudioDescription": true,
-        "hasKoreanSignLanguage": true,
         "ageRating": 15
       }
     },
@@ -41730,7 +41670,7 @@
       "day": "일",
       "time": "02:40",
       "channel": "TV 조선",
-      "title": "싱싱! 고향별곡 301회",
+      "title": "싱싱! 고향별곡 306회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -41738,57 +41678,27 @@
         "hasSubtitles": true,
         "hasAudioDescription": true,
         "hasKoreanSignLanguage": false,
-        "ageRating": null
+        "ageRating": 12
       }
     },
     {
       "day": "일",
-      "time": "02:40",
-      "channel": "채널A",
-      "title": "채널A 스페셜 하늘을 날다 2회",
+      "time": "02:42",
+      "channel": "E채널",
+      "title": "재벌X형사 2 5회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
-        "isRerun": false,
+        "isRerun": true,
         "hasSubtitles": true,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
-        "ageRating": null
+        "ageRating": 15
       }
     },
     {
       "day": "일",
       "time": "02:45",
-      "channel": "JTBC2",
-      "title": "[최신]아는 형님 548회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": false,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "일",
-      "time": "02:50",
-      "channel": "KBS joy",
-      "title": "말자쇼 39회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": true,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "일",
-      "time": "02:50",
       "channel": "KBS1",
       "title": "걸어서 세계속으로 트래블홀릭",
       "metadata": {
@@ -41805,7 +41715,7 @@
       "day": "일",
       "time": "02:50",
       "channel": "O tvN",
-      "title": "링크 10회",
+      "title": "싸이코패스 다이어리 5회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -41818,9 +41728,39 @@
     },
     {
       "day": "일",
+      "time": "02:50",
+      "channel": "채널A",
+      "title": "채널A 스페셜 훌륭한 집의 변신 4회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": false,
+        "hasSubtitles": true,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": null
+      }
+    },
+    {
+      "day": "일",
+      "time": "02:55",
+      "channel": "tvN",
+      "title": "텐트 밖은 유럽 노르웨이편 1회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": true,
+        "hasSubtitles": true,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": true,
+        "ageRating": 15
+      }
+    },
+    {
+      "day": "일",
       "time": "03:00",
       "channel": "JTBC",
-      "title": "JTBC 스페셜 다큐멘터리 <10가지 실수 5부> 4242회",
+      "title": "JTBC 스페셜 다큐멘터리 4254회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -41835,7 +41775,7 @@
       "day": "일",
       "time": "03:00",
       "channel": "MBN",
-      "title": "[MBN 스페셜 다큐] 세계 최고의 크루즈 여행 2회",
+      "title": "[MBN 스페셜 다큐] 세계 최고의 크루즈 여행 6회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -41848,24 +41788,39 @@
     },
     {
       "day": "일",
-      "time": "03:05",
-      "channel": "MBC every1",
-      "title": "일당백집사 3회",
+      "time": "03:00",
+      "channel": "코미디TV",
+      "title": "오늘부터 운동뚱 65회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
         "isRerun": true,
         "hasSubtitles": false,
-        "hasAudioDescription": true,
+        "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
         "ageRating": 15
       }
     },
     {
       "day": "일",
-      "time": "03:25",
+      "time": "03:11",
+      "channel": "MBC every1",
+      "title": "어서와~ 한국은 처음이지? 301회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": true,
+        "hasSubtitles": false,
+        "hasAudioDescription": true,
+        "hasKoreanSignLanguage": true,
+        "ageRating": 15
+      }
+    },
+    {
+      "day": "일",
+      "time": "03:30",
       "channel": "CH W",
-      "title": "W랭귀지 - 중국어 175회",
+      "title": "W랭귀지 - 중국어 204회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -41878,13 +41833,13 @@
     },
     {
       "day": "일",
-      "time": "03:30",
+      "time": "03:35",
       "channel": "코미디TV",
-      "title": "닥터신 7회",
+      "title": "밥값 하는 남자들 4회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
-        "isRerun": false,
+        "isRerun": true,
         "hasSubtitles": false,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
@@ -41894,8 +41849,23 @@
     {
       "day": "일",
       "time": "03:40",
+      "channel": "KBS1",
+      "title": "국가유산순례 드오",
+      "metadata": {
+        "videoQuality": "UHD",
+        "isLive": false,
+        "isRerun": true,
+        "hasSubtitles": false,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": null
+      }
+    },
+    {
+      "day": "일",
+      "time": "03:40",
       "channel": "TV 조선",
-      "title": "눈에 띄는 그녀들 5 30회",
+      "title": "눈에 띄는 그녀들 5 35회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -41909,40 +41879,10 @@
     {
       "day": "일",
       "time": "03:45",
-      "channel": "E채널",
-      "title": "시골에 간 도시 Z 하이라이트 3회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": false,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "일",
-      "time": "03:45",
       "channel": "KBS1",
       "title": "아침마당",
       "metadata": {
         "videoQuality": "UHD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": true,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": null
-      }
-    },
-    {
-      "day": "일",
-      "time": "03:50",
-      "channel": "tvN",
-      "title": "무쇠소녀단 4회",
-      "metadata": {
-        "videoQuality": "HD",
         "isLive": false,
         "isRerun": true,
         "hasSubtitles": true,
@@ -41968,9 +41908,24 @@
     },
     {
       "day": "일",
+      "time": "03:57",
+      "channel": "E채널",
+      "title": "재벌X형사 2 6회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": true,
+        "hasSubtitles": true,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
+      }
+    },
+    {
+      "day": "일",
       "time": "04:00",
       "channel": "JTBC",
-      "title": "JTBC 스페셜 다큐멘터리 4243회",
+      "title": "JTBC 스페셜 다큐멘터리 4255회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -41984,23 +41939,8 @@
     {
       "day": "일",
       "time": "04:00",
-      "channel": "KBS joy",
-      "title": "걸어서 세계속으로 트래블홀릭 97회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": false,
-        "hasSubtitles": true,
-        "hasAudioDescription": true,
-        "hasKoreanSignLanguage": true,
-        "ageRating": null
-      }
-    },
-    {
-      "day": "일",
-      "time": "04:00",
       "channel": "MBN",
-      "title": "엄지의 제왕 베스트 12회",
+      "title": "엄지의 제왕 베스트 13회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -42015,7 +41955,7 @@
       "day": "일",
       "time": "04:00",
       "channel": "채널A",
-      "title": "채널A 스페셜 과학자들 10회",
+      "title": "채널A 스페셜 과학자들 13회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -42028,24 +41968,24 @@
     },
     {
       "day": "일",
-      "time": "04:04",
-      "channel": "E채널",
-      "title": "하나부터 열까지 11회",
+      "time": "04:05",
+      "channel": "KBS joy",
+      "title": "걸어서 세계속으로 트래블홀릭 104회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
-        "isRerun": true,
+        "isRerun": false,
         "hasSubtitles": true,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
+        "hasAudioDescription": true,
+        "hasKoreanSignLanguage": true,
+        "ageRating": null
       }
     },
     {
       "day": "일",
       "time": "04:10",
       "channel": "O tvN",
-      "title": "링크 11회",
+      "title": "싸이코패스 다이어리 6회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -42058,24 +41998,24 @@
     },
     {
       "day": "일",
-      "time": "04:16",
-      "channel": "MBC every1",
-      "title": "히든 아이 라이브이슈 47회",
+      "time": "04:21",
+      "channel": "JTBC2",
+      "title": "[펜싱 금메달-오상욱]냉장고를 부탁해 since 2014 94회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
         "isRerun": true,
         "hasSubtitles": false,
-        "hasAudioDescription": true,
-        "hasKoreanSignLanguage": true,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
         "ageRating": 15
       }
     },
     {
       "day": "일",
-      "time": "04:20",
+      "time": "04:30",
       "channel": "CH W",
-      "title": "백문일견 54회",
+      "title": "백문일견 56회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -42089,23 +42029,8 @@
     {
       "day": "일",
       "time": "04:30",
-      "channel": "JTBC2",
-      "title": "[코쿤]냉장고를 부탁해 since 2014 93회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": false,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "일",
-      "time": "04:30",
       "channel": "채널A",
-      "title": "채널A 스페셜 X파일: 외계인의 흔적 시즌17 9회",
+      "title": "채널A 스페셜 눈에 띄는 그녀들 8 10회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -42113,7 +42038,7 @@
         "hasSubtitles": true,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
-        "ageRating": 15
+        "ageRating": 12
       }
     },
     {
@@ -42133,9 +42058,9 @@
     },
     {
       "day": "일",
-      "time": "04:55",
+      "time": "04:45",
       "channel": "코미디TV",
-      "title": "닥터신 8회",
+      "title": "닥터신 11회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -42148,9 +42073,24 @@
     },
     {
       "day": "일",
+      "time": "04:50",
+      "channel": "tvN",
+      "title": "십오야 골든벨 4회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": true,
+        "hasSubtitles": true,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
+      }
+    },
+    {
+      "day": "일",
       "time": "05:00",
       "channel": "CH W",
-      "title": "W랭귀지 - 중국어 176회",
+      "title": "W랭귀지 - 중국어 205회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -42174,21 +42114,6 @@
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
         "ageRating": null
-      }
-    },
-    {
-      "day": "일",
-      "time": "05:00",
-      "channel": "KBS joy",
-      "title": "1박 2일 시즌4 346회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": true,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
       }
     },
     {
@@ -42225,7 +42150,7 @@
       "day": "일",
       "time": "05:00",
       "channel": "MBC",
-      "title": "다문화 활력 프로젝트 다정다감",
+      "title": "푸른백세 어영차 바다야",
       "metadata": {
         "videoQuality": "UHD",
         "isLive": false,
@@ -42240,11 +42165,11 @@
       "day": "일",
       "time": "05:00",
       "channel": "SBS",
-      "title": "좋은아침 스페셜",
+      "title": "오늘부터, 인생 2막",
       "metadata": {
         "videoQuality": "UHD",
         "isLive": false,
-        "isRerun": false,
+        "isRerun": true,
         "hasSubtitles": true,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
@@ -42255,7 +42180,7 @@
       "day": "일",
       "time": "05:00",
       "channel": "TV 조선",
-      "title": "질병의 법칙 124회",
+      "title": "질병의 법칙 125회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -42268,9 +42193,54 @@
     },
     {
       "day": "일",
-      "time": "05:06",
+      "time": "05:00",
+      "channel": "채널A",
+      "title": "채널A 스페셜 호주의 이색 동물들 시즌 2 8회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": false,
+        "hasSubtitles": true,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": null
+      }
+    },
+    {
+      "day": "일",
+      "time": "05:03",
       "channel": "MBC every1",
-      "title": "출발! 비디오여행 1657회",
+      "title": "드라마 연구소 2회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": true,
+        "hasSubtitles": false,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
+      }
+    },
+    {
+      "day": "일",
+      "time": "05:05",
+      "channel": "E채널",
+      "title": "시골에 간 도시 Z 하이라이트 3회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": true,
+        "hasSubtitles": false,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
+      }
+    },
+    {
+      "day": "일",
+      "time": "05:05",
+      "channel": "KBS joy",
+      "title": "1박 2일 시즌4 347회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -42285,7 +42255,7 @@
       "day": "일",
       "time": "05:10",
       "channel": "JTBC",
-      "title": "쌀롱하우스 253회",
+      "title": "쌀롱하우스 254회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -42313,14 +42283,14 @@
     },
     {
       "day": "일",
-      "time": "05:14",
+      "time": "05:16",
       "channel": "E채널",
-      "title": "끝까지 간다 독박투어 21회",
+      "title": "놀면 뭐하니? 339회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
         "isRerun": true,
-        "hasSubtitles": false,
+        "hasSubtitles": true,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
         "ageRating": 15
@@ -42330,7 +42300,7 @@
       "day": "일",
       "time": "05:20",
       "channel": "MBN",
-      "title": "재난 대비 이렇게! 128회",
+      "title": "재난 대비 이렇게! 131회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -42343,29 +42313,14 @@
     },
     {
       "day": "일",
-      "time": "05:25",
-      "channel": "O tvN",
-      "title": "지리산 10회",
+      "time": "05:22",
+      "channel": "MBC every1",
+      "title": "출발! 비디오여행 1659회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
         "isRerun": true,
         "hasSubtitles": true,
-        "hasAudioDescription": true,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "일",
-      "time": "05:25",
-      "channel": "tvN",
-      "title": "언니네 산지직송3 - 네 식구 산지 라이프",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": false,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
         "ageRating": 15
@@ -42390,7 +42345,7 @@
       "day": "일",
       "time": "05:30",
       "channel": "채널A",
-      "title": "건강스페셜 한양촌 44회",
+      "title": "생존의 단서 블랙박스 34회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -42399,6 +42354,21 @@
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
         "ageRating": null
+      }
+    },
+    {
+      "day": "일",
+      "time": "05:35",
+      "channel": "O tvN",
+      "title": "언니네 산지직송3-네 식구 산지 라이프",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": true,
+        "hasSubtitles": false,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
       }
     },
     {
@@ -42420,7 +42390,7 @@
       "day": "일",
       "time": "05:40",
       "channel": "MBN",
-      "title": "휴먼다큐 사노라면 762회",
+      "title": "휴먼다큐 사노라면 763회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -42433,9 +42403,9 @@
     },
     {
       "day": "일",
-      "time": "05:57",
+      "time": "05:52",
       "channel": "JTBC2",
-      "title": "[첫 방송]파이널 테이블 1회",
+      "title": "파이널 테이블 3회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -42450,7 +42420,7 @@
       "day": "일",
       "time": "06:00",
       "channel": "CH W",
-      "title": "W랭귀지 - 중국어 177회",
+      "title": "W랭귀지 - 일본어 239회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -42480,9 +42450,9 @@
       "day": "일",
       "time": "06:00",
       "channel": "KBS1",
-      "title": "K-슈퍼푸드 기획 생로병사의 비밀 미리보기",
+      "title": "생활의 발견 스페셜",
       "metadata": {
-        "videoQuality": "UHD",
+        "videoQuality": "HD",
         "isLive": false,
         "isRerun": true,
         "hasSubtitles": true,
@@ -42540,7 +42510,7 @@
       "day": "일",
       "time": "06:00",
       "channel": "TV 조선",
-      "title": "메디컬 스토리 주어진 시간 30회",
+      "title": "메디컬 스토리 주어진 시간 특별판 5회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -42555,7 +42525,7 @@
       "day": "일",
       "time": "06:05",
       "channel": "JTBC",
-      "title": "이토록 위대한 몸 스페셜 8회",
+      "title": "친절한 진료실 스페셜 65회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -42569,23 +42539,8 @@
     {
       "day": "일",
       "time": "06:05",
-      "channel": "KBS1",
-      "title": "국가유산순례 드오 16회",
-      "metadata": {
-        "videoQuality": "UHD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": false,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": null
-      }
-    },
-    {
-      "day": "일",
-      "time": "06:05",
       "channel": "tvN",
-      "title": "70억의 선택 209회",
+      "title": "70억의 선택 210회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -42613,13 +42568,43 @@
     },
     {
       "day": "일",
-      "time": "06:11",
+      "time": "06:12",
       "channel": "MBC every1",
-      "title": "출발! 비디오여행 1658회",
+      "title": "파하, 최불암입니다 <1부>",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
         "isRerun": false,
+        "hasSubtitles": true,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 12
+      }
+    },
+    {
+      "day": "일",
+      "time": "06:15",
+      "channel": "코미디TV",
+      "title": "닥터신 12회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": false,
+        "hasSubtitles": false,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
+      }
+    },
+    {
+      "day": "일",
+      "time": "06:25",
+      "channel": "KBS joy",
+      "title": "신상출시 편스토랑 343회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": true,
         "hasSubtitles": true,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
@@ -42628,39 +42613,9 @@
     },
     {
       "day": "일",
-      "time": "06:20",
-      "channel": "코미디TV",
-      "title": "어디든 간대호 12회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": false,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 12
-      }
-    },
-    {
-      "day": "일",
-      "time": "06:25",
-      "channel": "KBS joy",
-      "title": "슈퍼맨이 돌아왔다 640회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": true,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 12
-      }
-    },
-    {
-      "day": "일",
       "time": "06:30",
       "channel": "EBS1",
-      "title": "나눔 0700 840회",
+      "title": "나눔 0700 841회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -42690,7 +42645,7 @@
       "day": "일",
       "time": "06:30",
       "channel": "MBN",
-      "title": "특집 다큐 H 줄어드는 건강 수명 면역력으로 늘려라",
+      "title": "바디인사이트 50회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -42698,14 +42653,14 @@
         "hasSubtitles": true,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
-        "ageRating": null
+        "ageRating": 12
       }
     },
     {
       "day": "일",
       "time": "06:30",
       "channel": "채널A",
-      "title": "알아야산다 82회",
+      "title": "알아야산다 42회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -42714,21 +42669,6 @@
         "hasAudioDescription": true,
         "hasKoreanSignLanguage": false,
         "ageRating": null
-      }
-    },
-    {
-      "day": "일",
-      "time": "06:35",
-      "channel": "O tvN",
-      "title": "보검 매직컬-도란도란 사랑방",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": false,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
       }
     },
     {
@@ -42748,6 +42688,21 @@
     },
     {
       "day": "일",
+      "time": "06:49",
+      "channel": "E채널",
+      "title": "나 혼자 산다 658회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": true,
+        "hasSubtitles": true,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
+      }
+    },
+    {
+      "day": "일",
       "time": "06:55",
       "channel": "KBS2",
       "title": "영상앨범 산",
@@ -42763,24 +42718,9 @@
     },
     {
       "day": "일",
-      "time": "06:55",
-      "channel": "O tvN",
-      "title": "100일의 거짓말 5회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": false,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "일",
       "time": "07:00",
       "channel": "CH W",
-      "title": "W랭귀지 - 일본어 206회",
+      "title": "W랭귀지 - 일본어 240회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -42810,7 +42750,7 @@
       "day": "일",
       "time": "07:00",
       "channel": "EBS2",
-      "title": "왕초보 영어 2830회",
+      "title": "왕초보 영어 2835회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -42825,7 +42765,7 @@
       "day": "일",
       "time": "07:00",
       "channel": "JTBC",
-      "title": "애코와 친구들 수리수리 넘버랜드 12회",
+      "title": "코코몽 3 2회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -42833,7 +42773,7 @@
         "hasSubtitles": false,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
-        "ageRating": 7
+        "ageRating": null
       }
     },
     {
@@ -42870,13 +42810,13 @@
       "day": "일",
       "time": "07:00",
       "channel": "OBS 경인TV",
-      "title": "BBC 특별기획",
+      "title": "경기도의회 집단지성토론 집현전",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
-        "isRerun": true,
+        "isRerun": false,
         "hasSubtitles": true,
-        "hasAudioDescription": true,
+        "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
         "ageRating": null
       }
@@ -42900,7 +42840,7 @@
       "day": "일",
       "time": "07:00",
       "channel": "TV 조선",
-      "title": "건강박사 옹달쌤 36회",
+      "title": "건강박사 옹달쌤 37회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -42913,14 +42853,14 @@
     },
     {
       "day": "일",
-      "time": "07:03",
-      "channel": "E채널",
-      "title": "나 혼자 산다 657회",
+      "time": "07:05",
+      "channel": "O tvN",
+      "title": "100일의 거짓말 7회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
         "isRerun": true,
-        "hasSubtitles": true,
+        "hasSubtitles": false,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
         "ageRating": 15
@@ -42973,17 +42913,17 @@
     },
     {
       "day": "일",
-      "time": "07:10",
-      "channel": "tvN",
-      "title": "슈퍼푸드의 힘 236회",
+      "time": "07:13",
+      "channel": "JTBC2",
+      "title": "[대환장]이혼숙려캠프 106회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
-        "isRerun": false,
+        "isRerun": true,
         "hasSubtitles": false,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
-        "ageRating": 12
+        "ageRating": 15
       }
     },
     {
@@ -43018,17 +42958,32 @@
     },
     {
       "day": "일",
-      "time": "07:17",
-      "channel": "JTBC2",
-      "title": "[대환장]이혼숙려캠프 105회",
+      "time": "07:15",
+      "channel": "tvN",
+      "title": "슈퍼푸드의 힘 237회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
-        "isRerun": true,
+        "isRerun": false,
         "hasSubtitles": false,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
-        "ageRating": 15
+        "ageRating": 12
+      }
+    },
+    {
+      "day": "일",
+      "time": "07:16",
+      "channel": "MBC every1",
+      "title": "파하, 최불암입니다 <2부>",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": false,
+        "hasSubtitles": true,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 12
       }
     },
     {
@@ -43065,7 +43020,7 @@
       "day": "일",
       "time": "07:25",
       "channel": "SBS",
-      "title": "헬로카봇 용사 2",
+      "title": "아쿵다쿵 탐험스쿨",
       "metadata": {
         "videoQuality": "UHD",
         "isLive": false,
@@ -43073,22 +43028,7 @@
         "hasSubtitles": true,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
-        "ageRating": 7
-      }
-    },
-    {
-      "day": "일",
-      "time": "07:26",
-      "channel": "MBC every1",
-      "title": "히든 아이 106회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": true,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
+        "ageRating": null
       }
     },
     {
@@ -43110,7 +43050,7 @@
       "day": "일",
       "time": "07:30",
       "channel": "EBS2",
-      "title": "왕초보 영어 2831회",
+      "title": "왕초보 영어 2836회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -43125,11 +43065,11 @@
       "day": "일",
       "time": "07:30",
       "channel": "JTBC",
-      "title": "중독자들 199회",
+      "title": "중독자들 176회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
-        "isRerun": false,
+        "isRerun": true,
         "hasSubtitles": false,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
@@ -43140,22 +43080,22 @@
       "day": "일",
       "time": "07:30",
       "channel": "MBN",
-      "title": "나는 자연인이다 728회",
+      "title": "메디컬 리포트 완벽한 몸 4회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
-        "isRerun": true,
+        "isRerun": false,
         "hasSubtitles": true,
-        "hasAudioDescription": true,
+        "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
-        "ageRating": null
+        "ageRating": 12
       }
     },
     {
       "day": "일",
       "time": "07:30",
       "channel": "TV 조선",
-      "title": "내 몸을 살리는 발견 유레카 248회",
+      "title": "건강한 집 2 특별판 27회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -43170,30 +43110,15 @@
       "day": "일",
       "time": "07:30",
       "channel": "채널A",
-      "title": "건강스페셜 한양촌 111회",
+      "title": "알아야산다 61회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
         "isRerun": true,
         "hasSubtitles": true,
-        "hasAudioDescription": false,
+        "hasAudioDescription": true,
         "hasKoreanSignLanguage": false,
         "ageRating": null
-      }
-    },
-    {
-      "day": "일",
-      "time": "07:30",
-      "channel": "코미디TV",
-      "title": "밥값 하는 남자들 3회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": false,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
       }
     },
     {
@@ -43214,23 +43139,8 @@
     {
       "day": "일",
       "time": "07:40",
-      "channel": "KBS joy",
-      "title": "신상출시 편스토랑 342회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": true,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "일",
-      "time": "07:40",
       "channel": "MBC",
-      "title": "앙코르 MBC 다큐프라임",
+      "title": "MBC 다큐프라임",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -43258,9 +43168,39 @@
     },
     {
       "day": "일",
+      "time": "07:50",
+      "channel": "KBS joy",
+      "title": "슈퍼맨이 돌아왔다 641회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": true,
+        "hasSubtitles": true,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 12
+      }
+    },
+    {
+      "day": "일",
+      "time": "07:50",
+      "channel": "코미디TV",
+      "title": "맛있는 녀석들 587회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": true,
+        "hasSubtitles": false,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
+      }
+    },
+    {
+      "day": "일",
       "time": "08:00",
       "channel": "CH W",
-      "title": "W 일본어 캠프 29회",
+      "title": "W 일본어 캠프 56회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -43275,7 +43215,7 @@
       "day": "일",
       "time": "08:00",
       "channel": "EBS1",
-      "title": "한글용사 아이야 7회",
+      "title": "한글용사 아이야 8회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -43335,7 +43275,7 @@
       "day": "일",
       "time": "08:15",
       "channel": "EBS1",
-      "title": "한글용사 아이야 8회",
+      "title": "한글용사 아이야 9회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -43364,8 +43304,23 @@
     {
       "day": "일",
       "time": "08:20",
+      "channel": "O tvN",
+      "title": "너의 몸소리가 들려 81회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": false,
+        "hasSubtitles": false,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
+      }
+    },
+    {
+      "day": "일",
+      "time": "08:20",
       "channel": "tvN",
-      "title": "너의 몸소리가 들려 80회",
+      "title": "너의 몸소리가 들려 81회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -43393,21 +43348,6 @@
     },
     {
       "day": "일",
-      "time": "08:25",
-      "channel": "O tvN",
-      "title": "너의 몸소리가 들려 80회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": false,
-        "hasSubtitles": false,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "일",
       "time": "08:30",
       "channel": "EBS1",
       "title": "모여라 딩동댕",
@@ -43425,11 +43365,11 @@
       "day": "일",
       "time": "08:30",
       "channel": "JTBC",
-      "title": "다큐플러스Q 32회",
+      "title": "이토록 위대한 몸 47회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
-        "isRerun": false,
+        "isRerun": true,
         "hasSubtitles": false,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
@@ -43440,22 +43380,22 @@
       "day": "일",
       "time": "08:30",
       "channel": "MBN",
-      "title": "당신이 아픈 사이 41회",
+      "title": "나는 자연인이다 731회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
-        "isRerun": false,
+        "isRerun": true,
         "hasSubtitles": true,
-        "hasAudioDescription": false,
+        "hasAudioDescription": true,
         "hasKoreanSignLanguage": false,
-        "ageRating": 12
+        "ageRating": null
       }
     },
     {
       "day": "일",
       "time": "08:30",
       "channel": "TV 조선",
-      "title": "어떻게 살 것인가? 94회",
+      "title": "어떻게 살 것인가? 95회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -43470,7 +43410,7 @@
       "day": "일",
       "time": "08:30",
       "channel": "채널A",
-      "title": "아이엠닥터 78회",
+      "title": "아이엠닥터 79회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -43479,6 +43419,21 @@
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
         "ageRating": null
+      }
+    },
+    {
+      "day": "일",
+      "time": "08:32",
+      "channel": "MBC every1",
+      "title": "나 혼자 산다 671회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": true,
+        "hasSubtitles": true,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
       }
     },
     {
@@ -43513,21 +43468,6 @@
     },
     {
       "day": "일",
-      "time": "08:35",
-      "channel": "코미디TV",
-      "title": "오늘부터 운동뚱 64회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": false,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "일",
       "time": "08:40",
       "channel": "EBS2",
       "title": "페파 피그",
@@ -43539,6 +43479,21 @@
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
         "ageRating": null
+      }
+    },
+    {
+      "day": "일",
+      "time": "08:47",
+      "channel": "E채널",
+      "title": "전지적 참견 시점 409회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": false,
+        "hasSubtitles": true,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
       }
     },
     {
@@ -43559,12 +43514,12 @@
     {
       "day": "일",
       "time": "08:58",
-      "channel": "E채널",
-      "title": "전지적 참견 시점 408회",
+      "channel": "JTBC2",
+      "title": "파이널 테이블 3회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
-        "isRerun": false,
+        "isRerun": true,
         "hasSubtitles": true,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
@@ -43575,7 +43530,7 @@
       "day": "일",
       "time": "09:00",
       "channel": "CH W",
-      "title": "W 일본어 캠프 30회",
+      "title": "W 일본어 캠프 57회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -43648,24 +43603,9 @@
     },
     {
       "day": "일",
-      "time": "09:05",
+      "time": "09:10",
       "channel": "KBS joy",
-      "title": "영화가 좋다 1028회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": false,
-        "hasSubtitles": true,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "일",
-      "time": "09:09",
-      "channel": "JTBC2",
-      "title": "[첫 방송]파이널 테이블 1회",
+      "title": "영화가 좋다 1029회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -43680,11 +43620,11 @@
       "day": "일",
       "time": "09:15",
       "channel": "EBS1",
-      "title": "로보카 폴리",
+      "title": "티시태시",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
-        "isRerun": true,
+        "isRerun": false,
         "hasSubtitles": false,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
@@ -43710,7 +43650,7 @@
       "day": "일",
       "time": "09:15",
       "channel": "코미디TV",
-      "title": "니돈내산 독박투어4 45회",
+      "title": "니돈내산 독박투어4 46회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -43723,24 +43663,9 @@
     },
     {
       "day": "일",
-      "time": "09:18",
-      "channel": "MBC every1",
-      "title": "나 혼자 산다 670회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": true,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "일",
       "time": "09:25",
       "channel": "JTBC",
-      "title": "지킬박사와 가이드 206회",
+      "title": "지킬박사와 가이드 스페셜 14회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -43753,14 +43678,29 @@
     },
     {
       "day": "일",
-      "time": "09:30",
-      "channel": "EBS1",
-      "title": "기가빌더",
+      "time": "09:25",
+      "channel": "tvN",
+      "title": "시간관찰자, 더 시크릿 9회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
         "isRerun": true,
         "hasSubtitles": true,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 12
+      }
+    },
+    {
+      "day": "일",
+      "time": "09:30",
+      "channel": "EBS1",
+      "title": "엄마 까투리",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": false,
+        "hasSubtitles": false,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
         "ageRating": null
@@ -43785,7 +43725,7 @@
       "day": "일",
       "time": "09:30",
       "channel": "MBC",
-      "title": "오은영 리포트 결혼지옥 스페셜",
+      "title": "추모 특집 앙코르 다큐멘터리 파하 최불암입니다 <2부>",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -43793,14 +43733,14 @@
         "hasSubtitles": true,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
-        "ageRating": 15
+        "ageRating": 12
       }
     },
     {
       "day": "일",
       "time": "09:30",
       "channel": "MBN",
-      "title": "바디인사이트 51회",
+      "title": "당신이 아픈 사이 38회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -43815,7 +43755,7 @@
       "day": "일",
       "time": "09:30",
       "channel": "O tvN",
-      "title": "티벤터뷰 : 100일의 거짓말",
+      "title": "티벤터뷰 7회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -43830,7 +43770,7 @@
       "day": "일",
       "time": "09:30",
       "channel": "SBS",
-      "title": "TV 동물농장",
+      "title": "TV 동물농장 1293회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -43844,23 +43784,8 @@
     {
       "day": "일",
       "time": "09:30",
-      "channel": "tvN",
-      "title": "시간관찰자, 더 시크릿 3회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": true,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 12
-      }
-    },
-    {
-      "day": "일",
-      "time": "09:30",
       "channel": "채널A",
-      "title": "잘 살면 좋잖아 46회",
+      "title": "잘 살면 좋잖아 47회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -43875,7 +43800,7 @@
       "day": "일",
       "time": "09:40",
       "channel": "TV 조선",
-      "title": "인생의 연장전 특별판 87회",
+      "title": "인생의 연장전 특별판 89회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -43920,7 +43845,7 @@
       "day": "일",
       "time": "10:00",
       "channel": "CH W",
-      "title": "W캠퍼스 - 중국어 1회",
+      "title": "W캠퍼스 - 중국어 14회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -43950,11 +43875,11 @@
       "day": "일",
       "time": "10:00",
       "channel": "EBS2",
-      "title": "시간을 달리는 세계사",
+      "title": "엄마 까투리(종합)",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
-        "isRerun": true,
+        "isRerun": false,
         "hasSubtitles": false,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
@@ -43993,9 +43918,9 @@
     },
     {
       "day": "일",
-      "time": "10:15",
-      "channel": "EBS2",
-      "title": "시간을 달리는 세계사",
+      "time": "10:19",
+      "channel": "JTBC2",
+      "title": "[펜싱 금메달-오상욱]냉장고를 부탁해 since 2014 94회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -44003,14 +43928,14 @@
         "hasSubtitles": false,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
-        "ageRating": null
+        "ageRating": 15
       }
     },
     {
       "day": "일",
-      "time": "10:25",
+      "time": "10:20",
       "channel": "KBS joy",
-      "title": "살림하는 남자들 2 479회",
+      "title": "살림하는 남자들 2 480회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -44023,9 +43948,24 @@
     },
     {
       "day": "일",
-      "time": "10:29",
-      "channel": "JTBC2",
-      "title": "[코쿤]냉장고를 부탁해 since 2014 93회",
+      "time": "10:22",
+      "channel": "MBC every1",
+      "title": "나 혼자 산다 671회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": true,
+        "hasSubtitles": true,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
+      }
+    },
+    {
+      "day": "일",
+      "time": "10:25",
+      "channel": "O tvN",
+      "title": "나의 유죄인간 3회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -44044,7 +43984,7 @@
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
-        "isRerun": true,
+        "isRerun": false,
         "hasSubtitles": true,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
@@ -44070,11 +44010,11 @@
       "day": "일",
       "time": "10:30",
       "channel": "JTBC",
-      "title": "한블리 베스트 98회",
+      "title": "파이널 테이블 3회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
-        "isRerun": false,
+        "isRerun": true,
         "hasSubtitles": false,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
@@ -44085,7 +44025,7 @@
       "day": "일",
       "time": "10:30",
       "channel": "MBN",
-      "title": "기적의 시작 함께 ON 3회",
+      "title": "전설의 사내 16회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -44093,7 +44033,7 @@
         "hasSubtitles": true,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
-        "ageRating": null
+        "ageRating": 15
       }
     },
     {
@@ -44115,13 +44055,13 @@
       "day": "일",
       "time": "10:30",
       "channel": "채널A",
-      "title": "생존의 비밀 59회",
+      "title": "알아야산다 82회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
         "isRerun": true,
         "hasSubtitles": true,
-        "hasAudioDescription": false,
+        "hasAudioDescription": true,
         "hasKoreanSignLanguage": false,
         "ageRating": null
       }
@@ -44130,7 +44070,7 @@
       "day": "일",
       "time": "10:35",
       "channel": "tvN",
-      "title": "100일의 거짓말 5회",
+      "title": "100일의 거짓말 7회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -44173,14 +44113,14 @@
     },
     {
       "day": "일",
-      "time": "10:45",
-      "channel": "O tvN",
-      "title": "나의 유죄인간 1회",
+      "time": "10:47",
+      "channel": "E채널",
+      "title": "무엇이든 해줄 지니 비서진 4회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
         "isRerun": true,
-        "hasSubtitles": false,
+        "hasSubtitles": true,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
         "ageRating": 15
@@ -44205,7 +44145,7 @@
       "day": "일",
       "time": "10:50",
       "channel": "TV 조선",
-      "title": "엄마의 봄날 580회",
+      "title": "엄마의 봄날 581회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -44220,52 +44160,7 @@
       "day": "일",
       "time": "10:55",
       "channel": "SBS",
-      "title": "다시 쓰는 성공 방정식-영크크는 출근 중 2부",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": false,
-        "hasSubtitles": false,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": null
-      }
-    },
-    {
-      "day": "일",
-      "time": "10:55",
-      "channel": "코미디TV",
-      "title": "뿅뿅 지구오락실 3 4회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": true,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "일",
-      "time": "10:59",
-      "channel": "E채널",
-      "title": "끝까지 간다 독박투어 21회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": false,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "일",
-      "time": "11:00",
-      "channel": "CH W",
-      "title": "W캠퍼스 - 영어 49회",
+      "title": "카름스테이 - She Go 가렴",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -44278,13 +44173,28 @@
     },
     {
       "day": "일",
-      "time": "11:05",
-      "channel": "MBC every1",
-      "title": "전지적 참견 시점 421회",
+      "time": "11:00",
+      "channel": "CH W",
+      "title": "W캠퍼스 - 중국어 15회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
         "isRerun": false,
+        "hasSubtitles": false,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 12
+      }
+    },
+    {
+      "day": "일",
+      "time": "11:00",
+      "channel": "코미디TV",
+      "title": "뿅뿅 지구오락실 3 5회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": true,
         "hasSubtitles": true,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
@@ -44340,9 +44250,9 @@
       "day": "일",
       "time": "11:25",
       "channel": "KBS2",
-      "title": "옥탑방의 문제아들",
+      "title": "주말드라마 사랑이 온다 26회",
       "metadata": {
-        "videoQuality": "HD",
+        "videoQuality": "UHD",
         "isLive": false,
         "isRerun": true,
         "hasSubtitles": true,
@@ -44355,26 +44265,26 @@
       "day": "일",
       "time": "11:30",
       "channel": "채널A",
-      "title": "브랜딩 코리아 18회",
+      "title": "신랑수업 2 32회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
-        "isRerun": false,
+        "isRerun": true,
         "hasSubtitles": true,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
-        "ageRating": null
+        "ageRating": 15
       }
     },
     {
       "day": "일",
       "time": "11:35",
       "channel": "EBS2",
-      "title": "출동! 타요와 소방 구조대",
+      "title": "티시태시",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
-        "isRerun": true,
+        "isRerun": false,
         "hasSubtitles": false,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
@@ -44385,12 +44295,27 @@
       "day": "일",
       "time": "11:40",
       "channel": "KBS joy",
-      "title": "계약결혼 4회",
+      "title": "계약결혼 5회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
         "isRerun": true,
         "hasSubtitles": true,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
+      }
+    },
+    {
+      "day": "일",
+      "time": "11:40",
+      "channel": "O tvN",
+      "title": "나의 유죄인간 4회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": true,
+        "hasSubtitles": false,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
         "ageRating": 15
@@ -44445,7 +44370,7 @@
       "day": "일",
       "time": "11:50",
       "channel": "JTBC",
-      "title": "아는 형님 548회",
+      "title": "아는 형님 549회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -44469,6 +44394,21 @@
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
         "ageRating": null
+      }
+    },
+    {
+      "day": "일",
+      "time": "11:53",
+      "channel": "JTBC2",
+      "title": "파이널 테이블 3회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": true,
+        "hasSubtitles": true,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
       }
     },
     {
@@ -44505,27 +44445,12 @@
       "day": "일",
       "time": "12:00",
       "channel": "CH W",
-      "title": "북쪽 고향에서 13회",
+      "title": "연속TV소설 오싱 <1-3회>",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
         "isRerun": false,
         "hasSubtitles": false,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "일",
-      "time": "12:00",
-      "channel": "JTBC2",
-      "title": "[첫 방송]파이널 테이블 1회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": true,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
         "ageRating": 15
@@ -44549,8 +44474,8 @@
     {
       "day": "일",
       "time": "12:00",
-      "channel": "MBN",
-      "title": "김주하의 데이앤나잇 스페셜 7회",
+      "channel": "TV 조선",
+      "title": "[TV CHOSUN 특집다큐] 세계 최강병사 - 72시간의 전투",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -44558,37 +44483,7 @@
         "hasSubtitles": true,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "일",
-      "time": "12:00",
-      "channel": "TV 조선",
-      "title": "미스트롯 포유 22회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": true,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "일",
-      "time": "12:00",
-      "channel": "채널A",
-      "title": "탐정들의 영업비밀 133회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": true,
-        "hasAudioDescription": true,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
+        "ageRating": null
       }
     },
     {
@@ -44609,31 +44504,16 @@
     {
       "day": "일",
       "time": "12:05",
-      "channel": "O tvN",
-      "title": "나의 유죄인간 2회",
+      "channel": "tvN",
+      "title": "언더커버 셰프 : 멀리서 찾아온 벗 1회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
         "isRerun": true,
-        "hasSubtitles": false,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "일",
-      "time": "12:05",
-      "channel": "SBS",
-      "title": "SBS 뉴스",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": true,
-        "isRerun": false,
         "hasSubtitles": true,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
-        "ageRating": null
+        "ageRating": 15
       }
     },
     {
@@ -44653,13 +44533,13 @@
     },
     {
       "day": "일",
-      "time": "12:10",
-      "channel": "tvN",
-      "title": "맛따라 길따라 대명이따라 1회",
+      "time": "12:12",
+      "channel": "MBC every1",
+      "title": "라이어 2회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
-        "isRerun": true,
+        "isRerun": false,
         "hasSubtitles": true,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
@@ -44683,21 +44563,6 @@
     },
     {
       "day": "일",
-      "time": "12:15",
-      "channel": "SBS",
-      "title": "닥터X : 하얀 마피아의 시대 6회",
-      "metadata": {
-        "videoQuality": "UHD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": true,
-        "hasAudioDescription": true,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "일",
       "time": "12:20",
       "channel": "EBS2",
       "title": "AI 시대 부모가 달라진다",
@@ -44709,6 +44574,51 @@
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
         "ageRating": null
+      }
+    },
+    {
+      "day": "일",
+      "time": "12:20",
+      "channel": "MBN",
+      "title": "속풀이쇼 동치미 스페셜 30회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": false,
+        "hasSubtitles": true,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
+      }
+    },
+    {
+      "day": "일",
+      "time": "12:20",
+      "channel": "SBS",
+      "title": "SBS 뉴스",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": true,
+        "isRerun": false,
+        "hasSubtitles": true,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": null
+      }
+    },
+    {
+      "day": "일",
+      "time": "12:30",
+      "channel": "SBS",
+      "title": "닥터X : 하얀 마피아의 시대 8회",
+      "metadata": {
+        "videoQuality": "UHD",
+        "isLive": false,
+        "isRerun": true,
+        "hasSubtitles": true,
+        "hasAudioDescription": true,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
       }
     },
     {
@@ -44743,29 +44653,14 @@
     },
     {
       "day": "일",
-      "time": "12:45",
+      "time": "12:50",
       "channel": "KBS2",
-      "title": "토일 미니시리즈 너 말고 다른 연애 11회",
-      "metadata": {
-        "videoQuality": "UHD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": true,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "일",
-      "time": "12:49",
-      "channel": "E채널",
-      "title": "뿅뿅 지구오락실 2 11회",
+      "title": "개그 콘서트 스페셜 <2안포함>",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": false,
+        "isRerun": false,
+        "hasSubtitles": true,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
         "ageRating": 15
@@ -44788,14 +44683,14 @@
     },
     {
       "day": "일",
-      "time": "12:58",
-      "channel": "MBC every1",
-      "title": "나 혼자 산다 670회",
+      "time": "12:56",
+      "channel": "E채널",
+      "title": "뿅뿅 지구오락실 3 1회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": true,
+        "isRerun": false,
+        "hasSubtitles": false,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
         "ageRating": 15
@@ -44805,7 +44700,7 @@
       "day": "일",
       "time": "13:00",
       "channel": "CH W",
-      "title": "북쪽 고향에서 14회",
+      "title": "연속TV소설 오싱 <4-6회>",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -44834,8 +44729,23 @@
     {
       "day": "일",
       "time": "13:00",
-      "channel": "MBN",
-      "title": "속풀이쇼 동치미 스페셜 29회",
+      "channel": "O tvN",
+      "title": "호텔 델루나 6회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": true,
+        "hasSubtitles": true,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": true,
+        "ageRating": 15
+      }
+    },
+    {
+      "day": "일",
+      "time": "13:00",
+      "channel": "TV 조선",
+      "title": "승리의 순간! 다시보는 2026 아이치-나고야 1회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -44843,29 +44753,14 @@
         "hasSubtitles": true,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "일",
-      "time": "13:05",
-      "channel": "코미디TV",
-      "title": "놀면 뭐하니? 329회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": false,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
+        "ageRating": null
       }
     },
     {
       "day": "일",
       "time": "13:10",
       "channel": "JTBC",
-      "title": "파이널 테이블 1회",
+      "title": "파이널 테이블 3회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -44893,9 +44788,69 @@
     },
     {
       "day": "일",
+      "time": "13:10",
+      "channel": "코미디TV",
+      "title": "놀면 뭐하니? 330회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": true,
+        "hasSubtitles": false,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
+      }
+    },
+    {
+      "day": "일",
+      "time": "13:12",
+      "channel": "JTBC2",
+      "title": "[랜선여행]톡파원 25시 230회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": true,
+        "hasSubtitles": false,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
+      }
+    },
+    {
+      "day": "일",
+      "time": "13:15",
+      "channel": "KBS joy",
+      "title": "차트를 달리는 남자 509회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": true,
+        "hasSubtitles": false,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
+      }
+    },
+    {
+      "day": "일",
+      "time": "13:18",
+      "channel": "MBC every1",
+      "title": "나 혼자 산다 671회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": true,
+        "hasSubtitles": true,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
+      }
+    },
+    {
+      "day": "일",
       "time": "13:20",
       "channel": "MBC",
-      "title": "라이어 프리미어",
+      "title": "신인감독 김연경2 스페셜",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -44908,30 +44863,15 @@
     },
     {
       "day": "일",
-      "time": "13:21",
-      "channel": "JTBC2",
-      "title": "[랜선여행]톡파원 25시 229회",
+      "time": "13:20",
+      "channel": "채널A",
+      "title": "탐정들의 영업비밀 134회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
         "isRerun": true,
-        "hasSubtitles": false,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "일",
-      "time": "13:25",
-      "channel": "O tvN",
-      "title": "언니네 산지직송3-네 식구 산지 라이프",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": false,
-        "hasAudioDescription": false,
+        "hasSubtitles": true,
+        "hasAudioDescription": true,
         "hasKoreanSignLanguage": false,
         "ageRating": 15
       }
@@ -44948,29 +44888,14 @@
         "hasSubtitles": true,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "일",
-      "time": "13:30",
-      "channel": "KBS joy",
-      "title": "차트를 달리는 남자 508회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": false,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
+        "ageRating": 12
       }
     },
     {
       "day": "일",
       "time": "13:30",
       "channel": "KBS1",
-      "title": "일일드라마 엄마가 미쳤어요 스페셜 4회",
+      "title": "넥스트 챔피언의 비밀병기 2",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -44978,27 +44903,42 @@
         "hasSubtitles": true,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
-        "ageRating": 15
+        "ageRating": null
       }
     },
     {
       "day": "일",
-      "time": "13:30",
-      "channel": "채널A",
-      "title": "신랑수업 2 스페셜 31회",
+      "time": "13:40",
+      "channel": "KBS2",
+      "title": "2026 프로야구 플레이오프 5차전 <2안포함>",
       "metadata": {
         "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": true,
+        "isLive": true,
+        "isRerun": false,
         "hasSubtitles": true,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
-        "ageRating": 15
+        "ageRating": null
       }
     },
     {
       "day": "일",
-      "time": "13:35",
+      "time": "13:50",
+      "channel": "MBN",
+      "title": "언포게터블 듀엣 2 스페셜 1회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": false,
+        "hasSubtitles": true,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 12
+      }
+    },
+    {
+      "day": "일",
+      "time": "13:50",
       "channel": "SBS",
       "title": "우리들의 발라드 2",
       "metadata": {
@@ -45013,39 +44953,9 @@
     },
     {
       "day": "일",
-      "time": "13:40",
-      "channel": "MBC",
-      "title": "MBC 스포츠 2026 KBO 리그 포스트시즌 플레이오프 <1차전, KIA:삼성, 대구, 2안포함>",
-      "metadata": {
-        "videoQuality": "UHD",
-        "isLive": true,
-        "isRerun": false,
-        "hasSubtitles": true,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": null
-      }
-    },
-    {
-      "day": "일",
-      "time": "13:50",
-      "channel": "O tvN",
-      "title": "언더커버 미쓰홍 14회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": false,
-        "hasAudioDescription": true,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "일",
       "time": "14:00",
       "channel": "CH W",
-      "title": "W랭귀지 - 일본어 207회",
+      "title": "W랭귀지 - 일본어 241회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -45054,21 +44964,6 @@
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
         "ageRating": 12
-      }
-    },
-    {
-      "day": "일",
-      "time": "14:00",
-      "channel": "KBS2",
-      "title": "트레킹노트 세상을 걷다 스페셜",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": true,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": null
       }
     },
     {
@@ -45090,7 +44985,7 @@
       "day": "일",
       "time": "14:10",
       "channel": "OBS 경인TV",
-      "title": "다시 갈 지도 <100만 원으로 끝내는 고퀄리티 효도여행>",
+      "title": "다시 갈 지도",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -45103,9 +44998,24 @@
     },
     {
       "day": "일",
-      "time": "14:10",
+      "time": "14:20",
+      "channel": "KBS1",
+      "title": "K-슈퍼푸드 기획 생로병사의 비밀",
+      "metadata": {
+        "videoQuality": "UHD",
+        "isLive": false,
+        "isRerun": true,
+        "hasSubtitles": true,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": null
+      }
+    },
+    {
+      "day": "일",
+      "time": "14:25",
       "channel": "tvN",
-      "title": "100일의 거짓말 5회",
+      "title": "100일의 거짓말 7회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -45118,9 +45028,9 @@
     },
     {
       "day": "일",
-      "time": "14:20",
-      "channel": "MBN",
-      "title": "전설의 사내 15회",
+      "time": "14:30",
+      "channel": "JTBC2",
+      "title": "파이널 테이블 3회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -45135,7 +45045,7 @@
       "day": "일",
       "time": "14:30",
       "channel": "KBS joy",
-      "title": "계약결혼 4회",
+      "title": "영화가 좋다 1029회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -45148,16 +45058,16 @@
     },
     {
       "day": "일",
-      "time": "14:37",
-      "channel": "JTBC2",
-      "title": "[첫 방송]파이널 테이블 1회",
+      "time": "14:30",
+      "channel": "O tvN",
+      "title": "호텔 델루나 7회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
         "isRerun": true,
         "hasSubtitles": true,
         "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
+        "hasKoreanSignLanguage": true,
         "ageRating": 15
       }
     },
@@ -45165,41 +45075,11 @@
       "day": "일",
       "time": "14:40",
       "channel": "JTBC",
-      "title": "한문철의 블랙박스 리뷰 191회",
+      "title": "한문철의 블랙박스 리뷰 192회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
         "isRerun": true,
-        "hasSubtitles": false,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "일",
-      "time": "14:40",
-      "channel": "KBS2",
-      "title": "2026 슈퍼레이스 챔피언십 8라운드 <- 용인 ->",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": true,
-        "isRerun": false,
-        "hasSubtitles": true,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": null
-      }
-    },
-    {
-      "day": "일",
-      "time": "14:40",
-      "channel": "코미디TV",
-      "title": "런닝맨 813회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": false,
         "hasSubtitles": false,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
@@ -45209,13 +45089,13 @@
     {
       "day": "일",
       "time": "14:45",
-      "channel": "MBC every1",
-      "title": "계약 결혼 4회",
+      "channel": "코미디TV",
+      "title": "런닝맨 814회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": true,
+        "isRerun": false,
+        "hasSubtitles": false,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
         "ageRating": 15
@@ -45225,7 +45105,7 @@
       "day": "일",
       "time": "14:50",
       "channel": "채널A",
-      "title": "채널A 토일드라마 너에게 다이브 9회",
+      "title": "채널A 토일드라마 너에게 다이브 11회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -45240,7 +45120,7 @@
       "day": "일",
       "time": "15:00",
       "channel": "CH W",
-      "title": "W랭귀지 - 일본어 208회",
+      "title": "W랭귀지 - 일본어 242회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -45284,8 +45164,8 @@
     {
       "day": "일",
       "time": "15:06",
-      "channel": "E채널",
-      "title": "놀면 뭐하니? 333회",
+      "channel": "MBC every1",
+      "title": "계약 결혼 5회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -45300,7 +45180,7 @@
       "day": "일",
       "time": "15:10",
       "channel": "KBS1",
-      "title": "생로병사의 비밀",
+      "title": "다큐 인사이트",
       "metadata": {
         "videoQuality": "UHD",
         "isLive": false,
@@ -45328,14 +45208,29 @@
     },
     {
       "day": "일",
-      "time": "15:20",
-      "channel": "O tvN",
-      "title": "언더커버 미쓰홍 15회",
+      "time": "15:19",
+      "channel": "E채널",
+      "title": "놀면 뭐하니? 337회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
         "isRerun": true,
-        "hasSubtitles": false,
+        "hasSubtitles": true,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
+      }
+    },
+    {
+      "day": "일",
+      "time": "15:20",
+      "channel": "MBC",
+      "title": "라이어 2회",
+      "metadata": {
+        "videoQuality": "UHD",
+        "isLive": false,
+        "isRerun": true,
+        "hasSubtitles": true,
         "hasAudioDescription": true,
         "hasKoreanSignLanguage": false,
         "ageRating": 15
@@ -45345,7 +45240,7 @@
       "day": "일",
       "time": "15:20",
       "channel": "TV 조선",
-      "title": "강적들 661회",
+      "title": "강적들 662회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -45388,6 +45283,21 @@
     },
     {
       "day": "일",
+      "time": "15:35",
+      "channel": "KBS joy",
+      "title": "계약결혼 5회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": true,
+        "hasSubtitles": true,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
+      }
+    },
+    {
+      "day": "일",
       "time": "15:40",
       "channel": "OBS 경인TV",
       "title": "세계테마기행",
@@ -45396,21 +45306,6 @@
         "isLive": false,
         "isRerun": false,
         "hasSubtitles": true,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": null
-      }
-    },
-    {
-      "day": "일",
-      "time": "15:45",
-      "channel": "EBS1",
-      "title": "지식채널e",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": false,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
         "ageRating": null
@@ -45433,9 +45328,24 @@
     },
     {
       "day": "일",
+      "time": "15:50",
+      "channel": "JTBC2",
+      "title": "[이승철X우즈]아는 형님 549회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": true,
+        "hasSubtitles": false,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
+      }
+    },
+    {
+      "day": "일",
       "time": "15:55",
       "channel": "EBS2",
-      "title": "나눔 0700 840회",
+      "title": "나눔 0700 841회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -45449,38 +45359,23 @@
     {
       "day": "일",
       "time": "15:55",
-      "channel": "tvN",
-      "title": "유 퀴즈 온 더 블럭 365회",
+      "channel": "O tvN",
+      "title": "호텔 델루나 8회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
         "isRerun": true,
         "hasSubtitles": true,
         "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": null
-      }
-    },
-    {
-      "day": "일",
-      "time": "15:59",
-      "channel": "JTBC2",
-      "title": "[본방-최종회]강연배틀쇼 사기꾼들 28회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": false,
-        "hasSubtitles": false,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 12
+        "hasKoreanSignLanguage": true,
+        "ageRating": 15
       }
     },
     {
       "day": "일",
       "time": "16:00",
       "channel": "CH W",
-      "title": "W랭귀지 - 중국어 178회",
+      "title": "W랭귀지 - 중국어 206회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -45495,7 +45390,7 @@
       "day": "일",
       "time": "16:00",
       "channel": "JTBC",
-      "title": "트렌드 픽 56회",
+      "title": "트렌드 픽 63회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -45510,12 +45405,27 @@
       "day": "일",
       "time": "16:00",
       "channel": "KBS1",
-      "title": "세계는 지금 스페셜",
+      "title": "생활의 발견 스페셜",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
         "isRerun": true,
         "hasSubtitles": true,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": null
+      }
+    },
+    {
+      "day": "일",
+      "time": "16:00",
+      "channel": "tvN",
+      "title": "유 퀴즈 온 더 블럭 366회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": true,
+        "hasSubtitles": false,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
         "ageRating": null
@@ -45540,7 +45450,7 @@
       "day": "일",
       "time": "16:10",
       "channel": "채널A",
-      "title": "우리동네 셀럽 1%의 비밀 20회",
+      "title": "우리동네 셀럽 1%의 비밀 21회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -45570,7 +45480,7 @@
       "day": "일",
       "time": "16:25",
       "channel": "EBS2",
-      "title": "자이언트 펭TV <34.5기 코미디언 펭수>",
+      "title": "자이언트 펭TV",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -45583,24 +45493,9 @@
     },
     {
       "day": "일",
-      "time": "16:25",
-      "channel": "KBS2",
-      "title": "생활의 발견 스페셜",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": true,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": null
-      }
-    },
-    {
-      "day": "일",
-      "time": "16:27",
+      "time": "16:38",
       "channel": "MBC every1",
-      "title": "나 혼자 산다 670회",
+      "title": "나 혼자 산다 671회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -45613,24 +45508,9 @@
     },
     {
       "day": "일",
-      "time": "16:30",
-      "channel": "KBS joy",
-      "title": "2026 오네 슈퍼레이스 챔피언십 GT클래스 <8라운드 나이트 레이스(26.10.25)> 4회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": true,
-        "isRerun": false,
-        "hasSubtitles": false,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": null
-      }
-    },
-    {
-      "day": "일",
       "time": "16:40",
-      "channel": "KBS2",
-      "title": "사장님 귀는 당나귀 귀",
+      "channel": "MBC",
+      "title": "놀면 뭐하니? 스페셜",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -45645,22 +45525,7 @@
       "day": "일",
       "time": "16:40",
       "channel": "TV 조선",
-      "title": "천만기인쇼 4회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": true,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "일",
-      "time": "16:44",
-      "channel": "E채널",
-      "title": "전지적 참견 시점 408회",
+      "title": "미스트롯 포유 23회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -45704,27 +45569,27 @@
     {
       "day": "일",
       "time": "16:45",
-      "channel": "코미디TV",
-      "title": "삼시세끼 어촌편 5 2회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": true,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "일",
-      "time": "16:50",
       "channel": "SBS",
       "title": "미운 우리 새끼",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
         "isRerun": true,
+        "hasSubtitles": true,
+        "hasAudioDescription": true,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
+      }
+    },
+    {
+      "day": "일",
+      "time": "16:45",
+      "channel": "코미디TV",
+      "title": "삼시세끼 어촌편 5 3회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": false,
         "hasSubtitles": true,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
@@ -45734,14 +45599,14 @@
     {
       "day": "일",
       "time": "16:55",
-      "channel": "O tvN",
-      "title": "언더커버 미쓰홍 16회",
+      "channel": "E채널",
+      "title": "전지적 참견 시점 409회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
         "isRerun": true,
-        "hasSubtitles": false,
-        "hasAudioDescription": true,
+        "hasSubtitles": true,
+        "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
         "ageRating": 15
       }
@@ -45750,7 +45615,7 @@
       "day": "일",
       "time": "17:00",
       "channel": "CH W",
-      "title": "하코즈메 ~싸워라! 파출소 여자들~ 5회",
+      "title": "언젠가, 무중력 하늘에서 <1-2회>",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -45765,7 +45630,7 @@
       "day": "일",
       "time": "17:00",
       "channel": "JTBC",
-      "title": "파이널 테이블 1회",
+      "title": "파이널 테이블 3회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -45795,7 +45660,7 @@
       "day": "일",
       "time": "17:00",
       "channel": "MBN",
-      "title": "알토란 616회",
+      "title": "알토란 617회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -45823,6 +45688,36 @@
     },
     {
       "day": "일",
+      "time": "17:09",
+      "channel": "JTBC2",
+      "title": "[펜싱 금메달-오상욱]냉장고를 부탁해 since 2014 94회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": true,
+        "hasSubtitles": false,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
+      }
+    },
+    {
+      "day": "일",
+      "time": "17:10",
+      "channel": "KBS joy",
+      "title": "이십세기 힛-트쏭 337회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": true,
+        "hasSubtitles": false,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
+      }
+    },
+    {
+      "day": "일",
       "time": "17:10",
       "channel": "KBS1",
       "title": "동물의 왕국",
@@ -45834,6 +45729,21 @@
         "hasAudioDescription": true,
         "hasKoreanSignLanguage": false,
         "ageRating": null
+      }
+    },
+    {
+      "day": "일",
+      "time": "17:10",
+      "channel": "KBS2",
+      "title": "놓친예능 따라잡기 <2안포함>",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": true,
+        "hasSubtitles": true,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
       }
     },
     {
@@ -45853,17 +45763,17 @@
     },
     {
       "day": "일",
-      "time": "17:15",
-      "channel": "MBC",
-      "title": "구해줘! 홈즈 스페셜 <2안포함>",
+      "time": "17:25",
+      "channel": "O tvN",
+      "title": "언니네 산지직송3-네 식구 산지 라이프",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
-        "isRerun": false,
-        "hasSubtitles": true,
+        "isRerun": true,
+        "hasSubtitles": false,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
-        "ageRating": 12
+        "ageRating": 15
       }
     },
     {
@@ -45884,6 +45794,21 @@
     {
       "day": "일",
       "time": "17:40",
+      "channel": "CH W",
+      "title": "쿠라라 ~호쿠사이의 딸~ 1회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": false,
+        "hasSubtitles": false,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
+      }
+    },
+    {
+      "day": "일",
+      "time": "17:40",
       "channel": "EBS1",
       "title": "세계테마기행 1부",
       "metadata": {
@@ -45899,13 +45824,28 @@
     {
       "day": "일",
       "time": "17:40",
-      "channel": "KBS joy",
-      "title": "이십세기 힛-트쏭 336회",
+      "channel": "KBS1",
+      "title": "열린음악회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": false,
+        "hasSubtitles": true,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": null
+      }
+    },
+    {
+      "day": "일",
+      "time": "17:40",
+      "channel": "KBS2",
+      "title": "꿀잼 영화가 좋다 <2안포함>",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
         "isRerun": true,
-        "hasSubtitles": false,
+        "hasSubtitles": true,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
         "ageRating": 15
@@ -45928,51 +45868,6 @@
     },
     {
       "day": "일",
-      "time": "17:48",
-      "channel": "JTBC2",
-      "title": "[코쿤]냉장고를 부탁해 since 2014 93회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": false,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "일",
-      "time": "17:55",
-      "channel": "MBC",
-      "title": "신인감독 김연경2 스페셜",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": false,
-        "hasSubtitles": true,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "일",
-      "time": "18:00",
-      "channel": "CH W",
-      "title": "하코즈메 ~싸워라! 파출소 여자들~ 6회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": false,
-        "hasSubtitles": false,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "일",
       "time": "18:00",
       "channel": "EBS2",
       "title": "백세부자",
@@ -45989,36 +45884,6 @@
     {
       "day": "일",
       "time": "18:00",
-      "channel": "KBS1",
-      "title": "열린음악회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": false,
-        "hasSubtitles": true,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": null
-      }
-    },
-    {
-      "day": "일",
-      "time": "18:10",
-      "channel": "KBS2",
-      "title": "1박 2일",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": false,
-        "hasSubtitles": true,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "일",
-      "time": "18:10",
       "channel": "SBS",
       "title": "런닝맨",
       "metadata": {
@@ -46033,14 +45898,14 @@
     },
     {
       "day": "일",
-      "time": "18:10",
-      "channel": "tvN",
-      "title": "100일의 거짓말 5회",
+      "time": "18:05",
+      "channel": "MBC",
+      "title": "전지적 참견 시점 스페셜",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": false,
+        "isRerun": false,
+        "hasSubtitles": true,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
         "ageRating": 15
@@ -46048,13 +45913,13 @@
     },
     {
       "day": "일",
-      "time": "18:14",
-      "channel": "MBC every1",
-      "title": "전지적 참견 시점 421회",
+      "time": "18:10",
+      "channel": "KBS2",
+      "title": "1박 2일",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
-        "isRerun": true,
+        "isRerun": false,
         "hasSubtitles": true,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
@@ -46080,7 +45945,7 @@
       "day": "일",
       "time": "18:20",
       "channel": "MBN",
-      "title": "특종세상 762회",
+      "title": "특종세상 763회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -46094,8 +45959,53 @@
     {
       "day": "일",
       "time": "18:20",
+      "channel": "tvN",
+      "title": "100일의 거짓말 7회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": true,
+        "hasSubtitles": false,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
+      }
+    },
+    {
+      "day": "일",
+      "time": "18:25",
       "channel": "O tvN",
-      "title": "나의 유죄인간 1회",
+      "title": "나의 유죄인간 3회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": true,
+        "hasSubtitles": false,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
+      }
+    },
+    {
+      "day": "일",
+      "time": "18:26",
+      "channel": "MBC every1",
+      "title": "놀면 뭐하니? 350회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": false,
+        "hasSubtitles": true,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
+      }
+    },
+    {
+      "day": "일",
+      "time": "18:30",
+      "channel": "KBS joy",
+      "title": "차트를 달리는 남자 509회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -46114,7 +46024,7 @@
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
-        "isRerun": false,
+        "isRerun": true,
         "hasSubtitles": true,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
@@ -46138,9 +46048,9 @@
     },
     {
       "day": "일",
-      "time": "18:40",
+      "time": "18:45",
       "channel": "코미디TV",
-      "title": "니돈내산 독박투어4 45회",
+      "title": "니돈내산 독박투어4 46회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -46153,14 +46063,14 @@
     },
     {
       "day": "일",
-      "time": "18:41",
+      "time": "18:46",
       "channel": "E채널",
-      "title": "끝까지 간다 독박투어 21회",
+      "title": "콩콩팜팜 1회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
         "isRerun": true,
-        "hasSubtitles": false,
+        "hasSubtitles": true,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
         "ageRating": 15
@@ -46183,24 +46093,9 @@
     },
     {
       "day": "일",
-      "time": "18:55",
-      "channel": "KBS joy",
-      "title": "차트를 달리는 남자 508회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": false,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "일",
       "time": "19:00",
       "channel": "CH W",
-      "title": "하코즈메 ~싸워라! 파출소 여자들~ 7회",
+      "title": "W 일본어 캠프 58회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -46208,7 +46103,7 @@
         "hasSubtitles": false,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
-        "ageRating": 15
+        "ageRating": 12
       }
     },
     {
@@ -46243,9 +46138,24 @@
     },
     {
       "day": "일",
+      "time": "19:06",
+      "channel": "JTBC2",
+      "title": "파이널 테이블 3회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": true,
+        "hasSubtitles": true,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
+      }
+    },
+    {
+      "day": "일",
       "time": "19:10",
       "channel": "JTBC",
-      "title": "톡파원 25시 229회",
+      "title": "톡파원 25시 230회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -46275,7 +46185,7 @@
       "day": "일",
       "time": "19:10",
       "channel": "채널A",
-      "title": "강철지구 차마고도 스페셜 1회",
+      "title": "강철지구 말레이시아 스페셜 1회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -46289,23 +46199,8 @@
     {
       "day": "일",
       "time": "19:20",
-      "channel": "JTBC2",
-      "title": "[대환장]이혼숙려캠프 105회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": false,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "일",
-      "time": "19:20",
       "channel": "채널A",
-      "title": "티처스3: 재수전쟁 2회",
+      "title": "티처스3: 재수전쟁 3회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -46363,14 +46258,29 @@
     },
     {
       "day": "일",
-      "time": "19:45",
+      "time": "19:40",
       "channel": "O tvN",
-      "title": "나의 유죄인간 2회",
+      "title": "나의 유죄인간 4회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
         "isRerun": true,
         "hasSubtitles": false,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
+      }
+    },
+    {
+      "day": "일",
+      "time": "19:45",
+      "channel": "KBS joy",
+      "title": "영화가 좋다 1029회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": true,
+        "hasSubtitles": true,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
         "ageRating": 15
@@ -46395,27 +46305,42 @@
       "day": "일",
       "time": "19:50",
       "channel": "TV 조선",
-      "title": "TV CHOSUN 슈퍼 콘서트 1부",
+      "title": "천만기인쇼 5회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
-        "isRerun": false,
+        "isRerun": true,
         "hasSubtitles": true,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
-        "ageRating": null
+        "ageRating": 15
       }
     },
     {
       "day": "일",
       "time": "19:50",
       "channel": "tvN",
-      "title": "식스센스: B사이드 6회",
+      "title": "식스센스: B사이드 7회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
         "isRerun": false,
         "hasSubtitles": false,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
+      }
+    },
+    {
+      "day": "일",
+      "time": "19:54",
+      "channel": "MBC every1",
+      "title": "전지적 참견 시점 422회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": false,
+        "hasSubtitles": true,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
         "ageRating": 15
@@ -46455,7 +46380,7 @@
       "day": "일",
       "time": "20:00",
       "channel": "CH W",
-      "title": "하코즈메 ~싸워라! 파출소 여자들~ 8회",
+      "title": "W 일본어 캠프 59회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -46463,14 +46388,14 @@
         "hasSubtitles": false,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
-        "ageRating": 15
+        "ageRating": 12
       }
     },
     {
       "day": "일",
       "time": "20:00",
       "channel": "KBS2",
-      "title": "주말드라마 사랑이 온다 25회",
+      "title": "주말드라마 사랑이 온다 27회",
       "metadata": {
         "videoQuality": "UHD",
         "isLive": false,
@@ -46498,58 +46423,13 @@
     },
     {
       "day": "일",
-      "time": "20:05",
-      "channel": "KBS joy",
-      "title": "옥탑방의 문제아들 331회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": true,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "일",
-      "time": "20:05",
-      "channel": "KBS1",
-      "title": "국가유산순례 드오 20회",
-      "metadata": {
-        "videoQuality": "UHD",
-        "isLive": false,
-        "isRerun": false,
-        "hasSubtitles": false,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": null
-      }
-    },
-    {
-      "day": "일",
-      "time": "20:05",
-      "channel": "MBC every1",
-      "title": "놀면 뭐하니? <95 MBC 서울가요제> 349회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": false,
-        "hasSubtitles": true,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "일",
       "time": "20:10",
       "channel": "KBS1",
-      "title": "다큐 인사이트",
+      "title": "특집 다큐 밥상지기 최불암 당신을 기억합니다",
       "metadata": {
-        "videoQuality": "UHD",
+        "videoQuality": "HD",
         "isLive": false,
-        "isRerun": true,
+        "isRerun": false,
         "hasSubtitles": true,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
@@ -46558,9 +46438,9 @@
     },
     {
       "day": "일",
-      "time": "20:15",
-      "channel": "코미디TV",
-      "title": "맛있는 녀석들 586회",
+      "time": "20:19",
+      "channel": "E채널",
+      "title": "서인영의 유행꼰대 5회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -46575,7 +46455,7 @@
       "day": "일",
       "time": "20:20",
       "channel": "MBN",
-      "title": "퀸 메이커 5회",
+      "title": "퀸 메이커 6회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -46588,9 +46468,24 @@
     },
     {
       "day": "일",
-      "time": "20:22",
-      "channel": "E채널",
-      "title": "서인영의 유행꼰대 4회",
+      "time": "20:20",
+      "channel": "코미디TV",
+      "title": "맛있는 녀석들 587회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": true,
+        "hasSubtitles": false,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
+      }
+    },
+    {
+      "day": "일",
+      "time": "20:27",
+      "channel": "JTBC2",
+      "title": "[대환장]이혼숙려캠프 106회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -46618,24 +46513,9 @@
     },
     {
       "day": "일",
-      "time": "20:30",
-      "channel": "TV 조선",
-      "title": "TV CHOSUN 슈퍼 콘서트 2부",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": false,
-        "hasSubtitles": true,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": null
-      }
-    },
-    {
-      "day": "일",
       "time": "20:45",
       "channel": "EBS2",
-      "title": "취미는 과학 105회",
+      "title": "취미는 과학 106회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -46673,14 +46553,14 @@
         "hasSubtitles": true,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
-        "ageRating": 12
+        "ageRating": 15
       }
     },
     {
       "day": "일",
       "time": "20:50",
       "channel": "JTBC",
-      "title": "냉장고를 부탁해 since 2014 94회",
+      "title": "냉장고를 부탁해 since 2014 95회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -46695,7 +46575,7 @@
       "day": "일",
       "time": "20:50",
       "channel": "채널A",
-      "title": "이제 만나러 갑니다 771회",
+      "title": "이제 만나러 갑니다 772회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -46710,12 +46590,27 @@
       "day": "일",
       "time": "21:00",
       "channel": "CH W",
-      "title": "하코즈메 ~싸워라! 파출소 여자들~ 9회",
+      "title": "W랭귀지 - 일본어 243회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
         "isRerun": false,
         "hasSubtitles": false,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 12
+      }
+    },
+    {
+      "day": "일",
+      "time": "21:00",
+      "channel": "KBS joy",
+      "title": "1박 2일 시즌4 348회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": false,
+        "hasSubtitles": true,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
         "ageRating": 15
@@ -46734,6 +46629,21 @@
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": true,
         "ageRating": null
+      }
+    },
+    {
+      "day": "일",
+      "time": "21:00",
+      "channel": "O tvN",
+      "title": "스트릿 레스토랑 파이터 10회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": true,
+        "hasSubtitles": true,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
       }
     },
     {
@@ -46784,38 +46694,8 @@
     {
       "day": "일",
       "time": "21:10",
-      "channel": "O tvN",
-      "title": "스트릿 레스토랑 파이터 8회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": true,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "일",
-      "time": "21:10",
-      "channel": "TV 조선",
-      "title": "금타는 금요일 42회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": true,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "일",
-      "time": "21:10",
       "channel": "tvN",
-      "title": "100일의 거짓말 6회",
+      "title": "100일의 거짓말 8회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -46828,39 +46708,9 @@
     },
     {
       "day": "일",
-      "time": "21:13",
-      "channel": "JTBC2",
-      "title": "[첫 방송]파이널 테이블 1회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": true,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "일",
-      "time": "21:20",
-      "channel": "KBS joy",
-      "title": "1박 2일 시즌4 347회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": false,
-        "hasSubtitles": true,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "일",
       "time": "21:20",
       "channel": "KBS2",
-      "title": "토일 미니시리즈 너 말고 다른 연애 12회",
+      "title": "토일 미니시리즈 너 말고 다른 연애 14회",
       "metadata": {
         "videoQuality": "UHD",
         "isLive": false,
@@ -46875,7 +46725,7 @@
       "day": "일",
       "time": "21:20",
       "channel": "MBN",
-      "title": "휴먼다큐 사노라면 763회",
+      "title": "휴먼다큐 사노라면 764회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -46903,9 +46753,9 @@
     },
     {
       "day": "일",
-      "time": "21:35",
-      "channel": "E채널",
-      "title": "놀면 뭐하니? 333회",
+      "time": "21:30",
+      "channel": "TV 조선",
+      "title": "금타는 금요일 43회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -46919,8 +46769,8 @@
     {
       "day": "일",
       "time": "21:35",
-      "channel": "MBC every1",
-      "title": "나 혼자 산다 670회",
+      "channel": "E채널",
+      "title": "놀면 뭐하니? 337회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -46950,12 +46800,27 @@
       "day": "일",
       "time": "21:40",
       "channel": "코미디TV",
-      "title": "밥값 하는 남자들 4회",
+      "title": "밥값 하는 남자들 5회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
         "isRerun": false,
         "hasSubtitles": false,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
+      }
+    },
+    {
+      "day": "일",
+      "time": "21:44",
+      "channel": "MBC every1",
+      "title": "전지적 참견 시점 422회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": true,
+        "hasSubtitles": true,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
         "ageRating": 15
@@ -46978,6 +46843,21 @@
     },
     {
       "day": "일",
+      "time": "22:00",
+      "channel": "CH W",
+      "title": "누가 공작의 춤을 보았나? 1회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": false,
+        "hasSubtitles": false,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
+      }
+    },
+    {
+      "day": "일",
       "time": "22:05",
       "channel": "EBS1",
       "title": "명의",
@@ -46989,21 +46869,6 @@
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
         "ageRating": null
-      }
-    },
-    {
-      "day": "일",
-      "time": "22:10",
-      "channel": "CH W",
-      "title": "게임의 이름은 유괴 3회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": false,
-        "hasSubtitles": false,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
       }
     },
     {
@@ -47023,9 +46888,24 @@
     },
     {
       "day": "일",
+      "time": "22:23",
+      "channel": "JTBC2",
+      "title": "[바로 보는 본방]냉장고를 부탁해 since 2014 95회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": false,
+        "hasSubtitles": false,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
+      }
+    },
+    {
+      "day": "일",
       "time": "22:30",
       "channel": "JTBC",
-      "title": "파이널 테이블 2회",
+      "title": "파이널 테이블 4회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -47040,7 +46920,7 @@
       "day": "일",
       "time": "22:30",
       "channel": "MBN",
-      "title": "디스이즈 현무로드 1부 6회",
+      "title": "디스이즈 현무로드 1부 7회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -47049,48 +46929,18 @@
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
         "ageRating": 15
-      }
-    },
-    {
-      "day": "일",
-      "time": "22:30",
-      "channel": "tvN",
-      "title": "유 퀴즈 온 더 블럭 365회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": false,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": null
       }
     },
     {
       "day": "일",
       "time": "22:30",
       "channel": "채널A",
-      "title": "채널A 토일드라마 너에게 다이브 10회",
+      "title": "채널A 토일드라마 너에게 다이브 12회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
         "isRerun": false,
         "hasSubtitles": true,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "일",
-      "time": "22:33",
-      "channel": "JTBC2",
-      "title": "[바로 보는 본방]냉장고를 부탁해 since 2014 94회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": false,
-        "hasSubtitles": false,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
         "ageRating": 15
@@ -47100,7 +46950,7 @@
       "day": "일",
       "time": "22:35",
       "channel": "EBS2",
-      "title": "EBS 다큐프라임 <1942 조세이 탄광 1부 그 바닷속에 사람이 있다>",
+      "title": "EBS 다큐프라임 <1942 조세이 탄광 2부 우리를 기억해 주오>",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -47145,7 +46995,7 @@
       "day": "일",
       "time": "22:40",
       "channel": "MBN",
-      "title": "디스이즈 현무로드 2부 6회",
+      "title": "디스이즈 현무로드 2부 7회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -47158,9 +47008,39 @@
     },
     {
       "day": "일",
-      "time": "22:50",
+      "time": "22:40",
       "channel": "O tvN",
-      "title": "100일의 거짓말 6회",
+      "title": "100일의 거짓말 8회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": true,
+        "hasSubtitles": false,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
+      }
+    },
+    {
+      "day": "일",
+      "time": "22:40",
+      "channel": "tvN",
+      "title": "언더커버 셰프 : 멀리서 찾아온 벗 1회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": true,
+        "hasSubtitles": false,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
+      }
+    },
+    {
+      "day": "일",
+      "time": "22:45",
+      "channel": "코미디TV",
+      "title": "런닝맨 814회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -47174,12 +47054,27 @@
     {
       "day": "일",
       "time": "22:50",
-      "channel": "코미디TV",
-      "title": "런닝맨 813회",
+      "channel": "KBS joy",
+      "title": "신상출시 편스토랑 343회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
         "isRerun": true,
+        "hasSubtitles": true,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 15
+      }
+    },
+    {
+      "day": "일",
+      "time": "23:00",
+      "channel": "CH W",
+      "title": "누가 공작의 춤을 보았나? 2회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": false,
         "hasSubtitles": false,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
@@ -47220,7 +47115,7 @@
       "day": "일",
       "time": "23:00",
       "channel": "TV 조선",
-      "title": "신 성공시대 마이웨이 13회",
+      "title": "신 성공시대 마이웨이 14회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -47235,7 +47130,7 @@
       "day": "일",
       "time": "23:05",
       "channel": "SBS",
-      "title": "박경리 작가 탄생 100주년 특집다큐 사람, 박경리",
+      "title": "특집다큐 그랜드퀘스트:질문의 탄생",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -47248,14 +47143,14 @@
     },
     {
       "day": "일",
-      "time": "23:10",
-      "channel": "CH W",
-      "title": "게임의 이름은 유괴 4회",
+      "time": "23:09",
+      "channel": "E채널",
+      "title": "전지적 참견 시점 409회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
-        "isRerun": false,
-        "hasSubtitles": false,
+        "isRerun": true,
+        "hasSubtitles": true,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
         "ageRating": 15
@@ -47273,21 +47168,6 @@
         "hasSubtitles": true,
         "hasAudioDescription": true,
         "hasKoreanSignLanguage": false,
-        "ageRating": 12
-      }
-    },
-    {
-      "day": "일",
-      "time": "23:10",
-      "channel": "KBS joy",
-      "title": "사장님 귀는 당나귀 귀 378회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": false,
-        "hasSubtitles": true,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
         "ageRating": 15
       }
     },
@@ -47295,7 +47175,7 @@
       "day": "일",
       "time": "23:10",
       "channel": "KBS1",
-      "title": "이현우의 체크인 콘서트 [광주총국] 8회",
+      "title": "이현우의 체크인 콘서트 [청주총국] 9회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -47308,36 +47188,6 @@
     },
     {
       "day": "일",
-      "time": "23:11",
-      "channel": "E채널",
-      "title": "끝까지 간다 독박투어 21회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": false,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "일",
-      "time": "23:20",
-      "channel": "MBC every1",
-      "title": "신인감독 김연경2 3회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": false,
-        "hasSubtitles": false,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
-      }
-    },
-    {
-      "day": "일",
       "time": "23:25",
       "channel": "OBS 경인TV",
       "title": "OBS 시네마",
@@ -47345,6 +47195,21 @@
         "videoQuality": "HD",
         "isLive": false,
         "isRerun": true,
+        "hasSubtitles": true,
+        "hasAudioDescription": false,
+        "hasKoreanSignLanguage": false,
+        "ageRating": 12
+      }
+    },
+    {
+      "day": "일",
+      "time": "23:29",
+      "channel": "MBC every1",
+      "title": "신인감독 김연경2 4회",
+      "metadata": {
+        "videoQuality": "HD",
+        "isLive": false,
+        "isRerun": false,
         "hasSubtitles": false,
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
@@ -47368,15 +47233,15 @@
     },
     {
       "day": "일",
-      "time": "23:40",
+      "time": "23:35",
       "channel": "MBC",
-      "title": "라이어 프리미어",
+      "title": "라이어 2회",
       "metadata": {
-        "videoQuality": "HD",
+        "videoQuality": "UHD",
         "isLive": false,
-        "isRerun": false,
+        "isRerun": true,
         "hasSubtitles": true,
-        "hasAudioDescription": false,
+        "hasAudioDescription": true,
         "hasKoreanSignLanguage": false,
         "ageRating": 15
       }
@@ -47385,7 +47250,7 @@
       "day": "일",
       "time": "23:40",
       "channel": "MBN",
-      "title": "디스이즈 현무로드 3부 6회",
+      "title": "디스이즈 현무로드 3부 7회",
       "metadata": {
         "videoQuality": "HD",
         "isLive": false,
@@ -47409,36 +47274,6 @@
         "hasAudioDescription": false,
         "hasKoreanSignLanguage": false,
         "ageRating": null
-      }
-    },
-    {
-      "day": "일",
-      "time": "23:50",
-      "channel": "채널A",
-      "title": "강철지구 말레이시아 스페셜 1회",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": true,
-        "hasSubtitles": true,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": null
-      }
-    },
-    {
-      "day": "일",
-      "time": "23:55",
-      "channel": "MBC",
-      "title": "놀면 뭐하니? 스페셜",
-      "metadata": {
-        "videoQuality": "HD",
-        "isLive": false,
-        "isRerun": false,
-        "hasSubtitles": true,
-        "hasAudioDescription": false,
-        "hasKoreanSignLanguage": false,
-        "ageRating": 15
       }
     }
   ]
