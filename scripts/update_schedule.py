@@ -12,7 +12,11 @@ from zoneinfo import ZoneInfo
 ROOT = Path(__file__).resolve().parent.parent
 SCHEDULE_PATH = ROOT / "schedule.json"
 SHEET_ID = "1D9jF3KVYAZBvYRDMzZ8oEnGwVojanrIW7FQFl4n2TOk"
-SHEET_GIDS = ("0", "48397256", "278462282")
+SHEETS = (
+    ("0", "지상파"),
+    ("48397256", "종합편성"),
+    ("278462282", "연예오락채널"),
+)
 DAYS = ("월", "화", "수", "목", "금", "토", "일")
 PROGRAM_MARKER = re.compile(
     r"(?:HD방송|UHD방송|자막방송|화면해설|한국수어방송|재방송|생방송)\s*(\d{2})"
@@ -68,7 +72,7 @@ def parse_cell(cell):
     return programs
 
 
-def parse_sheet(text, day):
+def parse_sheet(text, day, sheet_name):
     rows = list(csv.reader(text.splitlines()))
     if len(rows) < 3 or not rows[0] or rows[0][0].lstrip("\ufeff") != "채널":
         raise ValueError("Google Sheets 편성표의 표 구조가 올바르지 않습니다.")
@@ -99,6 +103,7 @@ def parse_sheet(text, day):
                     {
                         "day": day,
                         "time": f"{hour:02d}:{minute}",
+                        "sheet": sheet_name,
                         "channel": channel.strip(),
                         "title": title,
                         "metadata": metadata,
@@ -210,8 +215,8 @@ def main():
         return
 
     todays_programs = []
-    for gid in SHEET_GIDS:
-        todays_programs.extend(parse_sheet(fetch_sheet(gid), day))
+    for gid, sheet_name in SHEETS:
+        todays_programs.extend(parse_sheet(fetch_sheet(gid), day, sheet_name))
     if not todays_programs:
         raise RuntimeError(f"Google Sheets에서 {day}요일 편성을 찾지 못했습니다.")
 

@@ -12,7 +12,26 @@ const GENRES = ["미분류", "예능", "교양/다큐", "드라마"];
 const GENRE_SETTINGS_URL = new URL("genres.json", document.baseURI);
 const SCHEDULE_URL = new URL("schedule.json", document.baseURI);
 const SHEET_ID = "1D9jF3KVYAZBvYRDMzZ8oEnGwVojanrIW7FQFl4n2TOk";
-const SHEET_TABS = ["0", "48397256", "278462282"];
+const SHEET_TABS = [
+  {
+    gid: "0",
+    name: "지상파",
+    channels: ["KBS1", "KBS2", "MBC", "SBS", "EBS1", "EBS2", "OBS 경인TV"],
+  },
+  {
+    gid: "48397256",
+    name: "종합편성",
+    channels: ["JTBC", "MBN", "TV 조선", "채널A"],
+  },
+  {
+    gid: "278462282",
+    name: "연예오락채널",
+    channels: ["tvN", "코미디TV", "KBS joy", "E채널", "MBC every1", "JTBC2", "O tvN", "CH W"],
+  },
+];
+const SHEET_BY_CHANNEL = new Map(
+  SHEET_TABS.flatMap(({ name, channels }) => channels.map((channel) => [channel, name])),
+);
 
 const scheduleElement = document.querySelector("#schedule");
 const dayFilters = document.querySelector("#day-filters");
@@ -168,6 +187,8 @@ function validatePrograms(value) {
       Number(program.time.slice(0, 2)) > 23 ||
       Number(program.time.slice(3, 5)) > 59 ||
       !["channel", "title"].every((key) => typeof program[key] === "string" && program[key].trim()) ||
+      (program.sheet !== undefined &&
+        (typeof program.sheet !== "string" || !program.sheet.trim())) ||
       (program.isRerun !== undefined && typeof program.isRerun !== "boolean") ||
       (program.metadata !== undefined &&
         (!program.metadata || typeof program.metadata !== "object" || Array.isArray(program.metadata)))
@@ -178,6 +199,7 @@ function validatePrograms(value) {
     return {
       day: program.day,
       time: program.time,
+      sheet: program.sheet?.trim() || SHEET_BY_CHANNEL.get(program.channel.trim()) || "기타",
       channel: program.channel.trim(),
       genre: genreFor(title),
       title,
@@ -588,7 +610,18 @@ function renderGenreOptions() {
 }
 
 function renderChannelOptions() {
-  const channels = [...new Set(programs.map((program) => program.channel))].sort((a, b) => a.localeCompare(b, "ko"));
+  const channelsBySheet = new Map();
+  programs.forEach((program) => {
+    if (!channelsBySheet.has(program.sheet)) channelsBySheet.set(program.sheet, new Set());
+    channelsBySheet.get(program.sheet).add(program.channel);
+  });
+  const sheetOrder = new Map(SHEET_TABS.map(({ name }, index) => [name, index]));
+  const sheets = [...channelsBySheet.keys()].sort((a, b) => (
+    (sheetOrder.get(a) ?? SHEET_TABS.length) - (sheetOrder.get(b) ?? SHEET_TABS.length) ||
+    a.localeCompare(b, "ko")
+  ));
+  const channels = [...new Set([...channelsBySheet.values()].flatMap((items) => [...items]))]
+    .sort((a, b) => a.localeCompare(b, "ko"));
   const selectedCount = selectedChannels === null
     ? channels.length
     : channels.filter((channel) => selectedChannels.includes(channel)).length;
@@ -598,28 +631,37 @@ function renderChannelOptions() {
       ? `${selectedCount}개 채널 선택`
       : "선택 채널 없음";
   channelOptions.replaceChildren();
-  channels.forEach((channel) => {
-    const label = document.createElement("label");
-    label.className = "filter-picker-option";
-    const checkbox = document.createElement("input");
-    checkbox.type = "checkbox";
-    checkbox.checked = selectedChannels === null || selectedChannels.includes(channel);
-    checkbox.addEventListener("change", () => {
-      if (selectedChannels === null) selectedChannels = [...channels];
-      if (checkbox.checked) {
-        if (!selectedChannels.includes(channel)) selectedChannels.push(channel);
-      } else {
-        selectedChannels = selectedChannels.filter((selected) => selected !== channel);
-      }
-      if (selectedChannels.length === channels.length) selectedChannels = null;
-      saveFilterPreferences();
-      renderChannelOptions();
-      renderSchedule();
+  sheets.forEach((sheet) => {
+    const group = document.createElement("div");
+    group.className = "filter-picker-group";
+    const heading = document.createElement("h3");
+    heading.className = "filter-picker-group-title";
+    heading.textContent = sheet;
+    group.append(heading);
+    [...channelsBySheet.get(sheet)].sort((a, b) => a.localeCompare(b, "ko")).forEach((channel) => {
+      const label = document.createElement("label");
+      label.className = "filter-picker-option";
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.checked = selectedChannels === null || selectedChannels.includes(channel);
+      checkbox.addEventListener("change", () => {
+        if (selectedChannels === null) selectedChannels = [...channels];
+        if (checkbox.checked) {
+          if (!selectedChannels.includes(channel)) selectedChannels.push(channel);
+        } else {
+          selectedChannels = selectedChannels.filter((selected) => selected !== channel);
+        }
+        if (selectedChannels.length === channels.length) selectedChannels = null;
+        saveFilterPreferences();
+        renderChannelOptions();
+        renderSchedule();
+      });
+      const name = document.createElement("span");
+      name.textContent = channel;
+      label.append(checkbox, name);
+      group.append(label);
     });
-    const name = document.createElement("span");
-    name.textContent = channel;
-    label.append(checkbox, name);
-    channelOptions.append(label);
+    channelOptions.append(group);
   });
 }
 
@@ -925,11 +967,11 @@ async function loadManualSheetSchedule() {
   manualSheetRefreshButton.disabled = true;
   scheduleRefreshButton.disabled = true;
   try {
-    const schedules = await Promise.all(SHEET_TABS.map(async (gid) => {
+    const schedules = await Promise.all(SHEET_TABS.map(async ({ gid, name }) => {
       const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${gid}`;
       const response = await fetch(url, { cache: "no-cache" });
       if (!response.ok) throw new Error(`시트 ${gid}에서 HTTP ${response.status} 응답을 받았습니다.`);
-      return parseSheetSchedule(await response.text(), day);
+      return parseSheetSchedule(await response.text(), day, name);
     }));
     const importedPrograms = validatePrograms(schedules.flat());
     if (!importedPrograms.length) {
@@ -1004,7 +1046,7 @@ function parseCellPrograms(cell) {
   }).filter((program) => program.title);
 }
 
-function parseSheetSchedule(text, day) {
+function parseSheetSchedule(text, day, sheetName) {
   const rows = parseCsvRows(text);
   const firstHeader = rows[0]?.[0]?.replace(/^\uFEFF/, "");
   if (rows.length < 3 || firstHeader !== "채널" || rows[1][0] !== "시간") {
@@ -1032,6 +1074,7 @@ function parseSheetSchedule(text, day) {
         programsForDay.push({
           day,
           time: `${String(hour).padStart(2, "0")}:${minute}`,
+          sheet: sheetName,
           channel,
           genre: genreFor(title),
           title,
@@ -1063,9 +1106,12 @@ function parseCsv(text) {
     hasKoreanSignLanguage: headers.indexOf("haskoreansignlanguage"),
     ageRating: headers.indexOf("agerating"),
   };
-  return validatePrograms(rows.slice(1).map((values) => (
-    {
+  const sheetColumn = headers.indexOf("sheet");
+  return validatePrograms(rows.slice(1).map((values) => {
+    const sheet = sheetColumn < 0 ? "" : values[sheetColumn]?.trim() || "";
+    return {
       ...Object.fromEntries(required.map((header, index) => [header, values[indexes[index]] || ""])),
+      ...(sheet ? { sheet } : {}),
       metadata: {
         videoQuality: metadataColumns.videoQuality < 0
           ? null
@@ -1086,8 +1132,8 @@ function parseCsv(text) {
           : parseAgeRating(values[metadataColumns.ageRating] || ""),
       },
       genre: "미분류",
-    }
-  )));
+    };
+  }));
 }
 
 function parseMetadataBoolean(value, label) {

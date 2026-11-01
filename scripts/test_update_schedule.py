@@ -69,7 +69,7 @@ class ScheduleParserTests(unittest.TestCase):
     def test_parse_sheet_maps_channel_and_hour(self):
         sheet = "채널,KBS1,MBC\n시간,,\n20시,05첫 프로그램,방송 시간이 아닙니다\n"
 
-        programs = parse_sheet(sheet, "토")
+        programs = parse_sheet(sheet, "토", "지상파")
 
         self.assertEqual(
             programs,
@@ -77,6 +77,7 @@ class ScheduleParserTests(unittest.TestCase):
                 {
                     "day": "토",
                     "time": "20:05",
+                    "sheet": "지상파",
                     "channel": "KBS1",
                     "title": "첫 프로그램",
                     "metadata": {
@@ -95,7 +96,7 @@ class ScheduleParserTests(unittest.TestCase):
     def test_parse_sheet_preserves_rerun_marker(self):
         sheet = "채널,KBS1\n시간,\n20시,05재방송오늘의 드라마\n"
 
-        programs = parse_sheet(sheet, "토")
+        programs = parse_sheet(sheet, "토", "지상파")
 
         self.assertEqual(programs[0]["title"], "오늘의 드라마")
         self.assertTrue(programs[0]["metadata"]["isRerun"])
@@ -106,7 +107,7 @@ class ScheduleParserTests(unittest.TestCase):
             "20시,05프로그램등급12세 UHD방송 생방송 재방송 자막방송 화면해설 한국수어방송 프로그램\n"
         )
 
-        program = parse_sheet(sheet, "토")[0]
+        program = parse_sheet(sheet, "토", "지상파")[0]
 
         self.assertEqual(program["title"], "프로그램")
         self.assertEqual(

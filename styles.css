@@ -380,6 +380,19 @@ select {
   padding-top: 6px;
 }
 
+.filter-picker-group + .filter-picker-group {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #f0f1f5;
+}
+
+.filter-picker-group-title {
+  margin: 4px 6px;
+  color: #6571cc;
+  font-size: 12px;
+  font-weight: 800;
+}
+
 .filter-picker-option {
   display: flex;
   align-items: center;
