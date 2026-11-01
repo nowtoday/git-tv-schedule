@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-01T17:39:26Z",
+  "generatedAt": "2026-11-01T17:53:36Z",
   "updatedAtByDay": {
-    "월": "2026-11-01T17:39:26Z",
+    "월": "2026-11-01T17:53:36Z",
     "화": "2026-10-26T16:25:42Z",
     "수": "2026-10-27T16:40:47Z",
     "목": "2026-10-29T07:33:44Z",
@@ -14,6 +14,7 @@
     {
       "day": "월",
       "time": "00:00",
+      "sheet": "연예오락채널",
       "channel": "CH W",
       "title": "악의 파동 ~살인 분석반 스핀오프~ <1-2회>",
       "metadata": {
@@ -29,6 +30,7 @@
     {
       "day": "월",
       "time": "00:00",
+      "sheet": "종합편성",
       "channel": "JTBC",
       "title": "냉장고를 부탁해 since 2014 95회",
       "metadata": {
@@ -44,6 +46,7 @@
     {
       "day": "월",
       "time": "00:00",
+      "sheet": "지상파",
       "channel": "KBS1",
       "title": "걸어서 세계속으로",
       "metadata": {
@@ -59,6 +62,7 @@
     {
       "day": "월",
       "time": "00:00",
+      "sheet": "종합편성",
       "channel": "TV 조선",
       "title": "역전의 한방 173회",
       "metadata": {
@@ -74,6 +78,7 @@
     {
       "day": "월",
       "time": "00:05",
+      "sheet": "연예오락채널",
       "channel": "JTBC2",
       "title": "[바로 보는 본방]파이널 테이블 4회",
       "metadata": {
@@ -89,6 +94,7 @@
     {
       "day": "월",
       "time": "00:05",
+      "sheet": "지상파",
       "channel": "KBS2",
       "title": "토일 미니시리즈 너 말고 다른 연애 14회",
       "metadata": {
@@ -104,6 +110,7 @@
     {
       "day": "월",
       "time": "00:05",
+      "sheet": "연예오락채널",
       "channel": "O tvN",
       "title": "멜랑꼴리아 11회",
       "metadata": {
@@ -119,6 +126,7 @@
     {
       "day": "월",
       "time": "00:10",
+      "sheet": "종합편성",
       "channel": "MBN",
       "title": "열린TV 열린세상 779회",
       "metadata": {
@@ -134,6 +142,7 @@
     {
       "day": "월",
       "time": "00:10",
+      "sheet": "종합편성",
       "channel": "채널A",
       "title": "채널A 시청자 마당 778회",
       "metadata": {
@@ -149,6 +158,7 @@
     {
       "day": "월",
       "time": "00:15",
+      "sheet": "지상파",
       "channel": "SBS",
       "title": "거장항준",
       "metadata": {
@@ -164,6 +174,7 @@
     {
       "day": "월",
       "time": "00:25",
+      "sheet": "연예오락채널",
       "channel": "KBS joy",
       "title": "차트를 달리는 남자 509회",
       "metadata": {
@@ -179,6 +190,7 @@
     {
       "day": "월",
       "time": "00:50",
+      "sheet": "지상파",
       "channel": "KBS1",
       "title": "KBS 네트워크 특선 지명수배 [춘천총국]",
       "metadata": {
@@ -194,6 +206,7 @@
     {
       "day": "월",
       "time": "00:50",
+      "sheet": "종합편성",
       "channel": "TV 조선",
       "title": "인생의 연장전 특별판 87회",
       "metadata": {
@@ -209,6 +222,7 @@
     {
       "day": "월",
       "time": "00:50",
+      "sheet": "연예오락채널",
       "channel": "코미디TV",
       "title": "삼시세끼 어촌편 5 3회",
       "metadata": {
@@ -224,6 +238,7 @@
     {
       "day": "월",
       "time": "00:55",
+      "sheet": "지상파",
       "channel": "MBC",
       "title": "라이어 2회",
       "metadata": {
@@ -239,6 +254,7 @@
     {
       "day": "월",
       "time": "01:00",
+      "sheet": "연예오락채널",
       "channel": "CH W",
       "title": "야쿠자 경전 5회",
       "metadata": {
@@ -254,6 +270,7 @@
     {
       "day": "월",
       "time": "01:00",
+      "sheet": "연예오락채널",
       "channel": "E채널",
       "title": "용감한 형사들 5 27회",
       "metadata": {
@@ -269,6 +286,7 @@
     {
       "day": "월",
       "time": "01:10",
+      "sheet": "종합편성",
       "channel": "MBN",
       "title": "소나무 스페셜 7회",
       "metadata": {
@@ -284,6 +302,7 @@
     {
       "day": "월",
       "time": "01:10",
+      "sheet": "종합편성",
       "channel": "채널A",
       "title": "잘 살면 좋잖아 42회",
       "metadata": {
@@ -299,6 +318,7 @@
     {
       "day": "월",
       "time": "01:15",
+      "sheet": "지상파",
       "channel": "OBS 경인TV",
       "title": "주식학교 주말반",
       "metadata": {
@@ -314,6 +334,7 @@
     {
       "day": "월",
       "time": "01:20",
+      "sheet": "연예오락채널",
       "channel": "O tvN",
       "title": "멜랑꼴리아 12회",
       "metadata": {
@@ -329,6 +350,7 @@
     {
       "day": "월",
       "time": "01:21",
+      "sheet": "연예오락채널",
       "channel": "JTBC2",
       "title": "[최신]냉장고를 부탁해 since 2014 95회",
       "metadata": {
@@ -344,6 +366,7 @@
     {
       "day": "월",
       "time": "01:25",
+      "sheet": "연예오락채널",
       "channel": "tvN",
       "title": "벌거벗은 세계사 277회",
       "metadata": {
@@ -359,6 +382,7 @@
     {
       "day": "월",
       "time": "01:35",
+      "sheet": "지상파",
       "channel": "EBS1",
       "title": "2026 헬로루키 23회",
       "metadata": {
@@ -374,6 +398,7 @@
     {
       "day": "월",
       "time": "01:40",
+      "sheet": "종합편성",
       "channel": "JTBC",
       "title": "파이널 테이블 4회",
       "metadata": {
@@ -389,6 +414,7 @@
     {
       "day": "월",
       "time": "01:40",
+      "sheet": "연예오락채널",
       "channel": "KBS joy",
       "title": "영화가 좋다 1029회",
       "metadata": {
@@ -404,6 +430,7 @@
     {
       "day": "월",
       "time": "01:40",
+      "sheet": "종합편성",
       "channel": "TV 조선",
       "title": "승리의 순간! 다시보는 2026 아이치-나고야 2회",
       "metadata": {
@@ -419,6 +446,7 @@
     {
       "day": "월",
       "time": "01:50",
+      "sheet": "지상파",
       "channel": "EBS1",
       "title": "AI 고전 역사를 바꾼 100책",
       "metadata": {
@@ -434,6 +462,7 @@
     {
       "day": "월",
       "time": "01:50",
+      "sheet": "연예오락채널",
       "channel": "MBC every1",
       "title": "전지적 참견 시점 422회",
       "metadata": {
@@ -449,6 +478,7 @@
     {
       "day": "월",
       "time": "02:10",
+      "sheet": "종합편성",
       "channel": "MBN",
       "title": "[MBN 스페셜 다큐] 어영차 바다야 82회",
       "metadata": {
@@ -464,6 +494,7 @@
     {
       "day": "월",
       "time": "02:10",
+      "sheet": "종합편성",
       "channel": "채널A",
       "title": "강철지구 차마고도 스페셜",
       "metadata": {
@@ -479,6 +510,7 @@
     {
       "day": "월",
       "time": "02:20",
+      "sheet": "연예오락채널",
       "channel": "CH W",
       "title": "W랭귀지 - 중국어 207회",
       "metadata": {
@@ -494,6 +526,7 @@
     {
       "day": "월",
       "time": "02:30",
+      "sheet": "연예오락채널",
       "channel": "O tvN",
       "title": "싸이코패스 다이어리 7회",
       "metadata": {
@@ -509,6 +542,7 @@
     {
       "day": "월",
       "time": "02:30",
+      "sheet": "종합편성",
       "channel": "채널A",
       "title": "채널A 스페셜 과학자들 14회",
       "metadata": {
@@ -524,6 +558,7 @@
     {
       "day": "월",
       "time": "02:35",
+      "sheet": "연예오락채널",
       "channel": "E채널",
       "title": "라디오스타 958회",
       "metadata": {
@@ -539,6 +574,7 @@
     {
       "day": "월",
       "time": "02:40",
+      "sheet": "연예오락채널",
       "channel": "코미디TV",
       "title": "데이트 플래너 10회",
       "metadata": {
@@ -554,6 +590,7 @@
     {
       "day": "월",
       "time": "02:55",
+      "sheet": "연예오락채널",
       "channel": "KBS joy",
       "title": "살림하는 남자들 2 480회",
       "metadata": {
@@ -569,6 +606,7 @@
     {
       "day": "월",
       "time": "03:00",
+      "sheet": "종합편성",
       "channel": "JTBC",
       "title": "JTBC 스페셜 다큐멘터리 4256회",
       "metadata": {
@@ -584,6 +622,7 @@
     {
       "day": "월",
       "time": "03:00",
+      "sheet": "종합편성",
       "channel": "채널A",
       "title": "채널A 스페셜 과학자들 15회",
       "metadata": {
@@ -599,6 +638,7 @@
     {
       "day": "월",
       "time": "03:05",
+      "sheet": "연예오락채널",
       "channel": "tvN",
       "title": "텐트 밖은 유럽 노르웨이 2회",
       "metadata": {
@@ -614,6 +654,7 @@
     {
       "day": "월",
       "time": "03:06",
+      "sheet": "연예오락채널",
       "channel": "JTBC2",
       "title": "[연속방송]파이널 테이블 3회",
       "metadata": {
@@ -629,6 +670,7 @@
     {
       "day": "월",
       "time": "03:10",
+      "sheet": "종합편성",
       "channel": "MBN",
       "title": "[MBN 스페셜 다큐] 폐허 속에서 발견한 비밀 시즌2 1회",
       "metadata": {
@@ -644,6 +686,7 @@
     {
       "day": "월",
       "time": "03:10",
+      "sheet": "종합편성",
       "channel": "TV 조선",
       "title": "허영만의 팔도밥상 40회",
       "metadata": {
@@ -659,6 +702,7 @@
     {
       "day": "월",
       "time": "03:20",
+      "sheet": "연예오락채널",
       "channel": "CH W",
       "title": "W랭귀지 - 중국어 208회",
       "metadata": {
@@ -674,6 +718,7 @@
     {
       "day": "월",
       "time": "03:20",
+      "sheet": "연예오락채널",
       "channel": "코미디TV",
       "title": "이라티: 사냥의 시간 1회",
       "metadata": {
@@ -689,6 +734,7 @@
     {
       "day": "월",
       "time": "03:22",
+      "sheet": "연예오락채널",
       "channel": "MBC every1",
       "title": "일당백집사 8회",
       "metadata": {
@@ -704,6 +750,7 @@
     {
       "day": "월",
       "time": "03:30",
+      "sheet": "종합편성",
       "channel": "채널A",
       "title": "채널A 스페셜 호주의 이색 동물들 시즌 2 9회",
       "metadata": {
@@ -719,6 +766,7 @@
     {
       "day": "월",
       "time": "03:45",
+      "sheet": "연예오락채널",
       "channel": "O tvN",
       "title": "싸이코패스 다이어리 8회",
       "metadata": {
@@ -734,6 +782,7 @@
     {
       "day": "월",
       "time": "04:00",
+      "sheet": "종합편성",
       "channel": "JTBC",
       "title": "JTBC 스페셜 다큐멘터리 4257회",
       "metadata": {
@@ -749,6 +798,7 @@
     {
       "day": "월",
       "time": "04:00",
+      "sheet": "종합편성",
       "channel": "채널A",
       "title": "채널A 스페셜 X파일: 외계인의 흔적 시즌17 15회",
       "metadata": {
@@ -764,6 +814,7 @@
     {
       "day": "월",
       "time": "04:05",
+      "sheet": "연예오락채널",
       "channel": "KBS joy",
       "title": "걸어서 세계속으로 트래블홀릭 105회",
       "metadata": {
@@ -779,6 +830,7 @@
     {
       "day": "월",
       "time": "04:10",
+      "sheet": "종합편성",
       "channel": "MBN",
       "title": "천기누설 베스트 13회",
       "metadata": {
@@ -794,6 +846,7 @@
     {
       "day": "월",
       "time": "04:12",
+      "sheet": "연예오락채널",
       "channel": "E채널",
       "title": "시골에 간 도시 Z 하이라이트 1회",
       "metadata": {
@@ -809,6 +862,7 @@
     {
       "day": "월",
       "time": "04:19",
+      "sheet": "연예오락채널",
       "channel": "E채널",
       "title": "용감한 형사들 4 26회",
       "metadata": {
@@ -824,6 +878,7 @@
     {
       "day": "월",
       "time": "04:20",
+      "sheet": "연예오락채널",
       "channel": "CH W",
       "title": "연속TV소설 오싱 <3-4회>",
       "metadata": {
@@ -839,6 +894,7 @@
     {
       "day": "월",
       "time": "04:25",
+      "sheet": "연예오락채널",
       "channel": "코미디TV",
       "title": "이라티: 사냥의 시간 2회",
       "metadata": {
@@ -854,6 +910,7 @@
     {
       "day": "월",
       "time": "04:26",
+      "sheet": "연예오락채널",
       "channel": "JTBC2",
       "title": "[연속방송]파이널 테이블 4회",
       "metadata": {
@@ -869,6 +926,7 @@
     {
       "day": "월",
       "time": "04:32",
+      "sheet": "연예오락채널",
       "channel": "MBC every1",
       "title": "히든 아이 라이브이슈 30회",
       "metadata": {
@@ -884,6 +942,7 @@
     {
       "day": "월",
       "time": "04:40",
+      "sheet": "종합편성",
       "channel": "TV 조선",
       "title": "TV CHOSUN 재난특집",
       "metadata": {
@@ -899,6 +958,7 @@
     {
       "day": "월",
       "time": "04:55",
+      "sheet": "연예오락채널",
       "channel": "tvN",
       "title": "시간관찰자, 더 시크릿 18회",
       "metadata": {
@@ -914,6 +974,7 @@
     {
       "day": "월",
       "time": "05:00",
+      "sheet": "연예오락채널",
       "channel": "CH W",
       "title": "W랭귀지 - 중국어 209회",
       "metadata": {
@@ -929,6 +990,7 @@
     {
       "day": "월",
       "time": "05:00",
+      "sheet": "지상파",
       "channel": "EBS1",
       "title": "왕초보 영어 2838회",
       "metadata": {
@@ -944,6 +1006,7 @@
     {
       "day": "월",
       "time": "05:00",
+      "sheet": "종합편성",
       "channel": "JTBC",
       "title": "입만 살았네 41회",
       "metadata": {
@@ -959,6 +1022,7 @@
     {
       "day": "월",
       "time": "05:00",
+      "sheet": "지상파",
       "channel": "KBS1",
       "title": "생활의 발견 스페셜",
       "metadata": {
@@ -974,6 +1038,7 @@
     {
       "day": "월",
       "time": "05:00",
+      "sheet": "지상파",
       "channel": "KBS2",
       "title": "무엇이든 물어보세요 스페셜",
       "metadata": {
@@ -989,6 +1054,7 @@
     {
       "day": "월",
       "time": "05:00",
+      "sheet": "지상파",
       "channel": "MBC",
       "title": "테마기행 길",
       "metadata": {
@@ -1004,6 +1070,7 @@
     {
       "day": "월",
       "time": "05:00",
+      "sheet": "연예오락채널",
       "channel": "O tvN",
       "title": "위대한 쇼 3회",
       "metadata": {
@@ -1019,6 +1086,7 @@
     {
       "day": "월",
       "time": "05:00",
+      "sheet": "지상파",
       "channel": "SBS",
       "title": "SBS 특선 다큐멘터리",
       "metadata": {
@@ -1034,6 +1102,7 @@
     {
       "day": "월",
       "time": "05:00",
+      "sheet": "종합편성",
       "channel": "TV 조선",
       "title": "장수상회 188회",
       "metadata": {
@@ -1049,6 +1118,7 @@
     {
       "day": "월",
       "time": "05:00",
+      "sheet": "종합편성",
       "channel": "채널A",
       "title": "스타건강랭킹 넘버원 58회",
       "metadata": {
@@ -1064,6 +1134,7 @@
     {
       "day": "월",
       "time": "05:05",
+      "sheet": "연예오락채널",
       "channel": "KBS joy",
       "title": "신상출시 편스토랑 343회",
       "metadata": {
@@ -1079,6 +1150,7 @@
     {
       "day": "월",
       "time": "05:10",
+      "sheet": "지상파",
       "channel": "KBS1",
       "title": "내고향 스페셜",
       "metadata": {
@@ -1094,6 +1166,7 @@
     {
       "day": "월",
       "time": "05:10",
+      "sheet": "종합편성",
       "channel": "MBN",
       "title": "해피라이프 Make Better Next 스페셜 14회",
       "metadata": {
@@ -1109,6 +1182,7 @@
     {
       "day": "월",
       "time": "05:12",
+      "sheet": "연예오락채널",
       "channel": "MBC every1",
       "title": "장미의 전쟁 24회",
       "metadata": {
@@ -1124,6 +1198,7 @@
     {
       "day": "월",
       "time": "05:20",
+      "sheet": "연예오락채널",
       "channel": "코미디TV",
       "title": "열린성인가요콘서트2 65회",
       "metadata": {
@@ -1139,6 +1214,7 @@
     {
       "day": "월",
       "time": "05:30",
+      "sheet": "지상파",
       "channel": "EBS1",
       "title": "클래스 e 1강 뇌를 위해 몸을 움직이라 말하는 이유>",
       "metadata": {
@@ -1154,6 +1230,7 @@
     {
       "day": "월",
       "time": "05:33",
+      "sheet": "연예오락채널",
       "channel": "E채널",
       "title": "전현무계획 2 48회",
       "metadata": {
@@ -1169,6 +1246,7 @@
     {
       "day": "월",
       "time": "05:41",
+      "sheet": "연예오락채널",
       "channel": "JTBC2",
       "title": "사건반장 2925회",
       "metadata": {
@@ -1184,6 +1262,7 @@
     {
       "day": "월",
       "time": "05:50",
+      "sheet": "지상파",
       "channel": "EBS1",
       "title": "한국기행",
       "metadata": {
@@ -1199,6 +1278,7 @@
     {
       "day": "월",
       "time": "06:00",
+      "sheet": "연예오락채널",
       "channel": "CH W",
       "title": "W 일본어 캠프 60회",
       "metadata": {
@@ -1214,6 +1294,7 @@
     {
       "day": "월",
       "time": "06:00",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "매일 10분 영어 - 이현석의 정면돌파 스피킹",
       "metadata": {
@@ -1229,6 +1310,7 @@
     {
       "day": "월",
       "time": "06:00",
+      "sheet": "종합편성",
       "channel": "JTBC",
       "title": "이토록 위대한 몸 60회",
       "metadata": {
@@ -1244,6 +1326,7 @@
     {
       "day": "월",
       "time": "06:00",
+      "sheet": "지상파",
       "channel": "KBS1",
       "title": "KBS 뉴스광장",
       "metadata": {
@@ -1259,6 +1342,7 @@
     {
       "day": "월",
       "time": "06:00",
+      "sheet": "지상파",
       "channel": "MBC",
       "title": "MBC 뉴스투데이 1부",
       "metadata": {
@@ -1274,6 +1358,7 @@
     {
       "day": "월",
       "time": "06:00",
+      "sheet": "종합편성",
       "channel": "MBN",
       "title": "임성훈의 스타 유전자 X파일 89회",
       "metadata": {
@@ -1289,6 +1374,7 @@
     {
       "day": "월",
       "time": "06:00",
+      "sheet": "지상파",
       "channel": "OBS 경인TV",
       "title": "옴니극장 이것이 인생",
       "metadata": {
@@ -1304,6 +1390,7 @@
     {
       "day": "월",
       "time": "06:00",
+      "sheet": "지상파",
       "channel": "SBS",
       "title": "모닝와이드 (1부)",
       "metadata": {
@@ -1319,6 +1406,7 @@
     {
       "day": "월",
       "time": "06:00",
+      "sheet": "종합편성",
       "channel": "TV 조선",
       "title": "건강한 집 2 122회",
       "metadata": {
@@ -1334,6 +1422,7 @@
     {
       "day": "월",
       "time": "06:00",
+      "sheet": "연예오락채널",
       "channel": "tvN",
       "title": "너의 몸소리가 들려 81회",
       "metadata": {
@@ -1349,6 +1438,7 @@
     {
       "day": "월",
       "time": "06:00",
+      "sheet": "종합편성",
       "channel": "채널A",
       "title": "아이엠닥터 78회",
       "metadata": {
@@ -1364,6 +1454,7 @@
     {
       "day": "월",
       "time": "06:05",
+      "sheet": "지상파",
       "channel": "KBS2",
       "title": "TV 유치원",
       "metadata": {
@@ -1379,6 +1470,7 @@
     {
       "day": "월",
       "time": "06:10",
+      "sheet": "지상파",
       "channel": "EBS1",
       "title": "세계테마기행",
       "metadata": {
@@ -1394,6 +1486,7 @@
     {
       "day": "월",
       "time": "06:10",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "매일 10분 영어 - 세리나의 누구나 톡톡",
       "metadata": {
@@ -1409,6 +1502,7 @@
     {
       "day": "월",
       "time": "06:10",
+      "sheet": "연예오락채널",
       "channel": "O tvN",
       "title": "위대한 쇼 4회",
       "metadata": {
@@ -1424,6 +1518,7 @@
     {
       "day": "월",
       "time": "06:15",
+      "sheet": "연예오락채널",
       "channel": "KBS joy",
       "title": "살림하는 남자들 2 463회",
       "metadata": {
@@ -1439,6 +1534,7 @@
     {
       "day": "월",
       "time": "06:20",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "EBSe 생활영어",
       "metadata": {
@@ -1454,6 +1550,7 @@
     {
       "day": "월",
       "time": "06:20",
+      "sheet": "연예오락채널",
       "channel": "코미디TV",
       "title": "조영구의 전국 가요 스타쇼 63회",
       "metadata": {
@@ -1469,6 +1566,7 @@
     {
       "day": "월",
       "time": "06:25",
+      "sheet": "지상파",
       "channel": "MBC",
       "title": "MBC 뉴스투데이 2부",
       "metadata": {
@@ -1484,6 +1582,7 @@
     {
       "day": "월",
       "time": "06:25",
+      "sheet": "지상파",
       "channel": "SBS",
       "title": "모닝와이드 (2부)",
       "metadata": {
@@ -1499,6 +1598,7 @@
     {
       "day": "월",
       "time": "06:33",
+      "sheet": "연예오락채널",
       "channel": "MBC every1",
       "title": "히든 아이 107회",
       "metadata": {
@@ -1514,6 +1614,7 @@
     {
       "day": "월",
       "time": "06:35",
+      "sheet": "지상파",
       "channel": "KBS2",
       "title": "걸어서 세계속으로 트래블홀릭",
       "metadata": {
@@ -1529,6 +1630,7 @@
     {
       "day": "월",
       "time": "06:44",
+      "sheet": "연예오락채널",
       "channel": "JTBC2",
       "title": "[연속방송]파이널 테이블 3회",
       "metadata": {
@@ -1544,6 +1646,7 @@
     {
       "day": "월",
       "time": "06:50",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "영어 스토리 타임",
       "metadata": {
@@ -1559,6 +1662,7 @@
     {
       "day": "월",
       "time": "06:50",
+      "sheet": "종합편성",
       "channel": "채널A",
       "title": "생존의 단서 블랙박스 32회",
       "metadata": {
@@ -1574,6 +1678,7 @@
     {
       "day": "월",
       "time": "07:00",
+      "sheet": "연예오락채널",
       "channel": "CH W",
       "title": "W 일본어 캠프 61회",
       "metadata": {
@@ -1589,6 +1694,7 @@
     {
       "day": "월",
       "time": "07:00",
+      "sheet": "지상파",
       "channel": "EBS1",
       "title": "나의 비밀친구 해치",
       "metadata": {
@@ -1604,6 +1710,7 @@
     {
       "day": "월",
       "time": "07:00",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "왕초보 영어 2833회",
       "metadata": {
@@ -1619,6 +1726,7 @@
     {
       "day": "월",
       "time": "07:00",
+      "sheet": "종합편성",
       "channel": "JTBC",
       "title": "코코몽 3 3회",
       "metadata": {
@@ -1634,6 +1742,7 @@
     {
       "day": "월",
       "time": "07:00",
+      "sheet": "종합편성",
       "channel": "MBN",
       "title": "굿모닝 MBN",
       "metadata": {
@@ -1649,6 +1758,7 @@
     {
       "day": "월",
       "time": "07:00",
+      "sheet": "지상파",
       "channel": "OBS 경인TV",
       "title": "굿모닝 백세생활",
       "metadata": {
@@ -1664,6 +1774,7 @@
     {
       "day": "월",
       "time": "07:00",
+      "sheet": "종합편성",
       "channel": "TV 조선",
       "title": "금타는 금요일 특별판 10회",
       "metadata": {
@@ -1679,6 +1790,7 @@
     {
       "day": "월",
       "time": "07:00",
+      "sheet": "연예오락채널",
       "channel": "tvN",
       "title": "웰컴 투 불로촌 122회",
       "metadata": {
@@ -1694,6 +1806,7 @@
     {
       "day": "월",
       "time": "07:10",
+      "sheet": "연예오락채널",
       "channel": "E채널",
       "title": "나 혼자 산다 609회",
       "metadata": {
@@ -1709,6 +1822,7 @@
     {
       "day": "월",
       "time": "07:15",
+      "sheet": "지상파",
       "channel": "EBS1",
       "title": "모두 함께 부스누!",
       "metadata": {
@@ -1724,6 +1838,7 @@
     {
       "day": "월",
       "time": "07:20",
+      "sheet": "지상파",
       "channel": "OBS 경인TV",
       "title": "오지:객",
       "metadata": {
@@ -1739,6 +1854,7 @@
     {
       "day": "월",
       "time": "07:20",
+      "sheet": "연예오락채널",
       "channel": "코미디TV",
       "title": "맛있는 녀석들 587회",
       "metadata": {
@@ -1754,6 +1870,7 @@
     {
       "day": "월",
       "time": "07:30",
+      "sheet": "지상파",
       "channel": "EBS1",
       "title": "냠냠 히어로 슈퍼잭",
       "metadata": {
@@ -1769,6 +1886,7 @@
     {
       "day": "월",
       "time": "07:30",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "왕초보 영어 2838회",
       "metadata": {
@@ -1784,6 +1902,7 @@
     {
       "day": "월",
       "time": "07:30",
+      "sheet": "종합편성",
       "channel": "JTBC",
       "title": "아침&",
       "metadata": {
@@ -1799,6 +1918,7 @@
     {
       "day": "월",
       "time": "07:30",
+      "sheet": "지상파",
       "channel": "KBS2",
       "title": "생생정보 스페셜",
       "metadata": {
@@ -1814,6 +1934,7 @@
     {
       "day": "월",
       "time": "07:30",
+      "sheet": "종합편성",
       "channel": "채널A",
       "title": "터닝메카드 갓 9회",
       "metadata": {
@@ -1829,6 +1950,7 @@
     {
       "day": "월",
       "time": "07:35",
+      "sheet": "연예오락채널",
       "channel": "O tvN",
       "title": "언니네 산지직송3-네 식구 산지 라이프",
       "metadata": {
@@ -1844,6 +1966,7 @@
     {
       "day": "월",
       "time": "07:40",
+      "sheet": "연예오락채널",
       "channel": "KBS joy",
       "title": "옥탑방의 문제아들 325회",
       "metadata": {
@@ -1859,6 +1982,7 @@
     {
       "day": "월",
       "time": "07:40",
+      "sheet": "지상파",
       "channel": "SBS",
       "title": "모닝와이드 (3부)",
       "metadata": {
@@ -1874,6 +1998,7 @@
     {
       "day": "월",
       "time": "07:40",
+      "sheet": "종합편성",
       "channel": "TV 조선",
       "title": "뉴스 퍼레이드",
       "metadata": {
@@ -1889,6 +2014,7 @@
     {
       "day": "월",
       "time": "07:45",
+      "sheet": "지상파",
       "channel": "EBS1",
       "title": "다이노스터 공룡수호대",
       "metadata": {
@@ -1904,6 +2030,7 @@
     {
       "day": "월",
       "time": "07:50",
+      "sheet": "지상파",
       "channel": "KBS1",
       "title": "인간극장",
       "metadata": {
@@ -1919,6 +2046,7 @@
     {
       "day": "월",
       "time": "07:50",
+      "sheet": "지상파",
       "channel": "MBC",
       "title": "오늘 아침",
       "metadata": {
@@ -1934,6 +2062,7 @@
     {
       "day": "월",
       "time": "07:55",
+      "sheet": "연예오락채널",
       "channel": "tvN",
       "title": "이호선 상담소:호랑이쌤의 1:1 밀착 솔루션",
       "metadata": {
@@ -1949,6 +2078,7 @@
     {
       "day": "월",
       "time": "08:00",
+      "sheet": "연예오락채널",
       "channel": "CH W",
       "title": "W 일본어 캠프 62회",
       "metadata": {
@@ -1964,6 +2094,7 @@
     {
       "day": "월",
       "time": "08:00",
+      "sheet": "지상파",
       "channel": "EBS1",
       "title": "딩동댕 딩동댕",
       "metadata": {
@@ -1979,6 +2110,7 @@
     {
       "day": "월",
       "time": "08:00",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "매일 10분 영어 - 크리스틴 조의 슬기로운 출근영어",
       "metadata": {
@@ -1994,6 +2126,7 @@
     {
       "day": "월",
       "time": "08:00",
+      "sheet": "종합편성",
       "channel": "JTBC",
       "title": "몸이 답이다 스페셜 10회",
       "metadata": {
@@ -2009,6 +2142,7 @@
     {
       "day": "월",
       "time": "08:00",
+      "sheet": "종합편성",
       "channel": "MBN",
       "title": "아침 & 매일경제",
       "metadata": {
@@ -2024,6 +2158,7 @@
     {
       "day": "월",
       "time": "08:00",
+      "sheet": "지상파",
       "channel": "OBS 경인TV",
       "title": "OBS 매거진 톡톡",
       "metadata": {
@@ -2039,6 +2174,7 @@
     {
       "day": "월",
       "time": "08:00",
+      "sheet": "종합편성",
       "channel": "채널A",
       "title": "행복한 아침",
       "metadata": {
@@ -2054,6 +2190,7 @@
     {
       "day": "월",
       "time": "08:04",
+      "sheet": "연예오락채널",
       "channel": "JTBC2",
       "title": "[연속방송]파이널 테이블 4회",
       "metadata": {
@@ -2069,6 +2206,7 @@
     {
       "day": "월",
       "time": "08:05",
+      "sheet": "연예오락채널",
       "channel": "O tvN",
       "title": "청춘기록 7회",
       "metadata": {
@@ -2084,6 +2222,7 @@
     {
       "day": "월",
       "time": "08:10",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "매일 10분 영어 - 메이슨의 패턴 잉글리시",
       "metadata": {
@@ -2099,6 +2238,7 @@
     {
       "day": "월",
       "time": "08:20",
+      "sheet": "지상파",
       "channel": "EBS1",
       "title": "한글용사 아이야 10회",
       "metadata": {
@@ -2114,6 +2254,7 @@
     {
       "day": "월",
       "time": "08:20",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "매일 10분 영어 - 이근철의 하루 딱! 한문장 try again",
       "metadata": {
@@ -2129,6 +2270,7 @@
     {
       "day": "월",
       "time": "08:20",
+      "sheet": "연예오락채널",
       "channel": "MBC every1",
       "title": "계약 결혼 5회",
       "metadata": {
@@ -2144,6 +2286,7 @@
     {
       "day": "월",
       "time": "08:25",
+      "sheet": "지상파",
       "channel": "KBS1",
       "title": "아침마당",
       "metadata": {
@@ -2159,6 +2302,7 @@
     {
       "day": "월",
       "time": "08:30",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "EBS 평생학교",
       "metadata": {
@@ -2174,6 +2318,7 @@
     {
       "day": "월",
       "time": "08:35",
+      "sheet": "지상파",
       "channel": "EBS1",
       "title": "한글용사 아이야 9회",
       "metadata": {
@@ -2189,6 +2334,7 @@
     {
       "day": "월",
       "time": "08:35",
+      "sheet": "연예오락채널",
       "channel": "tvN",
       "title": "벌거벗은 한국사 3 4회",
       "metadata": {
@@ -2204,6 +2350,7 @@
     {
       "day": "월",
       "time": "08:40",
+      "sheet": "지상파",
       "channel": "KBS2",
       "title": "일일드라마 엄마가 미쳤어요 25회",
       "metadata": {
@@ -2219,6 +2366,7 @@
     {
       "day": "월",
       "time": "08:40",
+      "sheet": "지상파",
       "channel": "SBS",
       "title": "맨 인 블랙박스",
       "metadata": {
@@ -2234,6 +2382,7 @@
     {
       "day": "월",
       "time": "08:45",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "AI 고전 역사를 바꾼 100책",
       "metadata": {
@@ -2249,6 +2398,7 @@
     {
       "day": "월",
       "time": "08:50",
+      "sheet": "지상파",
       "channel": "EBS1",
       "title": "슈퍼윙스 지구를 지켜라",
       "metadata": {
@@ -2264,6 +2414,7 @@
     {
       "day": "월",
       "time": "08:50",
+      "sheet": "지상파",
       "channel": "MBC",
       "title": "가족관계증명서 71회",
       "metadata": {
@@ -2279,6 +2430,7 @@
     {
       "day": "월",
       "time": "08:50",
+      "sheet": "지상파",
       "channel": "OBS 경인TV",
       "title": "다시 갈 지도",
       "metadata": {
@@ -2294,6 +2446,7 @@
     {
       "day": "월",
       "time": "08:50",
+      "sheet": "지상파",
       "channel": "SBS",
       "title": "좋은아침",
       "metadata": {
@@ -2309,6 +2462,7 @@
     {
       "day": "월",
       "time": "08:50",
+      "sheet": "종합편성",
       "channel": "TV 조선",
       "title": "신통방통",
       "metadata": {
@@ -2324,6 +2478,7 @@
     {
       "day": "월",
       "time": "08:50",
+      "sheet": "종합편성",
       "channel": "채널A",
       "title": "김진의 돌직구 쇼",
       "metadata": {
@@ -2339,6 +2494,7 @@
     {
       "day": "월",
       "time": "08:50",
+      "sheet": "연예오락채널",
       "channel": "코미디TV",
       "title": "런닝맨 814회",
       "metadata": {
@@ -2354,6 +2510,7 @@
     {
       "day": "월",
       "time": "08:55",
+      "sheet": "연예오락채널",
       "channel": "KBS joy",
       "title": "신상출시 편스토랑 343회",
       "metadata": {
@@ -2369,6 +2526,7 @@
     {
       "day": "월",
       "time": "09:00",
+      "sheet": "연예오락채널",
       "channel": "CH W",
       "title": "W 일본어 캠프 63회",
       "metadata": {
@@ -2384,6 +2542,7 @@
     {
       "day": "월",
       "time": "09:00",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "Sesame Street(S54)",
       "metadata": {
@@ -2399,6 +2558,7 @@
     {
       "day": "월",
       "time": "09:00",
+      "sheet": "종합편성",
       "channel": "JTBC",
       "title": "친절한 진료실 242회",
       "metadata": {
@@ -2414,6 +2574,7 @@
     {
       "day": "월",
       "time": "09:08",
+      "sheet": "연예오락채널",
       "channel": "E채널",
       "title": "콩콩팜팜 1회",
       "metadata": {
@@ -2429,6 +2590,7 @@
     {
       "day": "월",
       "time": "09:20",
+      "sheet": "지상파",
       "channel": "EBS1",
       "title": "미리 가본 대학",
       "metadata": {
@@ -2444,6 +2606,7 @@
     {
       "day": "월",
       "time": "09:20",
+      "sheet": "지상파",
       "channel": "KBS2",
       "title": "일일드라마 욕망의 덫 48회",
       "metadata": {
@@ -2459,6 +2622,7 @@
     {
       "day": "월",
       "time": "09:20",
+      "sheet": "종합편성",
       "channel": "MBN",
       "title": "전국네트워크뉴스",
       "metadata": {
@@ -2474,6 +2638,7 @@
     {
       "day": "월",
       "time": "09:27",
+      "sheet": "연예오락채널",
       "channel": "JTBC2",
       "title": "[김풍매직X국대특집]냉장고를 부탁해 since 2014 95회",
       "metadata": {
@@ -2489,6 +2654,7 @@
     {
       "day": "월",
       "time": "09:30",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "딩동댕 딩동댕",
       "metadata": {
@@ -2504,6 +2670,7 @@
     {
       "day": "월",
       "time": "09:30",
+      "sheet": "지상파",
       "channel": "KBS1",
       "title": "KBS 뉴스 930",
       "metadata": {
@@ -2519,6 +2686,7 @@
     {
       "day": "월",
       "time": "09:30",
+      "sheet": "지상파",
       "channel": "MBC",
       "title": "930 MBC 뉴스",
       "metadata": {
@@ -2534,6 +2702,7 @@
     {
       "day": "월",
       "time": "09:30",
+      "sheet": "종합편성",
       "channel": "MBN",
       "title": "MBN 뉴스특보",
       "metadata": {
@@ -2549,6 +2718,7 @@
     {
       "day": "월",
       "time": "09:30",
+      "sheet": "연예오락채널",
       "channel": "O tvN",
       "title": "청춘기록 8회",
       "metadata": {
@@ -2564,6 +2734,7 @@
     {
       "day": "월",
       "time": "09:40",
+      "sheet": "지상파",
       "channel": "EBS1",
       "title": "부모의 첫 성교육",
       "metadata": {
@@ -2579,6 +2750,7 @@
     {
       "day": "월",
       "time": "09:50",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "페파 피그",
       "metadata": {
@@ -2594,6 +2766,7 @@
     {
       "day": "월",
       "time": "09:50",
+      "sheet": "지상파",
       "channel": "MBC",
       "title": "중계방송 2027년도 예산안 정부 시정연설",
       "metadata": {
@@ -2609,6 +2782,7 @@
     {
       "day": "월",
       "time": "09:54",
+      "sheet": "연예오락채널",
       "channel": "MBC every1",
       "title": "놀면 뭐하니? 350회",
       "metadata": {
@@ -2624,6 +2798,7 @@
     {
       "day": "월",
       "time": "09:55",
+      "sheet": "지상파",
       "channel": "SBS",
       "title": "중계방송 2027년도 예산안 정부 시정연설",
       "metadata": {
@@ -2639,6 +2814,7 @@
     {
       "day": "월",
       "time": "10:00",
+      "sheet": "연예오락채널",
       "channel": "CH W",
       "title": "W캠퍼스 - 중국어 16회",
       "metadata": {
@@ -2654,6 +2830,7 @@
     {
       "day": "월",
       "time": "10:00",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "슈퍼두퍼 잉글리시",
       "metadata": {
@@ -2669,6 +2846,7 @@
     {
       "day": "월",
       "time": "10:00",
+      "sheet": "종합편성",
       "channel": "JTBC",
       "title": "중독자들 166회",
       "metadata": {
@@ -2684,6 +2862,7 @@
     {
       "day": "월",
       "time": "10:00",
+      "sheet": "지상파",
       "channel": "KBS1",
       "title": "중계방송 2027년도 예산안 정부 시정연설",
       "metadata": {
@@ -2699,6 +2878,7 @@
     {
       "day": "월",
       "time": "10:00",
+      "sheet": "지상파",
       "channel": "KBS2",
       "title": "인간극장 스페셜",
       "metadata": {
@@ -2714,6 +2894,7 @@
     {
       "day": "월",
       "time": "10:00",
+      "sheet": "지상파",
       "channel": "OBS 경인TV",
       "title": "OBS 뉴스특보",
       "metadata": {
@@ -2729,6 +2910,7 @@
     {
       "day": "월",
       "time": "10:00",
+      "sheet": "종합편성",
       "channel": "TV 조선",
       "title": "뉴스특보",
       "metadata": {
@@ -2744,6 +2926,7 @@
     {
       "day": "월",
       "time": "10:05",
+      "sheet": "연예오락채널",
       "channel": "tvN",
       "title": "언더커버 셰프 : 멀리서 찾아온 벗 1회",
       "metadata": {
@@ -2759,6 +2942,7 @@
     {
       "day": "월",
       "time": "10:15",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "슈퍼두퍼 잉글리시",
       "metadata": {
@@ -2774,6 +2958,7 @@
     {
       "day": "월",
       "time": "10:25",
+      "sheet": "연예오락채널",
       "channel": "KBS joy",
       "title": "살림하는 남자들 2 480회",
       "metadata": {
@@ -2789,6 +2974,7 @@
     {
       "day": "월",
       "time": "10:30",
+      "sheet": "지상파",
       "channel": "MBC",
       "title": "기분 좋은 날",
       "metadata": {
@@ -2804,6 +2990,7 @@
     {
       "day": "월",
       "time": "10:35",
+      "sheet": "지상파",
       "channel": "EBS1",
       "title": "최고의 요리비결",
       "metadata": {
@@ -2819,6 +3006,7 @@
     {
       "day": "월",
       "time": "10:40",
+      "sheet": "지상파",
       "channel": "KBS1",
       "title": "무엇이든 물어보세요",
       "metadata": {
@@ -2834,6 +3022,7 @@
     {
       "day": "월",
       "time": "10:40",
+      "sheet": "지상파",
       "channel": "KBS2",
       "title": "KBS 아침 뉴스타임",
       "metadata": {
@@ -2849,6 +3038,7 @@
     {
       "day": "월",
       "time": "10:40",
+      "sheet": "종합편성",
       "channel": "MBN",
       "title": "해피라이프 Make Better Next 34회",
       "metadata": {
@@ -2864,6 +3054,7 @@
     {
       "day": "월",
       "time": "10:40",
+      "sheet": "지상파",
       "channel": "OBS 경인TV",
       "title": "비행기 타고 가는 세계의 명소",
       "metadata": {
@@ -2879,6 +3070,7 @@
     {
       "day": "월",
       "time": "10:40",
+      "sheet": "지상파",
       "channel": "SBS",
       "title": "생활의 달인 스페셜",
       "metadata": {
@@ -2894,6 +3086,7 @@
     {
       "day": "월",
       "time": "10:40",
+      "sheet": "종합편성",
       "channel": "TV 조선",
       "title": "천만기인쇼 특별판 1회",
       "metadata": {
@@ -2909,6 +3102,7 @@
     {
       "day": "월",
       "time": "10:40",
+      "sheet": "종합편성",
       "channel": "채널A",
       "title": "티처스3: 재수전쟁 스페셜 3회",
       "metadata": {
@@ -2924,6 +3118,7 @@
     {
       "day": "월",
       "time": "10:45",
+      "sheet": "연예오락채널",
       "channel": "코미디TV",
       "title": "오늘부터 운동뚱 65회",
       "metadata": {
@@ -2939,6 +3134,7 @@
     {
       "day": "월",
       "time": "10:50",
+      "sheet": "연예오락채널",
       "channel": "E채널",
       "title": "놀면 뭐하니? 337회",
       "metadata": {
@@ -2954,6 +3150,7 @@
     {
       "day": "월",
       "time": "10:50",
+      "sheet": "종합편성",
       "channel": "JTBC",
       "title": "연애전쟁 핫 클립 9회",
       "metadata": {
@@ -2969,6 +3166,7 @@
     {
       "day": "월",
       "time": "10:58",
+      "sheet": "연예오락채널",
       "channel": "JTBC2",
       "title": "[박은영X박가람]밥은영 13회",
       "metadata": {
@@ -2984,6 +3182,7 @@
     {
       "day": "월",
       "time": "11:00",
+      "sheet": "연예오락채널",
       "channel": "CH W",
       "title": "W캠퍼스 - 중국어 17회",
       "metadata": {
@@ -2999,6 +3198,7 @@
     {
       "day": "월",
       "time": "11:00",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "슈퍼윙스 지구를 지켜라(종합)",
       "metadata": {
@@ -3014,6 +3214,7 @@
     {
       "day": "월",
       "time": "11:00",
+      "sheet": "지상파",
       "channel": "MBC",
       "title": "베베핀 플레이타임",
       "metadata": {
@@ -3029,6 +3230,7 @@
     {
       "day": "월",
       "time": "11:00",
+      "sheet": "연예오락채널",
       "channel": "O tvN",
       "title": "청춘기록 9회",
       "metadata": {
@@ -3044,6 +3246,7 @@
     {
       "day": "월",
       "time": "11:00",
+      "sheet": "지상파",
       "channel": "SBS",
       "title": "보석이네 건강 수다",
       "metadata": {
@@ -3059,6 +3262,7 @@
     {
       "day": "월",
       "time": "11:05",
+      "sheet": "지상파",
       "channel": "EBS1",
       "title": "세계테마기행",
       "metadata": {
@@ -3074,6 +3278,7 @@
     {
       "day": "월",
       "time": "11:10",
+      "sheet": "지상파",
       "channel": "KBS2",
       "title": "백수 이세돌 2회",
       "metadata": {
@@ -3089,6 +3294,7 @@
     {
       "day": "월",
       "time": "11:10",
+      "sheet": "지상파",
       "channel": "OBS 경인TV",
       "title": "한방이 답이다",
       "metadata": {
@@ -3104,6 +3310,7 @@
     {
       "day": "월",
       "time": "11:10",
+      "sheet": "종합편성",
       "channel": "TV 조선",
       "title": "니니키즈 40회",
       "metadata": {
@@ -3119,6 +3326,7 @@
     {
       "day": "월",
       "time": "11:15",
+      "sheet": "지상파",
       "channel": "MBC",
       "title": "찾아가는 꾸러기교실",
       "metadata": {
@@ -3134,6 +3342,7 @@
     {
       "day": "월",
       "time": "11:15",
+      "sheet": "연예오락채널",
       "channel": "코미디TV",
       "title": "밥값 하는 남자들 5회",
       "metadata": {
@@ -3149,6 +3358,7 @@
     {
       "day": "월",
       "time": "11:20",
+      "sheet": "종합편성",
       "channel": "JTBC",
       "title": "중독자들 191회",
       "metadata": {
@@ -3164,6 +3374,7 @@
     {
       "day": "월",
       "time": "11:23",
+      "sheet": "연예오락채널",
       "channel": "MBC every1",
       "title": "나 혼자 산다 671회",
       "metadata": {
@@ -3179,6 +3390,7 @@
     {
       "day": "월",
       "time": "11:30",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "세계의 비밀 수호대 번개맨",
       "metadata": {
@@ -3194,6 +3406,7 @@
     {
       "day": "월",
       "time": "11:30",
+      "sheet": "연예오락채널",
       "channel": "KBS joy",
       "title": "계약결혼 5회",
       "metadata": {
@@ -3209,6 +3422,7 @@
     {
       "day": "월",
       "time": "11:40",
+      "sheet": "종합편성",
       "channel": "MBN",
       "title": "특종세상 759회",
       "metadata": {
@@ -3224,6 +3438,7 @@
     {
       "day": "월",
       "time": "11:40",
+      "sheet": "종합편성",
       "channel": "TV 조선",
       "title": "강적들 662회",
       "metadata": {
@@ -3239,6 +3454,7 @@
     {
       "day": "월",
       "time": "11:45",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "세계의 비밀 수호대 번개맨",
       "metadata": {
@@ -3254,6 +3470,7 @@
     {
       "day": "월",
       "time": "11:45",
+      "sheet": "지상파",
       "channel": "MBC",
       "title": "톰토미",
       "metadata": {
@@ -3269,6 +3486,7 @@
     {
       "day": "월",
       "time": "11:49",
+      "sheet": "연예오락채널",
       "channel": "JTBC2",
       "title": "[김풍매직X국대특집]냉장고를 부탁해 since 2014 95회",
       "metadata": {
@@ -3284,6 +3502,7 @@
     {
       "day": "월",
       "time": "11:50",
+      "sheet": "지상파",
       "channel": "KBS1",
       "title": "숨터 스페셜",
       "metadata": {
@@ -3299,6 +3518,7 @@
     {
       "day": "월",
       "time": "11:55",
+      "sheet": "지상파",
       "channel": "KBS1",
       "title": "국가유산순례 드오",
       "metadata": {
@@ -3314,6 +3534,7 @@
     {
       "day": "월",
       "time": "12:00",
+      "sheet": "연예오락채널",
       "channel": "CH W",
       "title": "연속TV소설 오싱 <7-9회>",
       "metadata": {
@@ -3329,6 +3550,7 @@
     {
       "day": "월",
       "time": "12:00",
+      "sheet": "지상파",
       "channel": "EBS1",
       "title": "EBS 뉴스 12",
       "metadata": {
@@ -3344,6 +3566,7 @@
     {
       "day": "월",
       "time": "12:00",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "AI 고전 역사를 바꾼 100책",
       "metadata": {
@@ -3359,6 +3582,7 @@
     {
       "day": "월",
       "time": "12:00",
+      "sheet": "지상파",
       "channel": "KBS1",
       "title": "KBS 뉴스 12",
       "metadata": {
@@ -3374,6 +3598,7 @@
     {
       "day": "월",
       "time": "12:00",
+      "sheet": "지상파",
       "channel": "MBC",
       "title": "12 MBC 뉴스",
       "metadata": {
@@ -3389,6 +3614,7 @@
     {
       "day": "월",
       "time": "12:00",
+      "sheet": "지상파",
       "channel": "SBS",
       "title": "SBS 12 뉴스",
       "metadata": {
@@ -3404,6 +3630,7 @@
     {
       "day": "월",
       "time": "12:00",
+      "sheet": "종합편성",
       "channel": "채널A",
       "title": "뉴스A LIVE",
       "metadata": {
@@ -3419,6 +3646,7 @@
     {
       "day": "월",
       "time": "12:10",
+      "sheet": "지상파",
       "channel": "EBS1",
       "title": "극한직업",
       "metadata": {
@@ -3434,6 +3662,7 @@
     {
       "day": "월",
       "time": "12:10",
+      "sheet": "지상파",
       "channel": "OBS 경인TV",
       "title": "귀농 다큐 살어리랏다",
       "metadata": {
@@ -3449,6 +3678,7 @@
     {
       "day": "월",
       "time": "12:15",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "AI 고전 역사를 바꾼 100책",
       "metadata": {
@@ -3464,6 +3694,7 @@
     {
       "day": "월",
       "time": "12:20",
+      "sheet": "종합편성",
       "channel": "JTBC",
       "title": "파이널 테이블 3회",
       "metadata": {
@@ -3479,6 +3710,7 @@
     {
       "day": "월",
       "time": "12:25",
+      "sheet": "지상파",
       "channel": "MBC",
       "title": "셰프의 DNA <1부 스페셜>",
       "metadata": {
@@ -3494,6 +3726,7 @@
     {
       "day": "월",
       "time": "12:25",
+      "sheet": "연예오락채널",
       "channel": "tvN",
       "title": "맛따라 길따라 대명이따라 2회",
       "metadata": {
@@ -3509,6 +3742,7 @@
     {
       "day": "월",
       "time": "12:30",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "시간을 달리는 세계사",
       "metadata": {
@@ -3524,6 +3758,7 @@
     {
       "day": "월",
       "time": "12:30",
+      "sheet": "연예오락채널",
       "channel": "O tvN",
       "title": "100일의 거짓말 7회",
       "metadata": {
@@ -3539,6 +3774,7 @@
     {
       "day": "월",
       "time": "12:30",
+      "sheet": "연예오락채널",
       "channel": "코미디TV",
       "title": "삼시세끼 어촌편 5 3회",
       "metadata": {
@@ -3554,6 +3790,7 @@
     {
       "day": "월",
       "time": "12:36",
+      "sheet": "연예오락채널",
       "channel": "E채널",
       "title": "유 퀴즈 온 더 블럭 353회",
       "metadata": {
@@ -3569,6 +3806,7 @@
     {
       "day": "월",
       "time": "12:40",
+      "sheet": "지상파",
       "channel": "KBS2",
       "title": "영화가 좋다",
       "metadata": {
@@ -3584,6 +3822,7 @@
     {
       "day": "월",
       "time": "12:45",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "시간을 달리는 세계사",
       "metadata": {
@@ -3599,6 +3838,7 @@
     {
       "day": "월",
       "time": "12:45",
+      "sheet": "지상파",
       "channel": "SBS",
       "title": "잔망루피 먹방",
       "metadata": {
@@ -3614,6 +3854,7 @@
     {
       "day": "월",
       "time": "12:50",
+      "sheet": "종합편성",
       "channel": "MBN",
       "title": "전설의 사내 16회",
       "metadata": {
@@ -3629,6 +3870,7 @@
     {
       "day": "월",
       "time": "12:50",
+      "sheet": "지상파",
       "channel": "OBS 경인TV",
       "title": "경기의정예:썰",
       "metadata": {
@@ -3644,6 +3886,7 @@
     {
       "day": "월",
       "time": "13:00",
+      "sheet": "연예오락채널",
       "channel": "CH W",
       "title": "연속TV소설 오싱 <10-12회>",
       "metadata": {
@@ -3659,6 +3902,7 @@
     {
       "day": "월",
       "time": "13:00",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "Sesame Street(S54)",
       "metadata": {
@@ -3674,6 +3918,7 @@
     {
       "day": "월",
       "time": "13:00",
+      "sheet": "지상파",
       "channel": "KBS1",
       "title": "네트워크 공동기획 문화스케치",
       "metadata": {
@@ -3689,6 +3934,7 @@
     {
       "day": "월",
       "time": "13:00",
+      "sheet": "지상파",
       "channel": "SBS",
       "title": "오늘부터, 인생 2막",
       "metadata": {
@@ -3704,6 +3950,7 @@
     {
       "day": "월",
       "time": "13:00",
+      "sheet": "종합편성",
       "channel": "TV 조선",
       "title": "보도본부 핫라인",
       "metadata": {
@@ -3719,6 +3966,7 @@
     {
       "day": "월",
       "time": "13:05",
+      "sheet": "지상파",
       "channel": "EBS1",
       "title": "한국기행",
       "metadata": {
@@ -3734,6 +3982,7 @@
     {
       "day": "월",
       "time": "13:09",
+      "sheet": "연예오락채널",
       "channel": "JTBC2",
       "title": "[이승철X우즈]아는 형님 549회",
       "metadata": {
@@ -3749,6 +3998,7 @@
     {
       "day": "월",
       "time": "13:10",
+      "sheet": "연예오락채널",
       "channel": "KBS joy",
       "title": "영화가 좋다 1029회",
       "metadata": {
@@ -3764,6 +4014,7 @@
     {
       "day": "월",
       "time": "13:14",
+      "sheet": "연예오락채널",
       "channel": "MBC every1",
       "title": "전지적 참견 시점 422회",
       "metadata": {
@@ -3779,6 +4030,7 @@
     {
       "day": "월",
       "time": "13:20",
+      "sheet": "종합편성",
       "channel": "채널A",
       "title": "아이엠닥터 71회",
       "metadata": {
@@ -3794,6 +4046,7 @@
     {
       "day": "월",
       "time": "13:25",
+      "sheet": "지상파",
       "channel": "EBS1",
       "title": "덩이랑 쾡이랑 인물 한국사",
       "metadata": {
@@ -3809,6 +4062,7 @@
     {
       "day": "월",
       "time": "13:25",
+      "sheet": "지상파",
       "channel": "MBC",
       "title": "뽀뽀뽀 좋아좋아",
       "metadata": {
@@ -3824,6 +4078,7 @@
     {
       "day": "월",
       "time": "13:30",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "최고다! 호기심딱지",
       "metadata": {
@@ -3839,6 +4094,7 @@
     {
       "day": "월",
       "time": "13:30",
+      "sheet": "종합편성",
       "channel": "JTBC",
       "title": "파이널 테이블 4회",
       "metadata": {
@@ -3854,6 +4110,7 @@
     {
       "day": "월",
       "time": "13:35",
+      "sheet": "지상파",
       "channel": "EBS1",
       "title": "위대한 수업, 그레이트 마인즈 2강 왜 기본소득은 무조건적이어야 하나>",
       "metadata": {
@@ -3869,6 +4126,7 @@
     {
       "day": "월",
       "time": "13:40",
+      "sheet": "지상파",
       "channel": "OBS 경인TV",
       "title": "오 마이 주식",
       "metadata": {
@@ -3884,6 +4142,7 @@
     {
       "day": "월",
       "time": "13:45",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "최고다! 호기심딱지",
       "metadata": {
@@ -3899,6 +4158,7 @@
     {
       "day": "월",
       "time": "13:45",
+      "sheet": "연예오락채널",
       "channel": "O tvN",
       "title": "100일의 거짓말 8회",
       "metadata": {
@@ -3914,6 +4174,7 @@
     {
       "day": "월",
       "time": "13:50",
+      "sheet": "지상파",
       "channel": "KBS1",
       "title": "생활의 발견 스페셜",
       "metadata": {
@@ -3929,6 +4190,7 @@
     {
       "day": "월",
       "time": "13:50",
+      "sheet": "지상파",
       "channel": "KBS2",
       "title": "무엇이든 물어보세요 스페셜",
       "metadata": {
@@ -3944,6 +4206,7 @@
     {
       "day": "월",
       "time": "13:55",
+      "sheet": "지상파",
       "channel": "EBS1",
       "title": "EBS 평생학교",
       "metadata": {
@@ -3959,6 +4222,7 @@
     {
       "day": "월",
       "time": "13:55",
+      "sheet": "지상파",
       "channel": "MBC",
       "title": "2시 뉴스 외전",
       "metadata": {
@@ -3974,6 +4238,7 @@
     {
       "day": "월",
       "time": "14:00",
+      "sheet": "연예오락채널",
       "channel": "CH W",
       "title": "W랭귀지 - 일본어 244회",
       "metadata": {
@@ -3989,6 +4254,7 @@
     {
       "day": "월",
       "time": "14:00",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "클래스 e",
       "metadata": {
@@ -4004,6 +4270,7 @@
     {
       "day": "월",
       "time": "14:00",
+      "sheet": "지상파",
       "channel": "KBS1",
       "title": "KBS 뉴스",
       "metadata": {
@@ -4019,6 +4286,7 @@
     {
       "day": "월",
       "time": "14:00",
+      "sheet": "지상파",
       "channel": "SBS",
       "title": "뉴스브리핑",
       "metadata": {
@@ -4034,6 +4302,7 @@
     {
       "day": "월",
       "time": "14:10",
+      "sheet": "지상파",
       "channel": "EBS1",
       "title": "EBS 평생학교 스페셜",
       "metadata": {
@@ -4049,6 +4318,7 @@
     {
       "day": "월",
       "time": "14:10",
+      "sheet": "지상파",
       "channel": "KBS1",
       "title": "다큐 인사이트",
       "metadata": {
@@ -4064,6 +4334,7 @@
     {
       "day": "월",
       "time": "14:20",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "EBS 평생학교 스페셜",
       "metadata": {
@@ -4079,6 +4350,7 @@
     {
       "day": "월",
       "time": "14:20",
+      "sheet": "연예오락채널",
       "channel": "KBS joy",
       "title": "개그콘서트 1196회",
       "metadata": {
@@ -4094,6 +4366,7 @@
     {
       "day": "월",
       "time": "14:20",
+      "sheet": "종합편성",
       "channel": "채널A",
       "title": "개와 늑대의 시간 2 40회",
       "metadata": {
@@ -4109,6 +4382,7 @@
     {
       "day": "월",
       "time": "14:30",
+      "sheet": "종합편성",
       "channel": "MBN",
       "title": "언포게터블 듀엣 2 1회",
       "metadata": {
@@ -4124,6 +4398,7 @@
     {
       "day": "월",
       "time": "14:30",
+      "sheet": "종합편성",
       "channel": "TV 조선",
       "title": "트롯 키친 달리는 디너쇼 4회",
       "metadata": {
@@ -4139,6 +4414,7 @@
     {
       "day": "월",
       "time": "14:30",
+      "sheet": "연예오락채널",
       "channel": "tvN",
       "title": "식스센스: B사이드 7회",
       "metadata": {
@@ -4154,6 +4430,7 @@
     {
       "day": "월",
       "time": "14:30",
+      "sheet": "연예오락채널",
       "channel": "코미디TV",
       "title": "냉장고를 부탁해 since 2014 82회",
       "metadata": {
@@ -4169,6 +4446,7 @@
     {
       "day": "월",
       "time": "14:33",
+      "sheet": "연예오락채널",
       "channel": "JTBC2",
       "title": "[연속방송]파이널 테이블 3회",
       "metadata": {
@@ -4184,6 +4462,7 @@
     {
       "day": "월",
       "time": "14:40",
+      "sheet": "지상파",
       "channel": "OBS 경인TV",
       "title": "꾸러기TV",
       "metadata": {
@@ -4199,6 +4478,7 @@
     {
       "day": "월",
       "time": "14:46",
+      "sheet": "연예오락채널",
       "channel": "E채널",
       "title": "서인영의 유행꼰대 5회",
       "metadata": {
@@ -4214,6 +4494,7 @@
     {
       "day": "월",
       "time": "14:50",
+      "sheet": "종합편성",
       "channel": "JTBC",
       "title": "냉장고를 부탁해 since 2014 95회",
       "metadata": {
@@ -4229,6 +4510,7 @@
     {
       "day": "월",
       "time": "14:55",
+      "sheet": "지상파",
       "channel": "EBS1",
       "title": "나의 두 번째 교과서",
       "metadata": {
@@ -4244,6 +4526,7 @@
     {
       "day": "월",
       "time": "15:00",
+      "sheet": "연예오락채널",
       "channel": "CH W",
       "title": "W랭귀지 - 일본어 245회",
       "metadata": {
@@ -4259,6 +4542,7 @@
     {
       "day": "월",
       "time": "15:00",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "지구탐사 이야기",
       "metadata": {
@@ -4274,6 +4558,7 @@
     {
       "day": "월",
       "time": "15:00",
+      "sheet": "지상파",
       "channel": "KBS1",
       "title": "세계는 지금 스페셜",
       "metadata": {
@@ -4289,6 +4574,7 @@
     {
       "day": "월",
       "time": "15:00",
+      "sheet": "지상파",
       "channel": "KBS2",
       "title": "KBS 뉴스타임",
       "metadata": {
@@ -4304,6 +4590,7 @@
     {
       "day": "월",
       "time": "15:00",
+      "sheet": "연예오락채널",
       "channel": "O tvN",
       "title": "일타 스캔들 1회",
       "metadata": {
@@ -4319,6 +4606,7 @@
     {
       "day": "월",
       "time": "15:07",
+      "sheet": "연예오락채널",
       "channel": "MBC every1",
       "title": "나 혼자 산다 671회",
       "metadata": {
@@ -4334,6 +4622,7 @@
     {
       "day": "월",
       "time": "15:10",
+      "sheet": "지상파",
       "channel": "KBS1",
       "title": "특집 다큐 밥상지기 최불암 당신을 기억합니다",
       "metadata": {
@@ -4349,6 +4638,7 @@
     {
       "day": "월",
       "time": "15:15",
+      "sheet": "지상파",
       "channel": "KBS2",
       "title": "월드 24",
       "metadata": {
@@ -4364,6 +4654,7 @@
     {
       "day": "월",
       "time": "15:30",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "냠냠 히어로 슈퍼잭",
       "metadata": {
@@ -4379,6 +4670,7 @@
     {
       "day": "월",
       "time": "15:30",
+      "sheet": "지상파",
       "channel": "OBS 경인TV",
       "title": "OBS 뉴스",
       "metadata": {
@@ -4394,6 +4686,7 @@
     {
       "day": "월",
       "time": "15:30",
+      "sheet": "지상파",
       "channel": "SBS",
       "title": "고향이 보인다",
       "metadata": {
@@ -4409,6 +4702,7 @@
     {
       "day": "월",
       "time": "15:35",
+      "sheet": "지상파",
       "channel": "EBS1",
       "title": "꼬마마법사 주니토니",
       "metadata": {
@@ -4424,6 +4718,7 @@
     {
       "day": "월",
       "time": "15:45",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "다이노스터 공룡수호대",
       "metadata": {
@@ -4439,6 +4734,7 @@
     {
       "day": "월",
       "time": "15:45",
+      "sheet": "지상파",
       "channel": "KBS2",
       "title": "도깨비 언덕에 왜 왔니?",
       "metadata": {
@@ -4454,6 +4750,7 @@
     {
       "day": "월",
       "time": "15:50",
+      "sheet": "지상파",
       "channel": "EBS1",
       "title": "마샤와 곰",
       "metadata": {
@@ -4469,6 +4766,7 @@
     {
       "day": "월",
       "time": "15:50",
+      "sheet": "종합편성",
       "channel": "채널A",
       "title": "탐정들의 영업비밀 스페셜 134회",
       "metadata": {
@@ -4484,6 +4782,7 @@
     {
       "day": "월",
       "time": "15:54",
+      "sheet": "연예오락채널",
       "channel": "JTBC2",
       "title": "[연속방송]파이널 테이블 4회",
       "metadata": {
@@ -4499,6 +4798,7 @@
     {
       "day": "월",
       "time": "15:55",
+      "sheet": "지상파",
       "channel": "MBC",
       "title": "기분 좋은 날",
       "metadata": {
@@ -4514,6 +4814,7 @@
     {
       "day": "월",
       "time": "15:59",
+      "sheet": "연예오락채널",
       "channel": "E채널",
       "title": "콩콩팜팜 1회",
       "metadata": {
@@ -4529,6 +4830,7 @@
     {
       "day": "월",
       "time": "16:00",
+      "sheet": "연예오락채널",
       "channel": "CH W",
       "title": "W랭귀지 - 중국어 210회",
       "metadata": {
@@ -4544,6 +4846,7 @@
     {
       "day": "월",
       "time": "16:00",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "하프와 친구들(종합)",
       "metadata": {
@@ -4559,6 +4862,7 @@
     {
       "day": "월",
       "time": "16:00",
+      "sheet": "종합편성",
       "channel": "JTBC",
       "title": "다큐플러스Q 23회",
       "metadata": {
@@ -4574,6 +4878,7 @@
     {
       "day": "월",
       "time": "16:00",
+      "sheet": "지상파",
       "channel": "KBS1",
       "title": "사사건건",
       "metadata": {
@@ -4589,6 +4894,7 @@
     {
       "day": "월",
       "time": "16:00",
+      "sheet": "지상파",
       "channel": "KBS2",
       "title": "TV 유치원",
       "metadata": {
@@ -4604,6 +4910,7 @@
     {
       "day": "월",
       "time": "16:00",
+      "sheet": "종합편성",
       "channel": "MBN",
       "title": "MBN 뉴스와이드",
       "metadata": {
@@ -4619,6 +4926,7 @@
     {
       "day": "월",
       "time": "16:00",
+      "sheet": "지상파",
       "channel": "SBS",
       "title": "좋은아침 스페셜",
       "metadata": {
@@ -4634,6 +4942,7 @@
     {
       "day": "월",
       "time": "16:00",
+      "sheet": "종합편성",
       "channel": "TV 조선",
       "title": "금타는 금요일 베스트 43회",
       "metadata": {
@@ -4649,6 +4958,7 @@
     {
       "day": "월",
       "time": "16:05",
+      "sheet": "지상파",
       "channel": "EBS1",
       "title": "블록스",
       "metadata": {
@@ -4664,6 +4974,7 @@
     {
       "day": "월",
       "time": "16:05",
+      "sheet": "연예오락채널",
       "channel": "KBS joy",
       "title": "차트를 달리는 남자 509회",
       "metadata": {
@@ -4679,6 +4990,7 @@
     {
       "day": "월",
       "time": "16:10",
+      "sheet": "연예오락채널",
       "channel": "tvN",
       "title": "100일의 거짓말 7회",
       "metadata": {
@@ -4694,6 +5006,7 @@
     {
       "day": "월",
       "time": "16:15",
+      "sheet": "연예오락채널",
       "channel": "코미디TV",
       "title": "지락이의 뛰뛰빵빵 2회",
       "metadata": {
@@ -4709,6 +5022,7 @@
     {
       "day": "월",
       "time": "16:20",
+      "sheet": "지상파",
       "channel": "EBS1",
       "title": "딩동댕 딩동댕",
       "metadata": {
@@ -4724,6 +5038,7 @@
     {
       "day": "월",
       "time": "16:25",
+      "sheet": "연예오락채널",
       "channel": "O tvN",
       "title": "일타 스캔들 2회",
       "metadata": {
@@ -4739,6 +5054,7 @@
     {
       "day": "월",
       "time": "16:30",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "블록스",
       "metadata": {
@@ -4754,6 +5070,7 @@
     {
       "day": "월",
       "time": "16:30",
+      "sheet": "지상파",
       "channel": "KBS2",
       "title": "세상의 모든 다큐",
       "metadata": {
@@ -4769,6 +5086,7 @@
     {
       "day": "월",
       "time": "16:30",
+      "sheet": "지상파",
       "channel": "OBS 경인TV",
       "title": "주식학교",
       "metadata": {
@@ -4784,6 +5102,7 @@
     {
       "day": "월",
       "time": "16:40",
+      "sheet": "지상파",
       "channel": "EBS1",
       "title": "한글용사 아이야 10회",
       "metadata": {
@@ -4799,6 +5118,7 @@
     {
       "day": "월",
       "time": "16:45",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "모두 함께 부스누!",
       "metadata": {
@@ -4814,6 +5134,7 @@
     {
       "day": "월",
       "time": "16:55",
+      "sheet": "지상파",
       "channel": "EBS1",
       "title": "한글용사 아이야 9회",
       "metadata": {
@@ -4829,6 +5150,7 @@
     {
       "day": "월",
       "time": "16:55",
+      "sheet": "지상파",
       "channel": "MBC",
       "title": "5시 뉴스와 경제",
       "metadata": {
@@ -4844,6 +5166,7 @@
     {
       "day": "월",
       "time": "16:57",
+      "sheet": "연예오락채널",
       "channel": "MBC every1",
       "title": "전지적 참견 시점 422회",
       "metadata": {
@@ -4859,6 +5182,7 @@
     {
       "day": "월",
       "time": "17:00",
+      "sheet": "연예오락채널",
       "channel": "CH W",
       "title": "미션 화이트 프로젝트 27회",
       "metadata": {
@@ -4874,6 +5198,7 @@
     {
       "day": "월",
       "time": "17:00",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "과학 다큐멘터리",
       "metadata": {
@@ -4889,6 +5214,7 @@
     {
       "day": "월",
       "time": "17:00",
+      "sheet": "종합편성",
       "channel": "JTBC",
       "title": "이가혁 라이브",
       "metadata": {
@@ -4904,6 +5230,7 @@
     {
       "day": "월",
       "time": "17:00",
+      "sheet": "지상파",
       "channel": "KBS1",
       "title": "KBS 뉴스 5",
       "metadata": {
@@ -4919,6 +5246,7 @@
     {
       "day": "월",
       "time": "17:00",
+      "sheet": "지상파",
       "channel": "SBS",
       "title": "SBS 오뉴스",
       "metadata": {
@@ -4934,6 +5262,7 @@
     {
       "day": "월",
       "time": "17:10",
+      "sheet": "지상파",
       "channel": "EBS1",
       "title": "페파 피그",
       "metadata": {
@@ -4949,6 +5278,7 @@
     {
       "day": "월",
       "time": "17:10",
+      "sheet": "지상파",
       "channel": "MBC",
       "title": "MBC 나눔 프로젝트 희망의 발걸음",
       "metadata": {
@@ -4964,6 +5294,7 @@
     {
       "day": "월",
       "time": "17:10",
+      "sheet": "지상파",
       "channel": "SBS",
       "title": "생활의 달인",
       "metadata": {
@@ -4979,6 +5310,7 @@
     {
       "day": "월",
       "time": "17:10",
+      "sheet": "종합편성",
       "channel": "채널A",
       "title": "뉴스 TOP10",
       "metadata": {
@@ -4994,6 +5326,7 @@
     {
       "day": "월",
       "time": "17:15",
+      "sheet": "연예오락채널",
       "channel": "JTBC2",
       "title": "[김풍매직X국대특집]냉장고를 부탁해 since 2014 95회",
       "metadata": {
@@ -5009,6 +5342,7 @@
     {
       "day": "월",
       "time": "17:15",
+      "sheet": "연예오락채널",
       "channel": "KBS joy",
       "title": "이십세기 힛-트쏭 337회",
       "metadata": {
@@ -5024,6 +5358,7 @@
     {
       "day": "월",
       "time": "17:20",
+      "sheet": "지상파",
       "channel": "EBS1",
       "title": "메카 빌더",
       "metadata": {
@@ -5039,6 +5374,7 @@
     {
       "day": "월",
       "time": "17:20",
+      "sheet": "지상파",
       "channel": "KBS2",
       "title": "스튜디오 K 스페셜",
       "metadata": {
@@ -5054,6 +5390,7 @@
     {
       "day": "월",
       "time": "17:20",
+      "sheet": "종합편성",
       "channel": "TV 조선",
       "title": "시사팩트 오늘",
       "metadata": {
@@ -5069,6 +5406,7 @@
     {
       "day": "월",
       "time": "17:30",
+      "sheet": "지상파",
       "channel": "KBS1",
       "title": "동물의 왕국",
       "metadata": {
@@ -5084,6 +5422,7 @@
     {
       "day": "월",
       "time": "17:30",
+      "sheet": "지상파",
       "channel": "OBS 경인TV",
       "title": "OBS뉴스경인 530",
       "metadata": {
@@ -5099,6 +5438,7 @@
     {
       "day": "월",
       "time": "17:35",
+      "sheet": "연예오락채널",
       "channel": "tvN",
       "title": "100일의 거짓말 8회",
       "metadata": {
@@ -5114,6 +5454,7 @@
     {
       "day": "월",
       "time": "17:39",
+      "sheet": "연예오락채널",
       "channel": "E채널",
       "title": "냉장고를 부탁해 since 2014 82회",
       "metadata": {
@@ -5129,6 +5470,7 @@
     {
       "day": "월",
       "time": "17:45",
+      "sheet": "연예오락채널",
       "channel": "O tvN",
       "title": "일타 스캔들 3회",
       "metadata": {
@@ -5144,6 +5486,7 @@
     {
       "day": "월",
       "time": "17:45",
+      "sheet": "연예오락채널",
       "channel": "코미디TV",
       "title": "맛있는 녀석들 587회",
       "metadata": {
@@ -5159,6 +5502,7 @@
     {
       "day": "월",
       "time": "17:50",
+      "sheet": "지상파",
       "channel": "EBS1",
       "title": "AI 석학 특강-넥스트 비전 - 비전2 진화생물학자>",
       "metadata": {
@@ -5174,6 +5518,7 @@
     {
       "day": "월",
       "time": "17:50",
+      "sheet": "종합편성",
       "channel": "MBN",
       "title": "더 펀치 73회",
       "metadata": {
@@ -5189,6 +5534,7 @@
     {
       "day": "월",
       "time": "17:50",
+      "sheet": "지상파",
       "channel": "OBS 경인TV",
       "title": "조선팔도 자연애 산다",
       "metadata": {
@@ -5204,6 +5550,7 @@
     {
       "day": "월",
       "time": "17:55",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "최고의 요리비결",
       "metadata": {
@@ -5219,6 +5566,7 @@
     {
       "day": "월",
       "time": "18:00",
+      "sheet": "연예오락채널",
       "channel": "CH W",
       "title": "W 일본어 캠프 64회",
       "metadata": {
@@ -5234,6 +5582,7 @@
     {
       "day": "월",
       "time": "18:00",
+      "sheet": "지상파",
       "channel": "KBS1",
       "title": "6시 내고향",
       "metadata": {
@@ -5249,6 +5598,7 @@
     {
       "day": "월",
       "time": "18:00",
+      "sheet": "지상파",
       "channel": "KBS2",
       "title": "경제콘서트",
       "metadata": {
@@ -5264,6 +5614,7 @@
     {
       "day": "월",
       "time": "18:05",
+      "sheet": "지상파",
       "channel": "MBC",
       "title": "오늘N",
       "metadata": {
@@ -5279,6 +5630,7 @@
     {
       "day": "월",
       "time": "18:10",
+      "sheet": "지상파",
       "channel": "EBS1",
       "title": "EBS 뉴스",
       "metadata": {
@@ -5294,6 +5646,7 @@
     {
       "day": "월",
       "time": "18:10",
+      "sheet": "지상파",
       "channel": "SBS",
       "title": "투데이",
       "metadata": {
@@ -5309,6 +5662,7 @@
     {
       "day": "월",
       "time": "18:20",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "엄마 까투리",
       "metadata": {
@@ -5324,6 +5678,7 @@
     {
       "day": "월",
       "time": "18:30",
+      "sheet": "지상파",
       "channel": "EBS1",
       "title": "덩이랑 쾡이랑 인물 한국사",
       "metadata": {
@@ -5339,6 +5694,7 @@
     {
       "day": "월",
       "time": "18:30",
+      "sheet": "종합편성",
       "channel": "JTBC",
       "title": "JTBC 뉴스룸",
       "metadata": {
@@ -5354,6 +5710,7 @@
     {
       "day": "월",
       "time": "18:35",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "마샤와 곰",
       "metadata": {
@@ -5369,6 +5726,7 @@
     {
       "day": "월",
       "time": "18:35",
+      "sheet": "연예오락채널",
       "channel": "KBS joy",
       "title": "더 시즌즈-성시경의 고막남친 29회",
       "metadata": {
@@ -5384,6 +5742,7 @@
     {
       "day": "월",
       "time": "18:35",
+      "sheet": "지상파",
       "channel": "KBS2",
       "title": "2TV 생생정보",
       "metadata": {
@@ -5399,6 +5758,7 @@
     {
       "day": "월",
       "time": "18:40",
+      "sheet": "지상파",
       "channel": "EBS1",
       "title": "덩이랑 쾡이랑 인물 한국사",
       "metadata": {
@@ -5414,6 +5774,7 @@
     {
       "day": "월",
       "time": "18:40",
+      "sheet": "지상파",
       "channel": "OBS 경인TV",
       "title": "바닷가 사람들",
       "metadata": {
@@ -5429,6 +5790,7 @@
     {
       "day": "월",
       "time": "18:47",
+      "sheet": "연예오락채널",
       "channel": "MBC every1",
       "title": "나 혼자 산다 671회",
       "metadata": {
@@ -5444,6 +5806,7 @@
     {
       "day": "월",
       "time": "18:50",
+      "sheet": "지상파",
       "channel": "EBS1",
       "title": "글로벌 특선 다큐 스페셜",
       "metadata": {
@@ -5459,6 +5822,7 @@
     {
       "day": "월",
       "time": "18:50",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "페파 피그",
       "metadata": {
@@ -5474,6 +5838,7 @@
     {
       "day": "월",
       "time": "19:00",
+      "sheet": "연예오락채널",
       "channel": "CH W",
       "title": "W 일본어 캠프 65회",
       "metadata": {
@@ -5489,6 +5854,7 @@
     {
       "day": "월",
       "time": "19:00",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "딩동댕 딩동댕",
       "metadata": {
@@ -5504,6 +5870,7 @@
     {
       "day": "월",
       "time": "19:00",
+      "sheet": "지상파",
       "channel": "KBS1",
       "title": "KBS 뉴스 7",
       "metadata": {
@@ -5519,6 +5886,7 @@
     {
       "day": "월",
       "time": "19:00",
+      "sheet": "종합편성",
       "channel": "MBN",
       "title": "MBN 뉴스 7",
       "metadata": {
@@ -5534,6 +5902,7 @@
     {
       "day": "월",
       "time": "19:00",
+      "sheet": "지상파",
       "channel": "SBS",
       "title": "뉴스헌터스",
       "metadata": {
@@ -5549,6 +5918,7 @@
     {
       "day": "월",
       "time": "19:00",
+      "sheet": "종합편성",
       "channel": "TV 조선",
       "title": "어떻게 살 것인가? 특별판 32회",
       "metadata": {
@@ -5564,6 +5934,7 @@
     {
       "day": "월",
       "time": "19:00",
+      "sheet": "연예오락채널",
       "channel": "tvN",
       "title": "원더픽 7회",
       "metadata": {
@@ -5579,6 +5950,7 @@
     {
       "day": "월",
       "time": "19:00",
+      "sheet": "종합편성",
       "channel": "채널A",
       "title": "뉴스A",
       "metadata": {
@@ -5594,6 +5966,7 @@
     {
       "day": "월",
       "time": "19:02",
+      "sheet": "연예오락채널",
       "channel": "JTBC2",
       "title": "[안효섭]파이널 테이블 4회",
       "metadata": {
@@ -5609,6 +5982,7 @@
     {
       "day": "월",
       "time": "19:05",
+      "sheet": "지상파",
       "channel": "MBC",
       "title": "가족관계증명서",
       "metadata": {
@@ -5624,6 +5998,7 @@
     {
       "day": "월",
       "time": "19:10",
+      "sheet": "연예오락채널",
       "channel": "O tvN",
       "title": "원더픽 7회",
       "metadata": {
@@ -5639,6 +6014,7 @@
     {
       "day": "월",
       "time": "19:10",
+      "sheet": "연예오락채널",
       "channel": "코미디TV",
       "title": "냉장고를 부탁해 since 2014 82회",
       "metadata": {
@@ -5654,6 +6030,7 @@
     {
       "day": "월",
       "time": "19:20",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "슈퍼두퍼 잉글리시",
       "metadata": {
@@ -5669,6 +6046,7 @@
     {
       "day": "월",
       "time": "19:30",
+      "sheet": "지상파",
       "channel": "OBS 경인TV",
       "title": "OBS뉴스 730",
       "metadata": {
@@ -5684,6 +6062,7 @@
     {
       "day": "월",
       "time": "19:35",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "슈퍼두퍼 잉글리시",
       "metadata": {
@@ -5699,6 +6078,7 @@
     {
       "day": "월",
       "time": "19:35",
+      "sheet": "연예오락채널",
       "channel": "E채널",
       "title": "유 퀴즈 온 더 블럭 353회",
       "metadata": {
@@ -5714,6 +6094,7 @@
     {
       "day": "월",
       "time": "19:40",
+      "sheet": "지상파",
       "channel": "KBS1",
       "title": "우리말 겨루기",
       "metadata": {
@@ -5729,6 +6110,7 @@
     {
       "day": "월",
       "time": "19:40",
+      "sheet": "지상파",
       "channel": "MBC",
       "title": "MBC 뉴스데스크",
       "metadata": {
@@ -5744,6 +6126,7 @@
     {
       "day": "월",
       "time": "19:45",
+      "sheet": "지상파",
       "channel": "EBS1",
       "title": "왔다! 내 손주",
       "metadata": {
@@ -5759,6 +6142,7 @@
     {
       "day": "월",
       "time": "19:50",
+      "sheet": "지상파",
       "channel": "KBS2",
       "title": "일일드라마 욕망의 덫 49회",
       "metadata": {
@@ -5774,6 +6158,7 @@
     {
       "day": "월",
       "time": "19:50",
+      "sheet": "지상파",
       "channel": "SBS",
       "title": "SBS 8 뉴스",
       "metadata": {
@@ -5789,6 +6174,7 @@
     {
       "day": "월",
       "time": "20:00",
+      "sheet": "연예오락채널",
       "channel": "CH W",
       "title": "W 일본어 캠프 66회",
       "metadata": {
@@ -5804,6 +6190,7 @@
     {
       "day": "월",
       "time": "20:00",
+      "sheet": "종합편성",
       "channel": "JTBC",
       "title": "내 아내의 속사정 1회",
       "metadata": {
@@ -5819,6 +6206,7 @@
     {
       "day": "월",
       "time": "20:00",
+      "sheet": "연예오락채널",
       "channel": "KBS joy",
       "title": "무엇이든 물어보살 388회",
       "metadata": {
@@ -5834,6 +6222,7 @@
     {
       "day": "월",
       "time": "20:00",
+      "sheet": "종합편성",
       "channel": "TV 조선",
       "title": "다시 사는 이야기 기사회생 179회",
       "metadata": {
@@ -5849,6 +6238,7 @@
     {
       "day": "월",
       "time": "20:00",
+      "sheet": "연예오락채널",
       "channel": "tvN",
       "title": "유 퀴즈 온 더 블럭 특별판 - 스타 자기님을 찾아서",
       "metadata": {
@@ -5864,6 +6254,7 @@
     {
       "day": "월",
       "time": "20:00",
+      "sheet": "종합편성",
       "channel": "채널A",
       "title": "건강한 식당 35회",
       "metadata": {
@@ -5879,6 +6270,7 @@
     {
       "day": "월",
       "time": "20:10",
+      "sheet": "종합편성",
       "channel": "MBN",
       "title": "바디인사이트 56회",
       "metadata": {
@@ -5894,6 +6286,7 @@
     {
       "day": "월",
       "time": "20:10",
+      "sheet": "지상파",
       "channel": "OBS 경인TV",
       "title": "오늘의 월드 뉴스",
       "metadata": {
@@ -5909,6 +6302,7 @@
     {
       "day": "월",
       "time": "20:15",
+      "sheet": "연예오락채널",
       "channel": "O tvN",
       "title": "미스터 션샤인 5회",
       "metadata": {
@@ -5924,6 +6318,7 @@
     {
       "day": "월",
       "time": "20:20",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "덩이랑 쾡이랑 인물 한국사",
       "metadata": {
@@ -5939,6 +6334,7 @@
     {
       "day": "월",
       "time": "20:20",
+      "sheet": "연예오락채널",
       "channel": "JTBC2",
       "title": "[펜싱 금메달 오상욱-1탄]냉장고를 부탁해 since 2014 94회",
       "metadata": {
@@ -5954,6 +6350,7 @@
     {
       "day": "월",
       "time": "20:30",
+      "sheet": "지상파",
       "channel": "EBS1",
       "title": "왔다! 내 손주",
       "metadata": {
@@ -5969,6 +6366,7 @@
     {
       "day": "월",
       "time": "20:30",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "덩이랑 쾡이랑 인물 한국사",
       "metadata": {
@@ -5984,6 +6382,7 @@
     {
       "day": "월",
       "time": "20:30",
+      "sheet": "지상파",
       "channel": "KBS1",
       "title": "일일드라마 엄마가 미쳤어요 26회",
       "metadata": {
@@ -5999,6 +6398,7 @@
     {
       "day": "월",
       "time": "20:30",
+      "sheet": "지상파",
       "channel": "KBS2",
       "title": "다큐멘터리 3일",
       "metadata": {
@@ -6014,6 +6414,7 @@
     {
       "day": "월",
       "time": "20:34",
+      "sheet": "연예오락채널",
       "channel": "MBC every1",
       "title": "히든 아이 108회",
       "metadata": {
@@ -6029,6 +6430,7 @@
     {
       "day": "월",
       "time": "20:40",
+      "sheet": "지상파",
       "channel": "EBS1",
       "title": "세계테마기행",
       "metadata": {
@@ -6044,6 +6446,7 @@
     {
       "day": "월",
       "time": "20:40",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "AI 석학 특강-넥스트 비전 - 비전2 진화생물학자>",
       "metadata": {
@@ -6059,6 +6462,7 @@
     {
       "day": "월",
       "time": "20:40",
+      "sheet": "지상파",
       "channel": "OBS 경인TV",
       "title": "독특한 연예 뉴스",
       "metadata": {
@@ -6074,6 +6478,7 @@
     {
       "day": "월",
       "time": "20:50",
+      "sheet": "종합편성",
       "channel": "JTBC",
       "title": "사건반장",
       "metadata": {
@@ -6089,6 +6494,7 @@
     {
       "day": "월",
       "time": "20:50",
+      "sheet": "연예오락채널",
       "channel": "tvN",
       "title": "나의 유죄인간 5회",
       "metadata": {
@@ -6104,6 +6510,7 @@
     {
       "day": "월",
       "time": "21:00",
+      "sheet": "연예오락채널",
       "channel": "CH W",
       "title": "W 일본어 캠프 67회",
       "metadata": {
@@ -6119,6 +6526,7 @@
     {
       "day": "월",
       "time": "21:00",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "지식채널e(1)",
       "metadata": {
@@ -6134,6 +6542,7 @@
     {
       "day": "월",
       "time": "21:00",
+      "sheet": "지상파",
       "channel": "KBS1",
       "title": "KBS 뉴스 9",
       "metadata": {
@@ -6149,6 +6558,7 @@
     {
       "day": "월",
       "time": "21:00",
+      "sheet": "지상파",
       "channel": "MBC",
       "title": "오은영 리포트 결혼지옥",
       "metadata": {
@@ -6164,6 +6574,7 @@
     {
       "day": "월",
       "time": "21:00",
+      "sheet": "지상파",
       "channel": "OBS 경인TV",
       "title": "BBC 특별기획",
       "metadata": {
@@ -6179,6 +6590,7 @@
     {
       "day": "월",
       "time": "21:00",
+      "sheet": "지상파",
       "channel": "SBS",
       "title": "생활의 달인",
       "metadata": {
@@ -6194,6 +6606,7 @@
     {
       "day": "월",
       "time": "21:00",
+      "sheet": "종합편성",
       "channel": "TV 조선",
       "title": "TV CHOSUN 뉴스9",
       "metadata": {
@@ -6209,6 +6622,7 @@
     {
       "day": "월",
       "time": "21:00",
+      "sheet": "종합편성",
       "channel": "채널A",
       "title": "뉴스A CITY LIVE",
       "metadata": {
@@ -6224,6 +6638,7 @@
     {
       "day": "월",
       "time": "21:05",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "지식채널e(2)",
       "metadata": {
@@ -6239,6 +6654,7 @@
     {
       "day": "월",
       "time": "21:05",
+      "sheet": "연예오락채널",
       "channel": "코미디TV",
       "title": "틈만나면 19회",
       "metadata": {
@@ -6254,6 +6670,7 @@
     {
       "day": "월",
       "time": "21:10",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "EBS 스페이스 공감 1724회",
       "metadata": {
@@ -6269,6 +6686,7 @@
     {
       "day": "월",
       "time": "21:10",
+      "sheet": "종합편성",
       "channel": "MBN",
       "title": "나는 자연인이다 733회",
       "metadata": {
@@ -6284,6 +6702,7 @@
     {
       "day": "월",
       "time": "21:15",
+      "sheet": "연예오락채널",
       "channel": "KBS joy",
       "title": "무엇이든 물어보살 388회",
       "metadata": {
@@ -6299,6 +6718,7 @@
     {
       "day": "월",
       "time": "21:25",
+      "sheet": "지상파",
       "channel": "EBS1",
       "title": "세계테마기행",
       "metadata": {
@@ -6314,6 +6734,7 @@
     {
       "day": "월",
       "time": "21:30",
+      "sheet": "지상파",
       "channel": "KBS2",
       "title": "말자쇼",
       "metadata": {
@@ -6329,6 +6750,7 @@
     {
       "day": "월",
       "time": "21:35",
+      "sheet": "지상파",
       "channel": "EBS1",
       "title": "한국기행",
       "metadata": {
@@ -6344,6 +6766,7 @@
     {
       "day": "월",
       "time": "21:45",
+      "sheet": "연예오락채널",
       "channel": "O tvN",
       "title": "미스터 션샤인 6회",
       "metadata": {
@@ -6359,6 +6782,7 @@
     {
       "day": "월",
       "time": "21:50",
+      "sheet": "종합편성",
       "channel": "JTBC",
       "title": "연애전쟁 19회",
       "metadata": {
@@ -6374,6 +6798,7 @@
     {
       "day": "월",
       "time": "21:53",
+      "sheet": "연예오락채널",
       "channel": "JTBC2",
       "title": "[유도 금메달 허미미-2탄]냉장고를 부탁해 since 2014 95회",
       "metadata": {
@@ -6389,6 +6814,7 @@
     {
       "day": "월",
       "time": "21:55",
+      "sheet": "지상파",
       "channel": "EBS1",
       "title": "EBS 다큐프라임",
       "metadata": {
@@ -6404,6 +6830,7 @@
     {
       "day": "월",
       "time": "21:55",
+      "sheet": "연예오락채널",
       "channel": "E채널",
       "title": "놀면 뭐하니? 340회",
       "metadata": {
@@ -6419,6 +6846,7 @@
     {
       "day": "월",
       "time": "22:00",
+      "sheet": "연예오락채널",
       "channel": "CH W",
       "title": "세상의 중심에서 사랑을 외치다 7회",
       "metadata": {
@@ -6434,6 +6862,7 @@
     {
       "day": "월",
       "time": "22:00",
+      "sheet": "지상파",
       "channel": "KBS1",
       "title": "가요무대",
       "metadata": {
@@ -6449,6 +6878,7 @@
     {
       "day": "월",
       "time": "22:00",
+      "sheet": "지상파",
       "channel": "OBS 경인TV",
       "title": "OBS 뉴스10 인천경기",
       "metadata": {
@@ -6464,6 +6894,7 @@
     {
       "day": "월",
       "time": "22:00",
+      "sheet": "지상파",
       "channel": "SBS",
       "title": "우리들의 발라드 2 1부",
       "metadata": {
@@ -6479,6 +6910,7 @@
     {
       "day": "월",
       "time": "22:00",
+      "sheet": "종합편성",
       "channel": "TV 조선",
       "title": "트롯 키친 달리는 디너쇼 1부 5회",
       "metadata": {
@@ -6494,6 +6926,7 @@
     {
       "day": "월",
       "time": "22:00",
+      "sheet": "연예오락채널",
       "channel": "tvN",
       "title": "벌거벗은 세계사 278회",
       "metadata": {
@@ -6509,6 +6942,7 @@
     {
       "day": "월",
       "time": "22:00",
+      "sheet": "종합편성",
       "channel": "채널A",
       "title": "탐정들의 영업비밀 135회",
       "metadata": {
@@ -6524,6 +6958,7 @@
     {
       "day": "월",
       "time": "22:05",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "클래스 e 1강 뇌를 위해 몸을 움직이라 말하는 이유>",
       "metadata": {
@@ -6539,6 +6974,7 @@
     {
       "day": "월",
       "time": "22:20",
+      "sheet": "연예오락채널",
       "channel": "KBS joy",
       "title": "계약결혼 6회",
       "metadata": {
@@ -6554,6 +6990,7 @@
     {
       "day": "월",
       "time": "22:20",
+      "sheet": "연예오락채널",
       "channel": "MBC every1",
       "title": "계약 결혼 6회",
       "metadata": {
@@ -6569,6 +7006,7 @@
     {
       "day": "월",
       "time": "22:20",
+      "sheet": "종합편성",
       "channel": "MBN",
       "title": "빈칸채우기 8회",
       "metadata": {
@@ -6584,6 +7022,7 @@
     {
       "day": "월",
       "time": "22:25",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "나의 두 번째 교과서",
       "metadata": {
@@ -6599,6 +7038,7 @@
     {
       "day": "월",
       "time": "22:30",
+      "sheet": "지상파",
       "channel": "OBS 경인TV",
       "title": "선 넘은 패밀리",
       "metadata": {
@@ -6614,6 +7054,7 @@
     {
       "day": "월",
       "time": "22:30",
+      "sheet": "종합편성",
       "channel": "TV 조선",
       "title": "트롯 키친 달리는 디너쇼 2부 5회",
       "metadata": {
@@ -6629,6 +7070,7 @@
     {
       "day": "월",
       "time": "22:40",
+      "sheet": "지상파",
       "channel": "EBS1",
       "title": "EBS 다큐프라임",
       "metadata": {
@@ -6644,6 +7086,7 @@
     {
       "day": "월",
       "time": "22:50",
+      "sheet": "지상파",
       "channel": "EBS1",
       "title": "백세부자",
       "metadata": {
@@ -6659,6 +7102,7 @@
     {
       "day": "월",
       "time": "22:50",
+      "sheet": "지상파",
       "channel": "MBC",
       "title": "심야괴담회 6",
       "metadata": {
@@ -6674,6 +7118,7 @@
     {
       "day": "월",
       "time": "22:55",
+      "sheet": "지상파",
       "channel": "KBS1",
       "title": "KBS 뉴스라인W",
       "metadata": {
@@ -6689,6 +7134,7 @@
     {
       "day": "월",
       "time": "23:00",
+      "sheet": "연예오락채널",
       "channel": "CH W",
       "title": "페이크 마미 9회",
       "metadata": {
@@ -6704,6 +7150,7 @@
     {
       "day": "월",
       "time": "23:00",
+      "sheet": "지상파",
       "channel": "KBS2",
       "title": "아이 러브 스포츠",
       "metadata": {
@@ -6719,6 +7166,7 @@
     {
       "day": "월",
       "time": "23:00",
+      "sheet": "지상파",
       "channel": "SBS",
       "title": "우리들의 발라드 2 2부",
       "metadata": {
@@ -6734,6 +7182,7 @@
     {
       "day": "월",
       "time": "23:05",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "EBS 비즈니스 리뷰",
       "metadata": {
@@ -6749,6 +7198,7 @@
     {
       "day": "월",
       "time": "23:10",
+      "sheet": "연예오락채널",
       "channel": "O tvN",
       "title": "나의 유죄인간 5회",
       "metadata": {
@@ -6764,6 +7214,7 @@
     {
       "day": "월",
       "time": "23:10",
+      "sheet": "종합편성",
       "channel": "TV 조선",
       "title": "트롯 키친 달리는 디너쇼 3부 5회",
       "metadata": {
@@ -6779,6 +7230,7 @@
     {
       "day": "월",
       "time": "23:15",
+      "sheet": "연예오락채널",
       "channel": "코미디TV",
       "title": "놀면 뭐하니? 332회",
       "metadata": {
@@ -6794,6 +7246,7 @@
     {
       "day": "월",
       "time": "23:20",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "EBS 명강",
       "metadata": {
@@ -6809,6 +7262,7 @@
     {
       "day": "월",
       "time": "23:25",
+      "sheet": "지상파",
       "channel": "KBS2",
       "title": "스모킹 건",
       "metadata": {
@@ -6824,6 +7278,7 @@
     {
       "day": "월",
       "time": "23:27",
+      "sheet": "연예오락채널",
       "channel": "E채널",
       "title": "냉장고를 부탁해 since 2014 82회",
       "metadata": {
@@ -6839,6 +7294,7 @@
     {
       "day": "월",
       "time": "23:30",
+      "sheet": "종합편성",
       "channel": "MBN",
       "title": "알토란 스페셜 375회",
       "metadata": {
@@ -6854,6 +7310,7 @@
     {
       "day": "월",
       "time": "23:35",
+      "sheet": "지상파",
       "channel": "KBS1",
       "title": "인생이 영화",
       "metadata": {
@@ -6869,6 +7326,7 @@
     {
       "day": "월",
       "time": "23:38",
+      "sheet": "연예오락채널",
       "channel": "JTBC2",
       "title": "[바로 보는 본방]연애전쟁 19회",
       "metadata": {
@@ -6884,6 +7342,7 @@
     {
       "day": "월",
       "time": "23:45",
+      "sheet": "지상파",
       "channel": "EBS1",
       "title": "위대한 수업, 그레이트 마인즈 2강 어떻게 시간을 되찾을 것인가>",
       "metadata": {
@@ -6899,6 +7358,7 @@
     {
       "day": "월",
       "time": "23:50",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "지식채널e(1)",
       "metadata": {
@@ -6914,6 +7374,7 @@
     {
       "day": "월",
       "time": "23:55",
+      "sheet": "지상파",
       "channel": "EBS2",
       "title": "지식채널e(2)",
       "metadata": {
@@ -6929,6 +7390,7 @@
     {
       "day": "월",
       "time": "23:55",
+      "sheet": "연예오락채널",
       "channel": "KBS joy",
       "title": "계약결혼 6회",
       "metadata": {
