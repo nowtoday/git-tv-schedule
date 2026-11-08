@@ -319,12 +319,17 @@ function applyLocalScheduleOverrides(basePrograms, schedule) {
 }
 
 function scheduleStatus(programCount, generatedAt) {
-  const source = activeLocalOverrideDays.length
-    ? `브라우저 수동 갱신 우선: ${activeLocalOverrideDays.map(({ day, fetchedAt }) => (
+  const serverRefresh = `서버 최종 갱신: ${generatedAt ? formatKoreanDateTime(generatedAt) : "시각 정보 없음"}`;
+  const localOverrides = activeLocalOverrideDays.length
+    ? `브라우저 수동 편성 우선 표시: ${activeLocalOverrideDays.map(({ day, fetchedAt }) => (
       `${day}(${formatKoreanDateTime(fetchedAt)})`
     )).join(", ")}`
-    : `자동 갱신: ${generatedAt ? formatKoreanDateTime(generatedAt) : "시각 정보 없음"}`;
-  return `${programCount}개 편성을 불러왔습니다. ${source}`;
+    : "";
+  return [
+    `${programCount}개 편성을 불러왔습니다.`,
+    serverRefresh,
+    localOverrides,
+  ].filter(Boolean).join(" ");
 }
 
 function formatKoreanDateTime(timestamp) {
@@ -362,7 +367,10 @@ function scheduleDayLabel(day) {
   const updatedDate = koreanDateKey(updatedAt);
   const today = koreanDateKey(new Date());
   if (updatedDate === today) return "오늘";
-  if (updatedDate < today) return `지난 일정 · ${formatKoreanDate(updatedAt)}`;
+  if (updatedDate < today) {
+    const source = localOverride ? "브라우저" : "서버";
+    return `지난 일정 · ${formatKoreanDate(updatedAt)} · ${source}`;
+  }
   return formatKoreanDate(updatedAt);
 }
 
