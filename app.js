@@ -61,11 +61,12 @@ let programs = [];
 let publishedSchedule = null;
 let activeLocalOverrideDays = [];
 let favorites = loadFavorites();
-let hideReruns = false;
+let hideReruns = savedFilterPreferences.hideReruns;
 let viewMode = savedFilterPreferences.viewMode === "favorites" && favorites.length
   ? "favorites"
   : "all";
 
+hideRerunsCheckbox.checked = hideReruns;
 if (savedFilterPreferences.viewMode !== viewMode) saveFilterPreferences();
 
 function clearLegacyScheduleStorage() {
@@ -111,7 +112,8 @@ function loadFilterPreferences() {
           preferences.channels.some((channel) => typeof channel !== "string" || !channel.trim()))) ||
       (preferences.viewMode !== undefined &&
         preferences.viewMode !== "all" &&
-        preferences.viewMode !== "favorites")
+        preferences.viewMode !== "favorites") ||
+      (preferences.hideReruns !== undefined && typeof preferences.hideReruns !== "boolean")
     ) {
       throw new Error("저장된 필터 설정 형식이 올바르지 않습니다.");
     }
@@ -119,6 +121,7 @@ function loadFilterPreferences() {
       genres: preferences.genres === null ? null : [...new Set(preferences.genres)],
       channels: preferences.channels === null ? null : [...new Set(preferences.channels)],
       viewMode: preferences.viewMode === "favorites" ? "favorites" : "all",
+      hideReruns: preferences.hideReruns === true,
     };
   } catch (error) {
     console.error("필터 설정을 불러오지 못했습니다.", error);
@@ -138,6 +141,7 @@ function saveFilterPreferences() {
       genres: selectedGenres,
       channels: selectedChannels,
       viewMode,
+      hideReruns,
     }));
     if (value.length > FILTER_PREFERENCES_MAX_LENGTH) {
       throw new Error("선택한 채널이 많아 브라우저 쿠키에 저장할 수 없습니다.");
@@ -1240,6 +1244,7 @@ document.querySelector("#favorite-form").addEventListener("submit", (event) => {
 
 hideRerunsCheckbox.addEventListener("change", () => {
   hideReruns = hideRerunsCheckbox.checked;
+  saveFilterPreferences();
   renderSchedule();
 });
 
